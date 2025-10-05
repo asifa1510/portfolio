@@ -1,115 +1,107 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asifa S | Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<title>S. ASIFA | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-body {
-    font-family: 'Poppins', sans-serif;
-    margin:0;
-    padding:0;
-    background:#f4f4f9;
-    color:#333;
-}
-header {
-    background: linear-gradient(90deg,#6a11cb,#2575fc);
-    color:white;
-    text-align:center;
-    padding:60px 20px;
-}
-header h1 {
-    margin:0;
-    font-size:2.8em;
-}
-header p {
-    margin-top:10px;
-    font-size:1.3em;
-    font-weight:500;
-}
-section {
-    max-width:900px;
-    margin:50px auto;
-    padding:0 20px;
-}
-h2 {
-    color:#2575fc;
-    margin-bottom:20px;
-    font-size:1.8em;
-}
-.skills, .projects {
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-}
-.skills span, .projects a {
-    background:#6a11cb;
-    color:white;
-    padding:10px 15px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:500;
-    transition: transform 0.2s, background 0.2s;
-}
-.skills span:hover, .projects a:hover {
-    transform: translateY(-3px);
-    background:#2575fc;
-}
-footer {
-    text-align:center;
-    padding:25px;
-    background:#222;
-    color:white;
-    margin-top:50px;
-}
-footer a {
-    color:#6a11cb;
-    text-decoration:none;
-    font-weight:500;
-}
-footer a:hover {
-    text-decoration:underline;
-}
+/* General */
+body { margin:0; font-family:'Poppins', sans-serif; background:#f5f7fa; color:#333; scroll-behavior: smooth;}
+a { text-decoration:none; color: inherit; }
+
+/* Header */
+header { background: linear-gradient(135deg,#6a11cb,#2575fc); color:white; text-align:center; padding:60px 20px; }
+header h1 { margin:0; font-size:3em; letter-spacing:1px; }
+header p { margin:10px 0; font-size:1.2em; }
+
+/* Contact links */
+.contact a { margin:0 10px; color:white; font-weight:600; transition:0.3s; }
+.contact a:hover { color:#ffeb3b; }
+
+/* Sections */
+section { max-width:1000px; margin:50px auto; padding:0 20px; }
+h2 { color:#2575fc; margin-bottom:20px; font-size:1.8em; border-bottom:2px solid #6a11cb; display:inline-block; padding-bottom:5px; }
+p { line-height:1.6; }
+
+/* Skills & Projects */
+.cards { display:flex; flex-wrap:wrap; gap:12px; }
+.card { background:#6a11cb; color:white; padding:12px 16px; border-radius:10px; transition:0.3s; }
+.card:hover { transform: translateY(-5px); background:#2575fc; }
+
+/* Projects links */
+.project-link { display:inline-block; margin:5px; padding:10px 15px; border-radius:8px; background:#2575fc; color:white; font-weight:600; transition:0.3s; }
+.project-link:hover { background:#6a11cb; transform:scale(1.05); }
+
+/* Footer */
+footer { text-align:center; padding:25px; background:#222; color:white; }
+footer a { color:#6a11cb; margin:0 10px; transition:0.3s; }
+footer a:hover { color:#ffeb3b; }
+
+/* Responsive */
+@media (max-width:700px){ .cards{flex-direction:column;} }
 </style>
 </head>
 <body>
 
 <header>
-<h1>Asifa S</h1>
-<p>AI & IoT Developer | Researcher | Hackathon Enthusiast</p>
+<h1>S. ASIFA</h1>
+<p>Software Engineering Student | AI, ML, Cybersecurity & IoT Enthusiast</p>
+<div class="contact">
+<a href="mailto:asifa.s2004@gmail.com">📧 Email</a> |
+<a href="https://www.linkedin.com/in/yourname" target="_blank">🌐 LinkedIn</a> |
+<a href="https://github.com/yourusername" target="_blank">GitHub</a> |
+<a href="https://scholar.google.com/citations?user=yourID" target="_blank">Google Scholar</a>
+</div>
 </header>
 
 <section>
-<h2>About Me</h2>
-<p>I am a software engineering student passionate about AI/ML, agentic AI systems, IoT, and cybersecurity. I have worked on real-world projects including adversarial QR code detection, robotic-assisted surgery prediction, and predictive analytics. I enjoy turning innovative ideas into functional prototypes with scalable impact.</p>
+<h2>Professional Summary</h2>
+<p>Motivated and detail-oriented Software Engineering student with expertise in AI, ML, Cybersecurity, and Generative AI (LLMs, RAG). Recognized with Best Paper Award (RFCoN 2025) and published in Springer. Skilled in full-stack development, IoT, applied deep learning, and interdisciplinary collaboration.</p>
 </section>
 
 <section>
-<h2>Skills</h2>
-<div class="skills">
-<span>RAG / Agentic AI</span><span>PyTorch</span><span>BiLSTM</span><span>VAE</span><span>PPO</span><span>Liquid Neural Networks</span>
-<span>Python</span><span>C</span><span>C++</span><span>Java</span><span>TypeScript</span><span>PHP</span>
-<span>Scikit-learn</span><span>U-Net</span><span>React</span><span>Android Studio</span><span>Firebase</span><span>Arduino</span><span>ESP32</span><span>NFC Integration</span>
+<h2>Technical Skills</h2>
+<div class="cards">
+<span class="card">Python</span><span class="card">C++</span><span class="card">JavaScript</span><span class="card">Java</span><span class="card">TypeScript</span>
+<span class="card">PHP</span><span class="card">PyTorch</span><span class="card">TensorFlow</span><span class="card">Scikit-learn</span><span class="card">BiLSTM</span>
+<span class="card">VAE</span><span class="card">PPO</span><span class="card">Liquid Neural Networks</span><span class="card">RAG</span><span class="card">U-Net</span>
+<span class="card">React</span><span class="card">Firebase</span><span class="card">Arduino</span><span class="card">NFC</span><span class="card">Cybersecurity</span>
 </div>
 </section>
 
 <section>
 <h2>Projects</h2>
-<div class="projects">
-<a href="https://github.com/asifa1510/LightningStrikeRisk" target="_blank">Lightning Strike Risk Prediction</a>
-<a href="https://github.com/asifa1510/DiffQuantumQR" target="_blank">DiffQuantumQR - Adversarial QR Detection</a>
-<a href="https://github.com/asifa1510/PredictingRoboticMalfunctions" target="_blank">RAS Error Prediction</a>
-<a href="https://github.com/asifa1510/NFCBusApp" target="_blank">IoT NFC Bus System</a>
-<a href="https://github.com/asifa1510/MemoGPT" target="_blank">MemoGPT - RAG Assistant</a>
-<a href="https://github.com/asifa1510/HealHive-Healthcare_Website" target="_blank">HealHive - Healthcare Platform</a>
+<div class="cards">
+<a href="https://github.com/yourusername/lightning-risk" target="_blank" class="project-link">Lightning Risk Prediction</a>
+<a href="https://github.com/yourusername/diffquantumqr" target="_blank" class="project-link">DiffQuantumQR</a>
+<a href="https://github.com/yourusername/soil-vital-signs" target="_blank" class="project-link">Soil Vital Signs</a>
+<a href="https://github.com/yourusername/ras-errors" target="_blank" class="project-link">Robotic Surgery Error Detection</a>
+<a href="https://github.com/yourusername/nfc-bus-app" target="_blank" class="project-link">NFC Bus App</a>
+<a href="https://github.com/yourusername/memogpt" target="_blank" class="project-link">MemoGPT</a>
+<a href="https://github.com/yourusername/healhive" target="_blank" class="project-link">HealHive</a>
 </div>
+</section>
+
+<section>
+<h2>Research & Publications</h2>
+<p>• Payable Outsourced Decryption for Functional Encryption using Blockchain, ICAIOT 2023, Springer<br>
+• Lightning-Strike Risk Prediction for Aviation Safety – Best Paper Award, RFCoN 2025, IEEE</p>
+</section>
+
+<section>
+<h2>Certifications & Education</h2>
+<p>• Machine Learning (Stanford University, Andrew Ng)<br>
+• Cybersecurity CTF Training – Finalist, DevsHouse’24<br>
+• Web Development – Frontend & backend with modern frameworks<br>
+• B.Tech Software Engineering – Vellore Institute of Technology, Chennai | CGPA: 8.89/10</p>
 </section>
 
 <footer>
 <p>Connect with me: 
-<a href="https://linkedin.com/in/asifa-s" target="_blank">LinkedIn</a> | 
-<a href="https://github.com/asifa1510" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/yourname" target="_blank">LinkedIn</a> | 
+<a href="https://github.com/yourusername" target="_blank">GitHub</a> | 
+<a href="mailto:asifa.s2004@gmail.com">Email</a>
 </p>
 </footer>
 

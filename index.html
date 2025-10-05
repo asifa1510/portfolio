@@ -1,109 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"> 
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>S. ASIFA | Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 /* General */
-body { margin:0; font-family:'Poppins', sans-serif; background:#f5f7fa; color:#333; scroll-behavior: smooth;}
-a { text-decoration:none; color: inherit; }
+* { box-sizing:border-box; margin:0; padding:0; scroll-behavior:smooth; }
+body { font-family:'Poppins', sans-serif; background:#1a1a2e; color:#e0e0e0; }
+a { text-decoration:none; color:inherit; }
+
+/* Navbar */
+nav { position:sticky; top:0; background:rgba(26,26,46,0.95); padding:15px 20px; display:flex; justify-content:center; gap:25px; z-index:100; border-bottom:1px solid #333;}
+nav a { color:#e0e0e0; font-weight:600; transition:0.3s;}
+nav a:hover { color:#ffb3c1; }
 
 /* Header */
-header { background: linear-gradient(135deg,#6a11cb,#2575fc); color:white; text-align:center; padding:60px 20px; }
-header h1 { margin:0; font-size:3em; letter-spacing:1px; }
-header p { margin:10px 0; font-size:1.2em; }
-
-/* Contact links */
-.contact a { margin:0 10px; color:white; font-weight:600; transition:0.3s; }
-.contact a:hover { color:#ffeb3b; }
+header { text-align:center; padding:80px 20px; background:linear-gradient(135deg,#2a2a72,#ffb3c1); color:white; }
+header h1 { font-size:3em; letter-spacing:1px; margin-bottom:10px; }
+header p { font-size:1.3em; color:#f0e5ff; }
+header .contact { margin-top:15px; }
+header .contact a { margin:0 12px; font-weight:600; color:white; transition:0.3s;}
+header .contact a:hover { color:#ffe066; }
 
 /* Sections */
-section { max-width:1000px; margin:50px auto; padding:0 20px; }
-h2 { color:#2575fc; margin-bottom:20px; font-size:1.8em; border-bottom:2px solid #6a11cb; display:inline-block; padding-bottom:5px; }
-p { line-height:1.6; }
+section { max-width:1000px; margin:70px auto; padding:0 20px; }
+h2 { font-size:2em; margin-bottom:20px; color:#ffb3c1; border-bottom:2px solid #6a11cb; display:inline-block; padding-bottom:5px; }
+p, li { line-height:1.6; margin-bottom:10px; }
+ul { margin-left:20px; }
 
-/* Skills & Projects */
-.cards { display:flex; flex-wrap:wrap; gap:12px; }
-.card { background:#6a11cb; color:white; padding:12px 16px; border-radius:10px; transition:0.3s; }
-.card:hover { transform: translateY(-5px); background:#2575fc; }
+/* Cards */
+.cards { display:flex; flex-wrap:wrap; gap:12px; margin-top:15px; }
+.card { background:#2a2a72; color:white; padding:12px 16px; border-radius:12px; transition:0.3s; cursor:pointer; flex:1 1 calc(25% - 20px); text-align:center; }
+.card:hover { transform: translateY(-5px) scale(1.05); background:#ffb3c1; color:#1a1a2e; }
 
-/* Projects links */
-.project-link { display:inline-block; margin:5px; padding:10px 15px; border-radius:8px; background:#2575fc; color:white; font-weight:600; transition:0.3s; }
-.project-link:hover { background:#6a11cb; transform:scale(1.05); }
+/* Projects */
+.project-link { display:inline-block; margin:5px; padding:12px 18px; border-radius:10px; background:#2a2a72; color:white; font-weight:600; transition:0.3s; }
+.project-link:hover { background:#ffb3c1; color:#1a1a2e; transform:scale(1.05); }
 
 /* Footer */
-footer { text-align:center; padding:25px; background:#222; color:white; }
-footer a { color:#6a11cb; margin:0 10px; transition:0.3s; }
-footer a:hover { color:#ffeb3b; }
+footer { text-align:center; padding:25px; background:#111; color:#aaa; }
+footer a { margin:0 10px; transition:0.3s; color:#ffb3c1; }
+footer a:hover { color:#ffe066; }
+
+/* Animations */
+.fadeIn { opacity:0; transform:translateY(30px); animation:fadeIn 1s forwards; }
+@keyframes fadeIn { to { opacity:1; transform:translateY(0); } }
 
 /* Responsive */
-@media (max-width:700px){ .cards{flex-direction:column;} }
+@media(max-width:900px){ .cards{flex-direction:column; flex:1 1 100%;} nav{flex-direction:column; gap:12px;} }
 </style>
 </head>
 <body>
 
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#research">Research</a>
+<a href="#contact">Contact</a>
+</nav>
+
 <header>
 <h1>S. ASIFA</h1>
-<p>Software Engineering Student | AI, ML, Cybersecurity & IoT Enthusiast</p>
+<p>Software Engineering | AI, ML, Cybersecurity & IoT</p>
 <div class="contact">
-<a href="mailto:asifa.s2004@gmail.com">📧 Email</a> |
-<a href="https://www.linkedin.com/in/yourname" target="_blank">🌐 LinkedIn</a> |
-<a href="https://github.com/yourusername" target="_blank">GitHub</a> |
+<a href="mailto:asifa.s2004@gmail.com">📧 Email</a>
+<a href="https://www.linkedin.com/in/s-asifa-896741250/" target="_blank">🌐 LinkedIn</a>
+<a href="https://github.com/yourusername" target="_blank">GitHub</a>
 <a href="https://scholar.google.com/citations?user=yourID" target="_blank">Google Scholar</a>
 </div>
 </header>
 
-<section>
+<section id="about" class="fadeIn">
 <h2>Professional Summary</h2>
 <p>Motivated and detail-oriented Software Engineering student with expertise in AI, ML, Cybersecurity, and Generative AI (LLMs, RAG). Recognized with Best Paper Award (RFCoN 2025) and published in Springer. Skilled in full-stack development, IoT, applied deep learning, and interdisciplinary collaboration.</p>
 </section>
 
-<section>
+<section id="skills" class="fadeIn">
 <h2>Technical Skills</h2>
 <div class="cards">
-<span class="card">Python</span><span class="card">C++</span><span class="card">JavaScript</span><span class="card">Java</span><span class="card">TypeScript</span>
-<span class="card">PHP</span><span class="card">PyTorch</span><span class="card">TensorFlow</span><span class="card">Scikit-learn</span><span class="card">BiLSTM</span>
-<span class="card">VAE</span><span class="card">PPO</span><span class="card">Liquid Neural Networks</span><span class="card">RAG</span><span class="card">U-Net</span>
-<span class="card">React</span><span class="card">Firebase</span><span class="card">Arduino</span><span class="card">NFC</span><span class="card">Cybersecurity</span>
+<span class="card">Python</span>
+<span class="card">C++</span>
+<span class="card">JavaScript</span>
+<span class="card">Java</span>
+<span class="card">TypeScript</span>
+<span class="card">PHP</span>
+<span class="card">PyTorch</span>
+<span class="card">TensorFlow</span>
+<span class="card">Scikit-learn</span>
+<span class="card">BiLSTM</span>
+<span class="card">VAE</span>
+<span class="card">PPO</span>
+<span class="card">Liquid Neural Networks</span>
+<span class="card">RAG / Agentic AI</span>
+<span class="card">U-Net</span>
+<span class="card">React</span>
+<span class="card">Firebase</span>
+<span class="card">Arduino</span>
+<span class="card">NFC Integration</span>
+<span class="card">Cybersecurity</span>
 </div>
 </section>
 
-<section>
+<section id="projects" class="fadeIn">
 <h2>Projects</h2>
 <div class="cards">
-<a href="https://github.com/yourusername/lightning-risk" target="_blank" class="project-link">Lightning Risk Prediction</a>
-<a href="https://github.com/yourusername/diffquantumqr" target="_blank" class="project-link">DiffQuantumQR</a>
-<a href="https://github.com/yourusername/soil-vital-signs" target="_blank" class="project-link">Soil Vital Signs</a>
+<a href="https://github.com/yourusername/lightning-risk" target="_blank" class="project-link">Lightning Risk Prediction – BiLSTM & PPO</a>
+<a href="https://github.com/yourusername/diffquantumqr" target="_blank" class="project-link">DiffQuantumQR – Adversarial QR Security</a>
+<a href="https://github.com/yourusername/soil-vital-signs" target="_blank" class="project-link">Soil Vital Signs – IoT Biometer</a>
 <a href="https://github.com/yourusername/ras-errors" target="_blank" class="project-link">Robotic Surgery Error Detection</a>
-<a href="https://github.com/yourusername/nfc-bus-app" target="_blank" class="project-link">NFC Bus App</a>
-<a href="https://github.com/yourusername/memogpt" target="_blank" class="project-link">MemoGPT</a>
-<a href="https://github.com/yourusername/healhive" target="_blank" class="project-link">HealHive</a>
+<a href="https://github.com/yourusername/nfc-bus-app" target="_blank" class="project-link">NFC Bus App – Android + ML</a>
+<a href="https://github.com/yourusername/memogpt" target="_blank" class="project-link">MemoGPT – Memory-based RAG</a>
+<a href="https://github.com/yourusername/healhive" target="_blank" class="project-link">HealHive – Full-stack Healthcare Web App</a>
 </div>
 </section>
 
-<section>
+<section id="research" class="fadeIn">
 <h2>Research & Publications</h2>
-<p>• Payable Outsourced Decryption for Functional Encryption using Blockchain, ICAIOT 2023, Springer<br>
-• Lightning-Strike Risk Prediction for Aviation Safety – Best Paper Award, RFCoN 2025, IEEE</p>
+<ul>
+<li>Payable Outsourced Decryption for Functional Encryption using Blockchain, ICAIOT 2023, Springer</li>
+<li>Lightning-Strike Risk Prediction for Aviation Safety – Best Paper Award, RFCoN 2025, IEEE</li>
+</ul>
 </section>
 
-<section>
-<h2>Certifications & Education</h2>
-<p>• Machine Learning (Stanford University, Andrew Ng)<br>
-• Cybersecurity CTF Training – Finalist, DevsHouse’24<br>
-• Web Development – Frontend & backend with modern frameworks<br>
-• B.Tech Software Engineering – Vellore Institute of Technology, Chennai | CGPA: 8.89/10</p>
+<section id="contact" class="fadeIn">
+<h2>Contact</h2>
+<p>📧 asifa.s2004@gmail.com | 📱 +91 9600126936</p>
+<p>Connect with me:</p>
+<a href="https://www.linkedin.com/in/s-asifa-896741250/" target="_blank">LinkedIn</a> | 
+<a href="https://github.com/yourusername" target="_blank">GitHub</a> | 
+<a href="mailto:asifa.s2004@gmail.com">Email</a>
 </section>
 
 <footer>
-<p>Connect with me: 
-<a href="https://www.linkedin.com/in/yourname" target="_blank">LinkedIn</a> | 
-<a href="https://github.com/yourusername" target="_blank">GitHub</a> | 
-<a href="mailto:asifa.s2004@gmail.com">Email</a>
-</p>
+<p>&copy; 2025 S. ASIFA | Built for Hackathons & Portfolio Showcase</p>
 </footer>
+
+<script>
+// Fade-in animation on scroll
+const faders = document.querySelectorAll('.fadeIn');
+const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+    entries.forEach(entry => { if(entry.isIntersecting){ entry.target.style.animation='fadeIn 1s forwards'; appearOnScroll.unobserve(entry.target); } });
+}, appearOptions);
+faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
 
 </body>
 </html>

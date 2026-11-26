@@ -1,1164 +1,207 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Asifa S — AI researcher and software engineering student working on scientific machine learning, temporal modelling and interpretable AI." />
-  <meta name="theme-color" content="#0d1726" />
-  <meta property="og:title" content="Asifa S | AI Research & Software Engineering" />
-  <meta property="og:description" content="Research, projects, publications and experience in AI, scientific machine learning and software engineering." />
-  <meta property="og:image" content="assets/nus-talk.jpg" />
-  <meta property="og:type" content="website" />
-
-  <title>Asifa S | Portfolio</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <style>
-    :root {
-      --bg: #0d1726;
-      --surface: #121f32;
-      --surface-2: #17263b;
-      --text: #edf3fb;
-      --muted: #a4b2c5;
-      --line: #26384f;
-      --accent: #6ea8fe;
-      --accent-soft: rgba(110, 168, 254, 0.12);
-      --white: #ffffff;
-      --radius: 16px;
-      --container: 1120px;
-      --shadow: 0 16px 42px rgba(0, 0, 0, 0.18);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 84px;
-    }
-
-    body {
-      min-height: 100vh;
-      overflow-x: hidden;
-      font-family: "Inter", sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.65;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    button {
-      font: inherit;
-    }
-
-    .container {
-      width: min(calc(100% - 40px), var(--container));
-      margin-inline: auto;
-    }
-
-    .section {
-      padding: 82px 0;
-    }
-
-    .section-alt {
-      background: #101c2d;
-      border-top: 1px solid rgba(255, 255, 255, 0.03);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-    }
-
-    .section-heading {
-      max-width: 720px;
-      margin-bottom: 34px;
-    }
-
-    .section-label {
-      display: block;
-      margin-bottom: 10px;
-      color: var(--accent);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    h1,
-    h2,
-    h3 {
-      line-height: 1.2;
-    }
-
-    h2 {
-      margin-bottom: 12px;
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      letter-spacing: -0.035em;
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      font-size: 1rem;
-    }
-
-    /* Navigation */
-    .site-nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid var(--line);
-      background: rgba(13, 23, 38, 0.94);
-      backdrop-filter: blur(12px);
-    }
-
-    .nav-inner {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 700;
-    }
-
-    .brand-mark {
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      border-radius: 10px;
-      color: #0b1421;
-      background: var(--accent);
-      font-size: 0.78rem;
-      font-weight: 800;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: #c2cddd;
-      font-size: 0.88rem;
-      font-weight: 600;
-    }
-
-    .nav-links a:hover {
-      color: var(--white);
-    }
-
-    .resume-link {
-      padding: 9px 14px;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      color: var(--white);
-      font-size: 0.86rem;
-      font-weight: 600;
-      background: var(--surface);
-    }
-
-    .menu-toggle {
-      width: 42px;
-      height: 42px;
-      display: none;
-      place-items: center;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      color: var(--white);
-      background: var(--surface);
-      cursor: pointer;
-    }
-
-    /* Hero */
-    .hero {
-      padding: 92px 0 62px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: clamp(42px, 7vw, 82px);
-      align-items: center;
-    }
-
-    .availability {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 20px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      color: #c9d8eb;
-      background: var(--surface);
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
-
-    .availability::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #6bd394;
-    }
-
-    .hero h1 {
-      max-width: 700px;
-      font-size: clamp(3.2rem, 8vw, 5.8rem);
-      letter-spacing: -0.065em;
-    }
-
-    .hero h1 span {
-      color: var(--accent);
-    }
-
-    .hero-subtitle {
-      margin-top: 18px;
-      color: #d1dbea;
-      font-size: clamp(1.12rem, 2.2vw, 1.45rem);
-      font-weight: 600;
-    }
-
-    .hero-copy {
-      max-width: 650px;
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 1rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .btn {
-      min-height: 46px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 17px;
-      border: 1px solid transparent;
-      border-radius: 10px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      transition: 0.2s ease;
-    }
-
-    .btn-primary {
-      color: #0b1421;
-      background: var(--accent);
-    }
-
-    .btn-primary:hover {
-      background: #86b8ff;
-    }
-
-    .btn-secondary {
-      border-color: var(--line);
-      color: var(--white);
-      background: var(--surface);
-    }
-
-    .btn-secondary:hover {
-      border-color: #3b5472;
-      background: var(--surface-2);
-    }
-
-    .social-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin-top: 24px;
-    }
-
-    .social-links a {
-      color: #aebdd0;
-      font-size: 0.88rem;
-      font-weight: 600;
-    }
-
-    .social-links a:hover {
-      color: var(--accent);
-    }
-
-    .hero-photo {
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: var(--surface);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-photo img {
-      width: 100%;
-      height: 480px;
-      object-fit: cover;
-      object-position: 63% center;
-    }
-
-    .photo-caption {
-      padding: 15px 17px;
-      color: var(--muted);
-      font-size: 0.84rem;
-    }
-
-    .photo-caption strong {
-      display: block;
-      margin-bottom: 2px;
-      color: var(--white);
-    }
-
-    /* Quick facts */
-    .facts {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--surface);
-    }
-
-    .fact {
-      padding: 24px;
-      border-right: 1px solid var(--line);
-    }
-
-    .fact:last-child {
-      border-right: 0;
-    }
-
-    .fact strong {
-      display: block;
-      margin-bottom: 5px;
-      color: var(--accent);
-      font-size: 1.55rem;
-    }
-
-    .fact span {
-      color: var(--muted);
-      font-size: 0.84rem;
-    }
-
-    /* About */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 24px;
-    }
-
-    .card {
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--surface);
-    }
-
-    .about-card,
-    .focus-card {
-      padding: 30px;
-    }
-
-    .about-card p {
-      color: #becbdd;
-    }
-
-    .about-card p + p {
-      margin-top: 15px;
-    }
-
-    .about-card strong {
-      color: var(--white);
-    }
-
-    .focus-card h3 {
-      margin-bottom: 18px;
-      font-size: 1.14rem;
-    }
-
-    .focus-list {
-      display: grid;
-      gap: 10px;
-      list-style: none;
-    }
-
-    .focus-list li {
-      padding: 11px 13px;
-      border-left: 3px solid var(--accent);
-      color: #cfdaea;
-      background: #101b2b;
-      font-size: 0.9rem;
-    }
-
-    /* Research */
-    .research-card {
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--surface);
-    }
-
-    .research-main {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 42px;
-      padding: 36px;
-    }
-
-    .tag-row,
-    .project-tags,
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .tag {
-      padding: 6px 9px;
-      border: 1px solid #304661;
-      border-radius: 999px;
-      color: #c8d8eb;
-      background: #101c2d;
-      font-size: 0.72rem;
-      font-weight: 600;
-    }
-
-    .research-main h3 {
-      margin-top: 18px;
-      font-size: clamp(1.7rem, 3vw, 2.35rem);
-      letter-spacing: -0.035em;
-    }
-
-    .research-main p {
-      margin-top: 16px;
-      color: var(--muted);
-    }
-
-    .research-details {
-      display: grid;
-      align-content: start;
-    }
-
-    .detail-row {
-      display: grid;
-      grid-template-columns: 100px 1fr;
-      gap: 14px;
-      padding: 13px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .detail-row:last-child {
-      border-bottom: 0;
-    }
-
-    .detail-row dt {
-      color: #7f91aa;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    .detail-row dd {
-      color: #dce6f3;
-      font-size: 0.88rem;
-      font-weight: 600;
-    }
-
-    .research-results {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      border-top: 1px solid var(--line);
-    }
-
-    .result {
-      padding: 22px;
-      border-right: 1px solid var(--line);
-    }
-
-    .result:last-child {
-      border-right: 0;
-    }
-
-    .result strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--accent);
-      font-size: 1.45rem;
-    }
-
-    .result span {
-      color: var(--muted);
-      font-size: 0.8rem;
-    }
-
-    /* Projects */
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .project-card {
-      min-height: 285px;
-      display: flex;
-      flex-direction: column;
-      padding: 25px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--surface);
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-3px);
-      border-color: #38516e;
-    }
-
-    .project-type {
-      color: var(--accent);
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .project-card h3 {
-      margin-top: 13px;
-      font-size: 1.28rem;
-    }
-
-    .project-card p {
-      margin: 12px 0 18px;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .project-tags {
-      margin-top: auto;
-    }
-
-    .project-link {
-      display: inline-flex;
-      margin-top: 20px;
-      color: var(--accent);
-      font-size: 0.86rem;
-      font-weight: 700;
-    }
-
-    /* Publications */
-    .publication-list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .publication {
-      display: grid;
-      grid-template-columns: 54px minmax(0, 1fr) auto;
-      gap: 18px;
-      align-items: center;
-      padding: 20px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: var(--surface);
-    }
-
-    .publication-number {
-      width: 44px;
-      height: 44px;
-      display: grid;
-      place-items: center;
-      border-radius: 10px;
-      color: var(--accent);
-      background: var(--accent-soft);
-      font-weight: 700;
-    }
-
-    .publication h3 {
-      margin-bottom: 4px;
-      font-size: 1rem;
-    }
-
-    .publication p {
-      color: var(--muted);
-      font-size: 0.82rem;
-    }
-
-    .publication-badge {
-      padding: 6px 9px;
-      border-radius: 999px;
-      color: #d7e5f7;
-      background: #18283d;
-      font-size: 0.72rem;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    /* Skills and recognition */
-    .skills-grid,
-    .recognition-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .skill-card,
-    .recognition-card {
-      padding: 24px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--surface);
-    }
-
-    .skill-card h3,
-    .recognition-card h3 {
-      margin-bottom: 15px;
-      font-size: 1.08rem;
-    }
-
-    .skill-tags span {
-      padding: 7px 9px;
-      border-radius: 8px;
-      color: #c7d3e3;
-      background: #101b2b;
-      font-size: 0.78rem;
-    }
-
-    .recognition-card p {
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
-
-    /* Contact */
-    .contact-card {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 34px;
-      align-items: center;
-      padding: 34px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--surface);
-    }
-
-    .contact-card h2 {
-      margin-bottom: 12px;
-    }
-
-    .contact-card p {
-      max-width: 720px;
-      color: var(--muted);
-    }
-
-    .contact-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      min-width: 200px;
-    }
-
-    footer {
-      padding: 28px 0 38px;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-      padding-top: 25px;
-      border-top: 1px solid var(--line);
-      color: #8091a8;
-      font-size: 0.8rem;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .footer-links a:hover {
-      color: var(--accent);
-    }
-
-    @media (max-width: 900px) {
-      .hero-grid,
-      .about-grid,
-      .research-main,
-      .photo-grid,
-      .contact-card {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-photo {
-        max-width: 720px;
-      }
-
-      .facts,
-      .research-results {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .fact:nth-child(2),
-      .result:nth-child(2) {
-        border-right: 0;
-      }
-
-      .fact:nth-child(-n+2),
-      .result:nth-child(-n+2) {
-        border-bottom: 1px solid var(--line);
-      }
-
-      .contact-actions {
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-    }
-
-    @media (max-width: 760px) {
-      .menu-toggle {
-        display: grid;
-      }
-
-      .resume-link {
-        display: none;
-      }
-
-      .nav-links {
-        position: absolute;
-        top: 72px;
-        left: 20px;
-        right: 20px;
-        display: none;
-        padding: 15px;
-        border: 1px solid var(--line);
-        border-radius: 12px;
-        background: #101c2d;
-      }
-
-      .nav-links.open {
-        display: grid;
-      }
-
-      .nav-links a {
-        display: block;
-        padding: 9px 6px;
-      }
-
-      .project-grid,
-      .skills-grid,
-      .recognition-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .publication {
-        grid-template-columns: 44px minmax(0, 1fr);
-      }
-
-      .publication-badge {
-        grid-column: 2;
-        justify-self: start;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .container {
-        width: min(calc(100% - 28px), var(--container));
-      }
-
-      .section {
-        padding: 68px 0;
-      }
-
-      .hero {
-        padding-top: 70px;
-      }
-
-      .hero h1 {
-        font-size: clamp(3rem, 17vw, 4.2rem);
-      }
-
-      .hero-actions .btn,
-      .contact-actions .btn {
-        width: 100%;
-      }
-
-      .hero-photo img {
-        height: 380px;
-      }
-
-      .facts,
-      .research-results {
-        grid-template-columns: 1fr;
-      }
-
-      .fact,
-      .result {
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .fact:last-child,
-      .result:last-child {
-        border-bottom: 0;
-      }
-
-      .research-main,
-      .about-card,
-      .focus-card,
-      .contact-card {
-        padding: 24px;
-      }
-
-      .moment img {
-        height: 280px;
-      }
-
-      .contact-actions {
-        flex-direction: column;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-      }
-    }
-  </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Portfolio of Asifa S — AI researcher and software engineering student working on scientific machine learning, temporal modelling and interpretable AI." name="description"/>
+<meta content="#191919" name="theme-color"/>
+<meta content="Asifa S | AI Research &amp; Software Engineering" property="og:title"/>
+<meta content="Research, projects, publications and experience in AI, scientific machine learning and software engineering." property="og:description"/>
+<meta content="assets/nus-talk.jpg" property="og:image"/>
+<meta content="website" property="og:type"/>
+<title>Asifa S | Portfolio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:105px} body{margin:0;background:white;color:#303030;font:16px/1.55 Arial,Helvetica,sans-serif} a{color:#007bbd;text-decoration:none} a:hover{text-decoration:underline} img{max-width:100%;display:block} .container{width:min(1460px,calc(100% - 48px));margin:auto} .site-nav{background:#191919;color:white;position:sticky;top:0;z-index:10} .nav-inner{display:flex;align-items:center;gap:28px;min-height:52px;flex-wrap:wrap} .brand{font-size:25px;font-weight:bold;color:#ccc} .nav-inner a:not(.brand){color:#eee;font-weight:bold;font-size:15px} .subnav{position:sticky;top:52px;background:#fafafa;border-bottom:1px solid #ddd;z-index:9} .subnav .container{display:flex;gap:25px;flex-wrap:wrap;min-height:48px;align-items:center} .subnav a{padding:10px 0} main.container{padding-top:20px} .bio-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:36px;align-items:start} h1{font-size:38px;text-align:center;margin:0 0 22px;padding-bottom:15px;border-bottom:1px solid #ddd} h2{font-size:25px;margin:0 0 12px;border-bottom:1px solid #ddd;padding-bottom:8px} h3{font-size:18px;margin:0 0 6px} p{margin:0 0 12px} .bio-row{display:flex;gap:20px;align-items:flex-start;padding:4px 0 22px;border-bottom:1px solid #ddd} .hero-photo{margin:0;flex:0 0 250px} .hero-photo img{width:250px;height:265px;object-fit:cover;object-position:63% center;border:1px solid #aaa;box-shadow:2px 3px 8px #0002} .photo-caption{font-size:12px;color:#666;margin-top:7px} .social-links{display:flex;flex-wrap:wrap;gap:13px;margin-top:15px} .interests{margin:20px 0} .sidebar{background:#f5f5f5;border:1px solid #ddd;border-radius:4px;padding:18px} .sidebar h2{text-align:center;font-size:21px} .sidebar article{padding:14px 0;border-bottom:1px solid #ddd} .sidebar article:last-child{border:0} .sidebar p{font-size:14px;color:#555;margin:0} .notice{border-left:3px solid #007bbd;background:#f4f4f4;padding:16px 20px;margin:18px 0} .section{padding:25px 0} .section .container{width:100%} .section-label,.publication-number,.project-type{font-size:12px;color:#666} .section-label{display:none} .section-heading>p{color:#666} .research-main{display:grid;grid-template-columns:1.4fr 1fr;gap:25px} .tag-row,.project-tags,.skill-tags{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0} .tag,.skill-tags span{font-size:12px;background:#f3f3f3;padding:3px 7px;color:#555} .detail-row{display:grid;grid-template-columns:90px 1fr;gap:10px;margin:5px 0;font-size:14px} dt{font-weight:bold} dd{margin:0} .research-results{display:flex;flex-wrap:wrap;gap:20px;border-top:1px solid #ddd;padding-top:12px} .result strong{display:block;color:#007bbd;font-size:20px} .result span{font-size:13px} .project-card,.publication,.skill-card,.recognition-card{display:block;border-bottom:1px solid #ddd;padding:15px 0} .project-card h3,.publication h3{color:#007bbd} .project-card p,.publication p{margin:5px 0} .publication-badge{font-size:12px;color:#555} .publication-number{display:none} .project-link{font-size:14px} .contact-actions,.footer-links{display:flex;gap:16px;flex-wrap:wrap} footer{border-top:1px solid #ddd;margin-top:25px;padding:20px 0;color:#666;font-size:13px} .footer-inner{display:flex;justify-content:space-between;gap:15px} .news{padding-left:20px} .news li{margin:6px 0} @media(max-width:950px){.bio-layout{grid-template-columns:1fr}.sidebar{display:none}} @media(max-width:600px){.container{width:calc(100% - 28px)} .nav-inner{gap:14px}.subnav{position:static}.subnav .container{gap:14px}.bio-row{flex-direction:column}.hero-photo{flex:auto}.research-main{grid-template-columns:1fr}.footer-inner{flex-direction:column}h1{font-size:32px}}
+</style>
 </head>
-<body>
-  <nav class="site-nav" aria-label="Main navigation">
-    <div class="container nav-inner">
-      <a class="brand" href="#home">
-        <span class="brand-mark">AS</span>
-        <span>Asifa S</span>
-      </a>
-
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <a class="resume-link" href="assets/AsifaS_resume.pdf" target="_blank" rel="noopener noreferrer">Resume ↗</a>
-      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu">☰</button>
-    </div>
-  </nav>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div>
-          <div class="availability">Available for research and AI internships · Aug 2026 – Jul 2027</div>
-          <h1>Hi, I'm <span>Asifa.</span></h1>
-          <p class="hero-subtitle">AI researcher and software engineering student.</p>
-          <p class="hero-copy">
-            I work on scientific machine learning, temporal modelling, interpretable AI and agentic systems. I enjoy building AI systems that are technically strong, useful and easier to understand.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#research">View my research</a>
-            <a class="btn btn-secondary" href="assets/AsifaS_resume.pdf" target="_blank" rel="noopener noreferrer">View resume</a>
-          </div>
-
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/s-asifa-896741250/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            <a href="https://github.com/asifa1510" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-            <a href="https://scholar.google.com/scholar?q=%22S+Asifa%22" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
-            <a href="mailto:asifa.s2004@gmail.com">Email ↗</a>
-          </div>
-        </div>
-
-        <!-- Replace this image with your preferred main photo later if needed. -->
-        <figure class="hero-photo">
-          <img src="assets/nus-talk.jpg" alt="Asifa presenting her research at the National University of Singapore" />
-          <figcaption class="photo-caption">
-            <strong>Presenting my research at NUS</strong>
+<body><nav class="site-nav"><div class="container nav-inner"><a class="brand" href="#home">Asifa S</a><a href="#home">Home</a><a href="#publications">Publications</a><a href="assets/AsifaS_resume.pdf">CV</a></div></nav><nav aria-label="Sections" class="subnav"><div class="container"><a href="#home">Bio</a><a href="#news">News</a><a href="#research">Research</a><a href="#projects">Projects</a><a href="#awards">Awards</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav><main class="container" id="home"><div class="bio-layout"><div><h1>Asifa S</h1><div class="bio-row"><figure class="hero-photo">
+<img alt="Asifa presenting her research at the National University of Singapore" src="assets/nus-talk.jpg"/>
+<figcaption class="photo-caption">
+<strong>Presenting my research at NUS</strong>
             Physics-Informed Hidden Regime Discovery · 2026
           </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Quick highlights">
-      <div class="container">
-        <div class="facts">
-          <div class="fact"><strong>396K+</strong><span>reactor observations analysed</span></div>
-          <div class="fact"><strong>8</strong><span>hidden operating regimes discovered</span></div>
-          <div class="fact"><strong>3</strong><span>IEEE and Springer publications</span></div>
-          <div class="fact"><strong>Best Paper</strong><span>IEEE RFCoN 2025</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="about">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">About me</span>
-          <h2>Research with a practical engineering mindset.</h2>
-          <p>I like understanding how complex systems behave and turning that understanding into useful AI tools.</p>
-        </div>
-
-        <div class="about-grid">
-          <article class="card about-card">
-            <p>
-              I am an <strong>Integrated M.Tech Software Engineering student at VIT Chennai</strong> and a recent <strong>NUS IRIS Summer Research Intern</strong>. At NUS, I worked on physics-informed temporal learning for the nonlinear Chylla–Haase polymerization reactor.
-            </p>
-            <p>
-              My research focuses on hidden-state discovery, temporal representation learning and interpretable symbolic models. Beyond AI-for-Science, I have worked on aviation safety, adversarial QR security, robotic-surgery risk prediction, RAG systems, network security and assistive edge AI.
-            </p>
-          </article>
-
-          <aside class="card focus-card">
-            <h3>What I am currently exploring</h3>
-            <ul class="focus-list">
-              <li>Physics-Informed Machine Learning</li>
-              <li>Hidden-State and Regime Discovery</li>
-              <li>Temporal and Multimodal Learning</li>
-              <li>Interpretable Symbolic Modelling</li>
-              <li>Agentic and Retrieval-Augmented AI</li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="research">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">Featured research</span>
-          <h2>Physics-Informed Hidden Regime Discovery</h2>
-          <p>Research completed during the NUS IRIS Summer Research Programme.</p>
-        </div>
-
-        <article class="research-card">
-          <div class="research-main">
-            <div>
-              <div class="tag-row">
-                <span class="tag">Physics-Informed AI</span>
-                <span class="tag">Mamba</span>
-                <span class="tag">GMM Clustering</span>
-                <span class="tag">Symbolic Regression</span>
-              </div>
-              <h3>Hidden Regime Discovery and Local Symbolic Law Learning for Semi-batch Reactors</h3>
-              <p>
+</figure><div><p>I am an Integrated M.Tech student in Software Engineering at <a href="https://chennai.vit.ac.in/">VIT Chennai</a>.</p><p>I was a summer research intern at the <a href="https://www.nus.edu.sg/">National University of Singapore</a> through the IRIS programme, advised by Assoc. Prof. Lakshminarayanan Samavedham. My work investigated physics-informed temporal learning and interpretable modelling of nonlinear reactor dynamics.</p><p>I am interested in developing machine learning methods that help us understand complex systems and their behaviour.</p><div class="social-links">
+<a href="https://www.linkedin.com/in/s-asifa-896741250/" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a>
+<a href="https://github.com/asifa1510" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
+<a href="https://scholar.google.com/scholar?q=%22S+Asifa%22" rel="noopener noreferrer" target="_blank">Google Scholar ↗</a>
+<a href="mailto:asifa.s2004@gmail.com">Email ↗</a>
+</div><a href="assets/AsifaS_resume.pdf">Curriculum Vitae (PDF)</a></div></div><p class="interests"><strong>Research Interests:</strong> Scientific Machine Learning; Temporal Representation Learning; Interpretable AI; Agentic and Retrieval-Augmented AI.</p><div class="notice"><strong>Research opportunities</strong><p>I am interested in research collaborations and internships in machine learning and artificial intelligence.</p></div><section class="section" id="news"><h2>News</h2><ul class="news"><li><strong>Jul 2026:</strong> Completed my summer research internship at NUS.</li><li><strong>2025:</strong> Received the Best Paper Award at IEEE RFCoN.</li></ul></section></div><aside class="sidebar"><h2>Research Interests</h2><article><h3>Scientific Machine Learning</h3><p>Physics-informed learning and nonlinear dynamical systems.</p></article><article><h3>Temporal Learning</h3><p>Hidden-state discovery and sequential representations.</p></article><article><h3>Interpretable AI</h3><p>Symbolic regression and interpretable local dynamics.</p></article><article><h3>Agentic AI</h3><p>Retrieval, memory and tool-supported reasoning.</p></article></aside></div><section class="section" id="research">
+<div class="container">
+<div class="section-heading">
+<span class="section-label">Featured research</span>
+<h2>Selected Research</h2>
+<p>Research completed during the NUS IRIS Summer Research Programme.</p>
+</div>
+<article class="research-card">
+<div class="research-main">
+<div>
+<div class="tag-row">
+<span class="tag">Physics-Informed AI</span>
+<span class="tag">Mamba</span>
+<span class="tag">GMM Clustering</span>
+<span class="tag">Symbolic Regression</span>
+</div>
+<h3>Hidden Regime Discovery and Local Symbolic Law Learning for Semi-batch Reactors</h3>
+<p>
                 The Chylla–Haase reactor moves through several nonlinear operating behaviours. Instead of using one global equation for the complete process, I developed a framework that learns temporal representations, discovers eight hidden operating regimes and derives separate readable equations for temperature-change dynamics inside each regime.
               </p>
-            </div>
-
-            <dl class="research-details">
-              <div class="detail-row"><dt>Institution</dt><dd>National University of Singapore</dd></div>
-              <div class="detail-row"><dt>Programme</dt><dd>NUS IRIS Summer Research Internship</dd></div>
-              <div class="detail-row"><dt>Advisor</dt><dd>Assoc. Prof. Lakshminarayanan Samavedham</dd></div>
-              <div class="detail-row"><dt>Period</dt><dd>May – July 2026</dd></div>
-            </dl>
-          </div>
-
-          <div class="research-results">
-            <div class="result"><strong>220</strong><span>validated reactor trajectories</span></div>
-            <div class="result"><strong>8</strong><span>unlabelled hidden regimes</span></div>
-            <div class="result"><strong>43.4%</strong><span>lower test RMSE</span></div>
-            <div class="result"><strong>17.6%</strong><span>lower OOD RMSE</span></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="projects">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">Selected projects</span>
-          <h2>AI systems I have built and researched.</h2>
-          <p>A mix of research prototypes, safety systems and end-to-end engineering projects.</p>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card">
-            <span class="project-type">Aviation safety · Best Paper</span>
-            <h3>Lightning-Strike Risk Prediction</h3>
-            <p>Real-time flight-risk prediction using aircraft data, weather-aware temporal modelling and route visualisation.</p>
-            <div class="project-tags"><span class="tag">BiLSTM</span><span class="tag">PPO</span><span class="tag">React</span><span class="tag">Leaflet</span></div>
-            <a class="project-link" href="https://github.com/asifa1510/LightningStrikeRisk" target="_blank" rel="noopener noreferrer">View project →</a>
-          </article>
-
-          <article class="project-card">
-            <span class="project-type">Adversarial machine learning</span>
-            <h3>DiffQuantumQR</h3>
-            <p>Secure QR classification using diffusion-guided purification, contrastive learning and adversarial robustness evaluation.</p>
-            <div class="project-tags"><span class="tag">Diffusion</span><span class="tag">U-Net</span><span class="tag">Contrastive Learning</span></div>
-            <a class="project-link" href="https://github.com/asifa1510" target="_blank" rel="noopener noreferrer">Explore GitHub →</a>
-          </article>
-
-          <article class="project-card">
-            <span class="project-type">Surgical intelligence</span>
-            <h3>Predicting Robotic Surgery Errors</h3>
-            <p>Temporal deep-learning models that predict surgical hazards before occurrence using workflow and kinematic signals.</p>
-            <div class="project-tags"><span class="tag">Time Series</span><span class="tag">Deep Learning</span><span class="tag">Cholec80</span></div>
-            <a class="project-link" href="https://github.com/asifa1510/PredictingRoboticMalfunctions" target="_blank" rel="noopener noreferrer">View project →</a>
-          </article>
-
-          <article class="project-card">
-            <span class="project-type">Agentic AI</span>
-            <h3>MemoGPT</h3>
-            <p>A local RAG assistant with semantic search, persistent memory, context management and tool-supported reasoning.</p>
-            <div class="project-tags"><span class="tag">RAG</span><span class="tag">LLMs</span><span class="tag">Vector Search</span></div>
-            <a class="project-link" href="https://github.com/asifa1510/MemoGPT" target="_blank" rel="noopener noreferrer">View project →</a>
-          </article>
-
-          <article class="project-card">
-            <span class="project-type">Sequence modelling</span>
-            <h3>Liquid Neural Networks from Scratch</h3>
-            <p>A ground-up implementation created to understand continuous-time neural dynamics beyond high-level libraries.</p>
-            <div class="project-tags"><span class="tag">Python</span><span class="tag">Liquid Networks</span><span class="tag">Sequential Data</span></div>
-            <a class="project-link" href="https://github.com/asifa1510/LNN" target="_blank" rel="noopener noreferrer">View project →</a>
-          </article>
-
-          <article class="project-card">
-            <span class="project-type">Assistive edge AI</span>
-            <h3>Neuro-Assist</h3>
-            <p>An offline assistive platform using ESP32 wearables and AI glasses for communication, fall alerts and OCR support.</p>
-            <div class="project-tags"><span class="tag">ESP32</span><span class="tag">Edge AI</span><span class="tag">OCR</span></div>
-            <a class="project-link" href="https://github.com/asifa1510" target="_blank" rel="noopener noreferrer">Explore GitHub →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="publications">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">Publications</span>
-          <h2>Published research.</h2>
-          <p>Peer-reviewed work across AI, security and aviation safety.</p>
-        </div>
-
-        <div class="publication-list">
-          <a class="publication" href="https://scholar.google.com/scholar?q=%22Diffusion-Guided+Quantum-Aware+Contrastive+Learning+for+Secure+QR+Code+Classification%22" target="_blank" rel="noopener noreferrer">
-            <span class="publication-number">01</span>
-            <div><h3>Diffusion-Guided Quantum-Aware Contrastive Learning for Secure QR Code Classification</h3><p>IEEE iConSCEPT 2025 · National Institute of Technology Puducherry</p></div>
-            <span class="publication-badge">IEEE</span>
-          </a>
-
-          <a class="publication" href="https://scholar.google.com/scholar?q=%22Lightning-Strike+Risk+Prediction+for+Aviation+Safety%22" target="_blank" rel="noopener noreferrer">
-            <span class="publication-number">02</span>
-            <div><h3>Lightning-Strike Risk Prediction for Aviation Safety</h3><p>IEEE RFCoN 2025 · Best Paper Award</p></div>
-            <span class="publication-badge">Best Paper</span>
-          </a>
-
-          <a class="publication" href="https://scholar.google.com/scholar?q=%22Payable+Outsourced+Decryption+for+Functional+Encryption+using+Blockchain%22" target="_blank" rel="noopener noreferrer">
-            <span class="publication-number">03</span>
-            <div><h3>Payable Outsourced Decryption for Functional Encryption using Blockchain</h3><p>ICAIOT 2023 · Springer Nature</p></div>
-            <span class="publication-badge">Springer</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">Skills</span>
-          <h2>Tools I use for research and engineering.</h2>
-        </div>
-
-        <div class="skills-grid">
-          <article class="skill-card">
-            <h3>AI & Temporal Modelling</h3>
-            <div class="skill-tags"><span>PyTorch</span><span>Scikit-learn</span><span>Mamba</span><span>LSTM / BiLSTM</span><span>Clustering</span><span>U-Net</span><span>PPO</span></div>
-          </article>
-          <article class="skill-card">
-            <h3>Scientific Machine Learning</h3>
-            <div class="skill-tags"><span>Physics-Informed ML</span><span>Symbolic Regression</span><span>GMM</span><span>Dynamical Systems</span><span>Simulation</span><span>Ablation Studies</span></div>
-          </article>
-          <article class="skill-card">
-            <h3>Generative & Agentic AI</h3>
-            <div class="skill-tags"><span>LLMs</span><span>RAG</span><span>Vector Databases</span><span>Embeddings</span><span>Semantic Retrieval</span><span>Tool Calling</span></div>
-          </article>
-          <article class="skill-card">
-            <h3>Development & Systems</h3>
-            <div class="skill-tags"><span>Python</span><span>C++</span><span>Java</span><span>SQL</span><span>JavaScript</span><span>React</span><span>Docker</span><span>Git</span><span>Linux</span></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" aria-label="Recognition">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">Recognition</span>
-          <h2>Selected achievements.</h2>
-        </div>
-
-        <div class="recognition-grid">
-          <article class="recognition-card"><h3>IEEE RFCoN 2025 Best Paper Award</h3><p>Recognised for research on lightning-strike risk prediction for aviation safety.</p></article>
-          <article class="recognition-card"><h3>NUS IRIS Summer Research Intern</h3><p>Selected for the international research programme at the National University of Singapore.</p></article>
-          <article class="recognition-card"><h3>DevsHouse’24 Finalist</h3><p>Top 7.5% of 800+ teams with an eye-gaze-controlled assistive communication system.</p></article>
-          <article class="recognition-card"><h3>National Hackathon Finalist</h3><p>Finalist at HackHub’25 and Glytch 2025 for applied AI and assistive-technology prototypes.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="contact-card">
-          <div>
-            <span class="section-label">Contact</span>
-            <h2>Let’s work on meaningful AI research.</h2>
-            <p>I am available for full-time research internships from August 2026 to July 2027, especially in AI-for-Science, temporal learning, multimodal AI, interpretable AI and agentic systems.</p>
-          </div>
-          <div class="contact-actions">
-            <a class="btn btn-primary" href="mailto:asifa.s2004@gmail.com">Email me</a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/s-asifa-896741250/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main> 
-
-  <footer>
-    <div class="container footer-inner">
-      <p>© <span id="year">2026</span> Asifa S.</p>
-      <div class="footer-links">
-        <a href="https://www.linkedin.com/in/s-asifa-896741250/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://github.com/asifa1510" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="mailto:asifa.s2004@gmail.com">Email</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
-
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("open");
-    });
-
-    navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => navLinks.classList.remove("open"));
-    });
-
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
+</div>
+<dl class="research-details">
+<div class="detail-row"><dt>Institution</dt><dd>National University of Singapore</dd></div>
+<div class="detail-row"><dt>Programme</dt><dd>NUS IRIS Summer Research Internship</dd></div>
+<div class="detail-row"><dt>Advisor</dt><dd>Assoc. Prof. Lakshminarayanan Samavedham</dd></div>
+<div class="detail-row"><dt>Period</dt><dd>May – July 2026</dd></div>
+</dl>
+</div>
+<div class="research-results">
+<div class="result"><strong>220</strong><span>validated reactor trajectories</span></div>
+<div class="result"><strong>8</strong><span>unlabelled hidden regimes</span></div>
+<div class="result"><strong>43.4%</strong><span>lower test RMSE</span></div>
+<div class="result"><strong>17.6%</strong><span>lower OOD RMSE</span></div>
+</div>
+</article>
+</div>
+</section><section class="section" id="publications">
+<div class="container">
+<div class="section-heading">
+<span class="section-label">Publications</span>
+<h2>Publications</h2>
+<p>Peer-reviewed work across AI, security and aviation safety.</p>
+</div>
+<div class="publication-list">
+<a class="publication" href="https://scholar.google.com/scholar?q=%22Diffusion-Guided+Quantum-Aware+Contrastive+Learning+for+Secure+QR+Code+Classification%22" rel="noopener noreferrer" target="_blank">
+<span class="publication-number">01</span>
+<div><h3>Diffusion-Guided Quantum-Aware Contrastive Learning for Secure QR Code Classification</h3><p>IEEE iConSCEPT 2025 · National Institute of Technology Puducherry</p></div>
+<span class="publication-badge">IEEE</span>
+</a>
+<a class="publication" href="https://scholar.google.com/scholar?q=%22Lightning-Strike+Risk+Prediction+for+Aviation+Safety%22" rel="noopener noreferrer" target="_blank">
+<span class="publication-number">02</span>
+<div><h3>Lightning-Strike Risk Prediction for Aviation Safety</h3><p>IEEE RFCoN 2025 · Best Paper Award</p></div>
+<span class="publication-badge">Best Paper</span>
+</a>
+<a class="publication" href="https://scholar.google.com/scholar?q=%22Payable+Outsourced+Decryption+for+Functional+Encryption+using+Blockchain%22" rel="noopener noreferrer" target="_blank">
+<span class="publication-number">03</span>
+<div><h3>Payable Outsourced Decryption for Functional Encryption using Blockchain</h3><p>ICAIOT 2023 · Springer Nature</p></div>
+<span class="publication-badge">Springer</span>
+</a>
+</div>
+</div>
+</section><section class="section section-alt" id="projects">
+<div class="container">
+<div class="section-heading">
+<span class="section-label">Selected projects</span>
+<h2>Selected Projects</h2>
+<p>A mix of research prototypes, safety systems and end-to-end engineering projects.</p>
+</div>
+<div class="project-grid">
+<article class="project-card">
+<span class="project-type">Aviation safety · Best Paper</span>
+<h3>Lightning-Strike Risk Prediction</h3>
+<p>Real-time flight-risk prediction using aircraft data, weather-aware temporal modelling and route visualisation.</p>
+<div class="project-tags"><span class="tag">BiLSTM</span><span class="tag">PPO</span><span class="tag">React</span><span class="tag">Leaflet</span></div>
+<a class="project-link" href="https://github.com/asifa1510/LightningStrikeRisk" rel="noopener noreferrer" target="_blank">View project →</a>
+</article>
+<article class="project-card">
+<span class="project-type">Adversarial machine learning</span>
+<h3>DiffQuantumQR</h3>
+<p>Secure QR classification using diffusion-guided purification, contrastive learning and adversarial robustness evaluation.</p>
+<div class="project-tags"><span class="tag">Diffusion</span><span class="tag">U-Net</span><span class="tag">Contrastive Learning</span></div>
+<a class="project-link" href="https://github.com/asifa1510" rel="noopener noreferrer" target="_blank">Explore GitHub →</a>
+</article>
+<article class="project-card">
+<span class="project-type">Surgical intelligence</span>
+<h3>Surgical Error Prediction in Robotic-Assisted Cholecystectomy (Ongoing)</h3>
+<p>Investigating temporal deep learning methods for anticipating adverse surgical events from surgical video and workflow signals.</p>
+<div class="project-tags"><span class="tag">Time Series</span><span class="tag">Deep Learning</span><span class="tag">Cholec80</span></div>
+<a class="project-link" href="https://github.com/asifa1510/PredictingRoboticMalfunctions" rel="noopener noreferrer" target="_blank">View project →</a>
+</article>
+<article class="project-card">
+<span class="project-type">Agentic AI</span>
+<h3>MemoGPT</h3>
+<p>A local RAG assistant with semantic search, persistent memory, context management and tool-supported reasoning.</p>
+<div class="project-tags"><span class="tag">RAG</span><span class="tag">LLMs</span><span class="tag">Vector Search</span></div>
+<a class="project-link" href="https://github.com/asifa1510/MemoGPT" rel="noopener noreferrer" target="_blank">View project →</a>
+</article>
+<article class="project-card">
+<span class="project-type">Sequence modelling</span>
+<h3>Liquid Neural Networks from Scratch</h3>
+<p>A ground-up implementation created to understand continuous-time neural dynamics beyond high-level libraries.</p>
+<div class="project-tags"><span class="tag">Python</span><span class="tag">Liquid Networks</span><span class="tag">Sequential Data</span></div>
+<a class="project-link" href="https://github.com/asifa1510/LNN" rel="noopener noreferrer" target="_blank">View project →</a>
+</article>
+<article class="project-card">
+<span class="project-type">Assistive edge AI</span>
+<h3>Neuro-Assist</h3>
+<p>An offline assistive platform using ESP32 wearables and AI glasses for communication, fall alerts and OCR support.</p>
+<div class="project-tags"><span class="tag">ESP32</span><span class="tag">Edge AI</span><span class="tag">OCR</span></div>
+<a class="project-link" href="https://github.com/asifa1510" rel="noopener noreferrer" target="_blank">Explore GitHub →</a>
+</article>
+</div>
+</div>
+</section><section aria-label="Recognition" class="section section-alt" id="awards">
+<div class="container">
+<div class="section-heading">
+<span class="section-label">Recognition</span>
+<h2>Awards and Recognition</h2>
+</div>
+<div class="recognition-grid">
+<article class="recognition-card"><h3>IEEE RFCoN 2025 Best Paper Award</h3><p>Recognised for research on lightning-strike risk prediction for aviation safety.</p></article>
+<article class="recognition-card"><h3>NUS IRIS Summer Research Intern</h3><p>Selected for the international research programme at the National University of Singapore.</p></article>
+<article class="recognition-card"><h3>DevsHouse’24 Finalist</h3><p>Top 7.5% of 800+ teams with an eye-gaze-controlled assistive communication system.</p></article>
+<article class="recognition-card"><h3>National Hackathon Finalist</h3><p>Finalist at HackHub’25 and Glytch 2025 for applied AI and assistive-technology prototypes.</p></article>
+</div>
+</div>
+</section><section class="section" id="skills">
+<div class="container">
+<div class="section-heading">
+<span class="section-label">Skills</span>
+<h2>Technical Skills</h2>
+</div>
+<div class="skills-grid">
+<article class="skill-card">
+<h3>AI &amp; Temporal Modelling</h3>
+<div class="skill-tags"><span>PyTorch</span><span>Scikit-learn</span><span>Mamba</span><span>LSTM / BiLSTM</span><span>Clustering</span><span>U-Net</span><span>PPO</span></div>
+</article>
+<article class="skill-card">
+<h3>Scientific Machine Learning</h3>
+<div class="skill-tags"><span>Physics-Informed ML</span><span>Symbolic Regression</span><span>GMM</span><span>Dynamical Systems</span><span>Simulation</span><span>Ablation Studies</span></div>
+</article>
+<article class="skill-card">
+<h3>Generative &amp; Agentic AI</h3>
+<div class="skill-tags"><span>LLMs</span><span>RAG</span><span>Vector Databases</span><span>Embeddings</span><span>Semantic Retrieval</span><span>Tool Calling</span></div>
+</article>
+<article class="skill-card">
+<h3>Development &amp; Systems</h3>
+<div class="skill-tags"><span>Python</span><span>C++</span><span>Java</span><span>SQL</span><span>JavaScript</span><span>React</span><span>Docker</span><span>Git</span><span>Linux</span></div>
+</article>
+</div>
+</div>
+</section><section class="section" id="contact">
+<div class="container">
+<div class="contact-card">
+<div>
+<span class="section-label">Contact</span>
+<h2>Let’s work on meaningful AI research.</h2>
+<p>I welcome enquiries about research collaborations and internship opportunities in artificial intelligence and machine learning.</p>
+</div>
+<div class="contact-actions">
+<a class="btn btn-primary" href="mailto:asifa.s2004@gmail.com">Email me</a>
+<a class="btn btn-secondary" href="https://www.linkedin.com/in/s-asifa-896741250/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+</div>
+</div>
+</div>
+</section></main><footer>
+<div class="container footer-inner">
+<p>© <span id="year">2026</span> Asifa S.</p>
+<div class="footer-links">
+<a href="https://www.linkedin.com/in/s-asifa-896741250/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a href="https://github.com/asifa1510" rel="noopener noreferrer" target="_blank">GitHub</a>
+<a href="mailto:asifa.s2004@gmail.com">Email</a>
+</div>
+</div>
+</footer><script>document.getElementById('year').textContent=new Date().getFullYear();</script></body>
 </html>

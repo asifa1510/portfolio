@@ -1,207 +1,2308 @@
-<!DOCTYPE html> 
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Portfolio of Asifa S — AI researcher and software engineering student working on scientific machine learning, temporal modelling and interpretable AI." name="description"/>
-<meta content="#191919" name="theme-color"/>
-<meta content="Asifa S | AI Research &amp; Software Engineering" property="og:title"/>
-<meta content="Research, projects, publications and experience in AI, scientific machine learning and software engineering." property="og:description"/>
-<meta content="assets/nus-talk.jpg" property="og:image"/>
-<meta content="website" property="og:type"/>
-<title>Asifa S | Portfolio</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Asifa S | Research</title>
+
+<meta name="description" content="Academic homepage of Asifa S. Research interests in scientific machine learning, temporal modelling, interpretable AI and intelligent systems.">
+
 <style>
-*{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:105px} body{margin:0;background:white;color:#303030;font:16px/1.55 Arial,Helvetica,sans-serif} a{color:#007bbd;text-decoration:none} a:hover{text-decoration:underline} img{max-width:100%;display:block} .container{width:min(1460px,calc(100% - 48px));margin:auto} .site-nav{background:#191919;color:white;position:sticky;top:0;z-index:10} .nav-inner{display:flex;align-items:center;gap:28px;min-height:52px;flex-wrap:wrap} .brand{font-size:25px;font-weight:bold;color:#ccc} .nav-inner a:not(.brand){color:#eee;font-weight:bold;font-size:15px} .subnav{position:sticky;top:52px;background:#fafafa;border-bottom:1px solid #ddd;z-index:9} .subnav .container{display:flex;gap:25px;flex-wrap:wrap;min-height:48px;align-items:center} .subnav a{padding:10px 0} main.container{padding-top:20px} .bio-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:36px;align-items:start} h1{font-size:38px;text-align:center;margin:0 0 22px;padding-bottom:15px;border-bottom:1px solid #ddd} h2{font-size:25px;margin:0 0 12px;border-bottom:1px solid #ddd;padding-bottom:8px} h3{font-size:18px;margin:0 0 6px} p{margin:0 0 12px} .bio-row{display:flex;gap:20px;align-items:flex-start;padding:4px 0 22px;border-bottom:1px solid #ddd} .hero-photo{margin:0;flex:0 0 250px} .hero-photo img{width:250px;height:265px;object-fit:cover;object-position:63% center;border:1px solid #aaa;box-shadow:2px 3px 8px #0002} .photo-caption{font-size:12px;color:#666;margin-top:7px} .social-links{display:flex;flex-wrap:wrap;gap:13px;margin-top:15px} .interests{margin:20px 0} .sidebar{background:#f5f5f5;border:1px solid #ddd;border-radius:4px;padding:18px} .sidebar h2{text-align:center;font-size:21px} .sidebar article{padding:14px 0;border-bottom:1px solid #ddd} .sidebar article:last-child{border:0} .sidebar p{font-size:14px;color:#555;margin:0} .notice{border-left:3px solid #007bbd;background:#f4f4f4;padding:16px 20px;margin:18px 0} .section{padding:25px 0} .section .container{width:100%} .section-label,.publication-number,.project-type{font-size:12px;color:#666} .section-label{display:none} .section-heading>p{color:#666} .research-main{display:grid;grid-template-columns:1.4fr 1fr;gap:25px} .tag-row,.project-tags,.skill-tags{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0} .tag,.skill-tags span{font-size:12px;background:#f3f3f3;padding:3px 7px;color:#555} .detail-row{display:grid;grid-template-columns:90px 1fr;gap:10px;margin:5px 0;font-size:14px} dt{font-weight:bold} dd{margin:0} .research-results{display:flex;flex-wrap:wrap;gap:20px;border-top:1px solid #ddd;padding-top:12px} .result strong{display:block;color:#007bbd;font-size:20px} .result span{font-size:13px} .project-card,.publication,.skill-card,.recognition-card{display:block;border-bottom:1px solid #ddd;padding:15px 0} .project-card h3,.publication h3{color:#007bbd} .project-card p,.publication p{margin:5px 0} .publication-badge{font-size:12px;color:#555} .publication-number{display:none} .project-link{font-size:14px} .contact-actions,.footer-links{display:flex;gap:16px;flex-wrap:wrap} footer{border-top:1px solid #ddd;margin-top:25px;padding:20px 0;color:#666;font-size:13px} .footer-inner{display:flex;justify-content:space-between;gap:15px} .news{padding-left:20px} .news li{margin:6px 0} @media(max-width:950px){.bio-layout{grid-template-columns:1fr}.sidebar{display:none}} @media(max-width:600px){.container{width:calc(100% - 28px)} .nav-inner{gap:14px}.subnav{position:static}.subnav .container{gap:14px}.bio-row{flex-direction:column}.hero-photo{flex:auto}.research-main{grid-template-columns:1fr}.footer-inner{flex-direction:column}h1{font-size:32px}}
+:root {
+    --blue: #0085c8;
+    --text: #303030;
+    --muted: #666666;
+    --border: #dddddd;
+    --light: #f5f5f5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    background: #ffffff;
+    color: var(--text);
+}
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 86%;
+    max-width: 1460px;
+    margin: 0 auto;
+}
+
+/* =========================
+   TOP NAVIGATION
+========================= */
+
+.top-nav {
+    background: #191919;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    min-height: 53px;
+}
+
+.brand {
+    color: #aaaaaa;
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+.brand:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: stretch;
+}
+
+.nav-links a {
+    color: #aaaaaa;
+    font-weight: bold;
+    padding: 15px 16px;
+    font-size: 15px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: #080808;
+    color: white;
+    text-decoration: none;
+}
+
+/* =========================
+   SECONDARY NAVIGATION
+========================= */
+
+.sub-nav {
+    position: sticky;
+    top: 53px;
+    z-index: 999;
+    background: #fafafa;
+    border-bottom: 1px solid var(--border);
+}
+
+.sub-nav-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.sub-nav a {
+    padding: 13px 18px;
+    font-size: 15px;
+    border-bottom: 3px solid transparent;
+}
+
+.sub-nav a.active,
+.sub-nav a:hover {
+    background: #eef5f9;
+    border-bottom-color: var(--blue);
+    text-decoration: none;
+}
+
+/* =========================
+   GENERAL TYPOGRAPHY
+========================= */
+
+main {
+    padding-top: 22px;
+}
+
+h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 0 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+h2 {
+    font-size: 26px;
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+}
+
+p {
+    margin: 0 0 13px;
+}
+
+section {
+    padding: 25px 0;
+}
+
+.small {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* =========================
+   BIOGRAPHY
+========================= */
+
+.home-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 350px;
+    gap: 38px;
+    align-items: start;
+}
+
+.bio {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--border);
+}
+
+.profile {
+    flex: 0 0 250px;
+    margin: 0;
+}
+
+.profile img {
+    display: block;
+    width: 250px;
+    height: 265px;
+    object-fit: cover;
+    object-position: 63% center;
+    border: 1px solid #999999;
+    box-shadow: 3px 4px 9px #00000025;
+}
+
+.profile figcaption {
+    font-size: 12px;
+    color: #777777;
+    margin-top: 7px;
+    text-align: center;
+}
+
+.bio-text {
+    flex: 1;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.interests {
+    margin-top: 22px;
+}
+
+.opportunity {
+    background: #f4f4f4;
+    border-left: 3px solid var(--blue);
+    padding: 18px 20px;
+    margin-top: 20px;
+}
+
+.opportunity p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================
+   RESEARCH SIDEBAR
+========================= */
+
+.research-sidebar {
+    background: #f5f5f5;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.research-sidebar h2 {
+    font-size: 22px;
+    text-align: center;
+    border: none;
+    line-height: 1.4;
+}
+
+.interest-card {
+    margin-bottom: 15px;
+}
+
+.interest-card:last-child {
+    margin-bottom: 0;
+}
+
+.interest-card h3 {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.interest-card p {
+    font-size: 13px;
+    color: #555555;
+    text-align: center;
+}
+
+/* =========================
+   NEWS
+========================= */
+
+.news-list {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.news-list li {
+    margin-bottom: 10px;
+}
+
+.news-date {
+    color: #555555;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* =========================
+   RESEARCH & PROJECTS
+========================= */
+
+.research-entry {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    align-items: start;
+    gap: 25px;
+    padding: 23px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.research-entry:last-child {
+    border-bottom: none;
+}
+
+.project-figure {
+    margin: 0;
+    width: 100%;
+}
+
+.project-figure img,
+.project-figure svg {
+    display: block;
+    width: 100%;
+    border: 1px solid #bfc9d2;
+    border-radius: 4px;
+    background: #fafbfc;
+}
+
+.project-figure img {
+    height: 175px;
+    object-fit: contain;
+}
+
+.project-figure figcaption {
+    color: #777777;
+    font-size: 11px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.research-title {
+    color: #007bb5;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.affiliation {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.venue {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 9px;
+}
+
+.award {
+    color: #a12626;
+    font-weight: bold;
+}
+
+.paper-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.paper-links a {
+    font-weight: 500;
+}
+
+.research-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.research-tags span {
+    font-size: 12px;
+    padding: 3px 7px;
+    background: #f1f3f5;
+    color: #555555;
+    border: 1px solid #e1e5e8;
+}
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.result strong {
+    display: block;
+    color: #007bb5;
+    font-size: 21px;
+}
+
+.result span {
+    font-size: 12px;
+    color: #666666;
+}
+
+/* =========================
+   PUBLICATIONS
+========================= */
+
+.publication {
+    padding: 17px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.publication:last-child {
+    border-bottom: none;
+}
+
+.publication h3 {
+    font-size: 17px;
+    color: var(--blue);
+}
+
+.publication p {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+/* =========================
+   EXPERIENCE & AWARDS
+========================= */
+
+.experience-item {
+    padding: 16px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.experience-header span {
+    color: #666666;
+    font-size: 14px;
+}
+
+.awards-list {
+    padding-left: 20px;
+}
+
+.awards-list li {
+    margin-bottom: 14px;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.skills-table td {
+    padding: 13px 10px;
+    border-bottom: 1px solid #e5e5e5;
+    vertical-align: top;
+}
+
+.skills-table td:first-child {
+    width: 28%;
+    font-weight: bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #f7f7f7;
+    border-top: 1px solid #dddddd;
+    margin-top: 30px;
+    padding: 25px 0;
+    color: #777777;
+    font-size: 13px;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 16px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1100px) {
+    .container {
+        width: 92%;
+    }
+
+    .home-layout {
+        grid-template-columns: minmax(0, 1fr) 280px;
+        gap: 25px;
+    }
+
+    .profile {
+        flex-basis: 200px;
+    }
+
+    .profile img {
+        width: 200px;
+        height: 235px;
+    }
+}
+
+@media (max-width: 850px) {
+    .home-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .research-sidebar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .research-sidebar h2 {
+        grid-column: 1 / -1;
+    }
+
+    .research-entry {
+        grid-template-columns: 220px minmax(0, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 92%;
+    }
+
+    .nav-inner {
+        flex-wrap: wrap;
+    }
+
+    .brand {
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .sub-nav {
+        position: static;
+    }
+
+    .sub-nav a {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    .bio {
+        flex-direction: column;
+    }
+
+    .profile {
+        flex-basis: auto;
+        margin: auto;
+    }
+
+    .profile img {
+        width: 230px;
+        height: 250px;
+    }
+
+    .research-entry {
+        grid-template-columns: 1fr;
+    }
+
+    .project-figure {
+        max-width: 350px;
+    }
+
+    .research-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .skills-table td {
+        display: block;
+        width: 100% !important;
+    }
+}
 </style>
 </head>
-<body><nav class="site-nav"><div class="container nav-inner"><a class="brand" href="#home">Asifa S</a><a href="#home">Home</a><a href="#publications">Publications</a><a href="assets/AsifaS_resume.pdf">CV</a></div></nav><nav aria-label="Sections" class="subnav"><div class="container"><a href="#home">Bio</a><a href="#news">News</a><a href="#research">Research</a><a href="#projects">Projects</a><a href="#awards">Awards</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav><main class="container" id="home"><div class="bio-layout"><div><h1>Asifa S</h1><div class="bio-row"><figure class="hero-photo">
-<img alt="Asifa presenting her research at the National University of Singapore" src="assets/nus-talk.jpg"/>
-<figcaption class="photo-caption">
-<strong>Presenting my research at NUS</strong>
-            Physics-Informed Hidden Regime Discovery · 2026
-          </figcaption>
-</figure><div><p>I am an Integrated M.Tech student in Software Engineering at <a href="https://chennai.vit.ac.in/">VIT Chennai</a>.</p><p>I was a summer research intern at the <a href="https://www.nus.edu.sg/">National University of Singapore</a> through the IRIS programme, advised by Assoc. Prof. Lakshminarayanan Samavedham. My work investigated physics-informed temporal learning and interpretable modelling of nonlinear reactor dynamics.</p><p>I am interested in developing machine learning methods that help us understand complex systems and their behaviour.</p><div class="social-links">
-<a href="https://www.linkedin.com/in/s-asifa-896741250/" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a>
-<a href="https://github.com/asifa1510" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
-<a href="https://scholar.google.com/scholar?q=%22S+Asifa%22" rel="noopener noreferrer" target="_blank">Google Scholar ↗</a>
-<a href="mailto:asifa.s2004@gmail.com">Email ↗</a>
-</div><a href="assets/AsifaS_resume.pdf">Curriculum Vitae (PDF)</a></div></div><p class="interests"><strong>Research Interests:</strong> Scientific Machine Learning; Temporal Representation Learning; Interpretable AI; Agentic and Retrieval-Augmented AI.</p><div class="notice"><strong>Research opportunities</strong><p>I am interested in research collaborations and internships in machine learning and artificial intelligence.</p></div><section class="section" id="news"><h2>News</h2><ul class="news"><li><strong>Jul 2026:</strong> Completed my summer research internship at NUS.</li><li><strong>2025:</strong> Received the Best Paper Award at IEEE RFCoN.</li></ul></section></div><aside class="sidebar"><h2>Research Interests</h2><article><h3>Scientific Machine Learning</h3><p>Physics-informed learning and nonlinear dynamical systems.</p></article><article><h3>Temporal Learning</h3><p>Hidden-state discovery and sequential representations.</p></article><article><h3>Interpretable AI</h3><p>Symbolic regression and interpretable local dynamics.</p></article><article><h3>Agentic AI</h3><p>Retrieval, memory and tool-supported reasoning.</p></article></aside></div><section class="section" id="research">
-<div class="container">
-<div class="section-heading">
-<span class="section-label">Featured research</span>
-<h2>Selected Research</h2>
-<p>Research completed during the NUS IRIS Summer Research Programme.</p>
+
+<body>
+
+<!-- =========================
+     TOP NAVIGATION
+========================== -->
+
+<nav class="top-nav">
+    <div class="container nav-inner">
+
+        <a class="brand" href="#home">
+            Asifa S
+        </a>
+
+        <div class="nav-links">
+            <a class="active" href="#home">Home</a>
+            <a href="#publications">Publications</a>
+            <a href="assets/AsifaS_resume.pdf"
+               target="_blank">CV</a>
+        </div>
+
+    </div>
+</nav>
+
+<nav class="sub-nav">
+    <div class="container sub-nav-inner">
+        <a class="active" href="#home">Bio</a>
+        <a href="#news">News</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<main class="container">
+
+<!-- =========================
+     BIOGRAPHY
+========================== -->
+
+<div class="home-layout" id="home">
+
+    <div class="main-bio">
+
+        <h1>Asifa S</h1>
+
+        <div class="bio">
+
+            <figure class="profile">
+                <img
+                    src="assets/nus-talk.jpg"
+                    alt="Asifa S presenting research at NUS">
+
+                <figcaption>
+                    Research presentation at NUS, 2026
+                </figcaption>
+            </figure>
+
+            <div class="bio-text">
+
+                <p>
+                    I am a final-year Integrated M.Tech student
+                    in Software Engineering at
+                    <a href="https://chennai.vit.ac.in/"
+                       target="_blank">
+                        Vellore Institute of Technology, Chennai.
+                    </a>
+                </p>
+
+                <p>
+                    Previously, I was a summer research intern at the
+                    <a href="https://www.nus.edu.sg/"
+                       target="_blank">
+                        National University of Singapore
+                    </a>
+                    through the IRIS programme, advised by
+                    Assoc. Prof. Lakshminarayanan Samavedham.
+                    My research involved physics-informed temporal
+                    modelling, hidden regime discovery and
+                    interpretable learning for nonlinear
+                    dynamical systems.
+                </p>
+
+                <p>
+                    I have also collaborated on AI research at
+                    <a href="https://www.ntu.edu.sg/"
+                       target="_blank">
+                        Nanyang Technological University,
+                    </a>
+                    Singapore.
+                </p>
+
+                <p>
+                    I am interested in understanding how machine
+                    learning systems learn, reason and represent
+                    complex real-world phenomena.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="mailto:asifa.s2004@gmail.com">
+                        Email
+                    </a>
+
+                    <a href="assets/AsifaS_resume.pdf"
+                       target="_blank">
+                        CV
+                    </a>
+
+                    <a href="https://github.com/asifa1510"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/s-asifa-896741250/"
+                       target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://scholar.google.com/scholar?q=%22S+Asifa%22"
+                       target="_blank">
+                        Google Scholar
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="interests">
+
+            <p>
+                <strong>Research Interests:</strong>
+                Scientific Machine Learning;
+                Temporal Representation Learning;
+                Interpretable AI;
+                Agentic AI;
+                Intelligent Systems.
+            </p>
+
+            <p>
+                My current interests lie in developing learning
+                methods that capture meaningful representations,
+                generalize across different environments and
+                provide interpretable insights into complex systems.
+            </p>
+
+        </div>
+
+        <div class="opportunity">
+
+            <strong>Research Opportunities</strong>
+
+            <p>
+                I am interested in research collaborations and
+                internship opportunities in artificial intelligence
+                and machine learning. Please feel free to
+                <a href="mailto:asifa.s2004@gmail.com">
+                    contact me.
+                </a>
+            </p>
+
+        </div>
+
+        <!-- NEWS -->
+
+        <section id="news">
+
+            <h2>News</h2>
+
+            <ul class="news-list">
+
+                <li>
+                    <span class="news-date">[Jul 2026]</span>
+                    Completed my summer research internship at
+                    the National University of Singapore.
+                </li>
+
+                <li>
+                    <span class="news-date">[May 2026]</span>
+                    Joined NUS as an IRIS Summer Research Intern.
+                </li>
+
+                <li>
+                    <span class="news-date">[2025]</span>
+                    Received the
+                    <strong>Best Paper Award</strong>
+                    at IEEE RFCoN 2025.
+                </li>
+
+                <li>
+                    <span class="news-date">[2025]</span>
+                    Research on secure QR code classification
+                    published at IEEE iConSCEPT.
+                </li>
+
+                <li>
+                    <span class="news-date">[2024]</span>
+                    Selected as a finalist at DevsHouse'24.
+                </li>
+
+            </ul>
+
+        </section>
+
+    </div>
+
+    <!-- RESEARCH INTEREST SIDEBAR -->
+
+    <aside class="research-sidebar">
+
+        <h2>Visualization of Research Interests</h2>
+
+        <div class="interest-card">
+
+            <figure class="project-figure"
+                    data-kind="science">
+            </figure>
+
+            <h3>Scientific Machine Learning</h3>
+
+            <p>
+                Physical systems, nonlinear dynamics and
+                physics-informed representations.
+            </p>
+
+        </div>
+
+        <div class="interest-card">
+
+            <figure class="project-figure"
+                    data-kind="temporal">
+            </figure>
+
+            <h3>Temporal Learning</h3>
+
+            <p>
+                State-space models, sequence representations
+                and forecasting.
+            </p>
+
+        </div>
+
+        <div class="interest-card">
+
+            <figure class="project-figure"
+                    data-kind="regime">
+            </figure>
+
+            <h3>Interpretable AI</h3>
+
+            <p>
+                Hidden-state discovery and symbolic modelling.
+            </p>
+
+        </div>
+
+        <div class="interest-card">
+
+            <figure class="project-figure"
+                    data-kind="agent">
+            </figure>
+
+            <h3>Agentic AI</h3>
+
+            <p>
+                Reasoning, retrieval, memory and intelligent agents.
+            </p>
+
+        </div>
+
+    </aside>
+
 </div>
-<article class="research-card">
-<div class="research-main">
-<div>
-<div class="tag-row">
-<span class="tag">Physics-Informed AI</span>
-<span class="tag">Mamba</span>
-<span class="tag">GMM Clustering</span>
-<span class="tag">Symbolic Regression</span>
-</div>
-<h3>Hidden Regime Discovery and Local Symbolic Law Learning for Semi-batch Reactors</h3>
-<p>
-                The Chylla–Haase reactor moves through several nonlinear operating behaviours. Instead of using one global equation for the complete process, I developed a framework that learns temporal representations, discovers eight hidden operating regimes and derives separate readable equations for temperature-change dynamics inside each regime.
-              </p>
-</div>
-<dl class="research-details">
-<div class="detail-row"><dt>Institution</dt><dd>National University of Singapore</dd></div>
-<div class="detail-row"><dt>Programme</dt><dd>NUS IRIS Summer Research Internship</dd></div>
-<div class="detail-row"><dt>Advisor</dt><dd>Assoc. Prof. Lakshminarayanan Samavedham</dd></div>
-<div class="detail-row"><dt>Period</dt><dd>May – July 2026</dd></div>
-</dl>
-</div>
-<div class="research-results">
-<div class="result"><strong>220</strong><span>validated reactor trajectories</span></div>
-<div class="result"><strong>8</strong><span>unlabelled hidden regimes</span></div>
-<div class="result"><strong>43.4%</strong><span>lower test RMSE</span></div>
-<div class="result"><strong>17.6%</strong><span>lower OOD RMSE</span></div>
-</div>
-</article>
-</div>
-</section><section class="section" id="publications">
-<div class="container">
-<div class="section-heading">
-<span class="section-label">Publications</span>
-<h2>Publications</h2>
-<p>Peer-reviewed work across AI, security and aviation safety.</p>
-</div>
-<div class="publication-list">
-<a class="publication" href="https://scholar.google.com/scholar?q=%22Diffusion-Guided+Quantum-Aware+Contrastive+Learning+for+Secure+QR+Code+Classification%22" rel="noopener noreferrer" target="_blank">
-<span class="publication-number">01</span>
-<div><h3>Diffusion-Guided Quantum-Aware Contrastive Learning for Secure QR Code Classification</h3><p>IEEE iConSCEPT 2025 · National Institute of Technology Puducherry</p></div>
-<span class="publication-badge">IEEE</span>
-</a>
-<a class="publication" href="https://scholar.google.com/scholar?q=%22Lightning-Strike+Risk+Prediction+for+Aviation+Safety%22" rel="noopener noreferrer" target="_blank">
-<span class="publication-number">02</span>
-<div><h3>Lightning-Strike Risk Prediction for Aviation Safety</h3><p>IEEE RFCoN 2025 · Best Paper Award</p></div>
-<span class="publication-badge">Best Paper</span>
-</a>
-<a class="publication" href="https://scholar.google.com/scholar?q=%22Payable+Outsourced+Decryption+for+Functional+Encryption+using+Blockchain%22" rel="noopener noreferrer" target="_blank">
-<span class="publication-number">03</span>
-<div><h3>Payable Outsourced Decryption for Functional Encryption using Blockchain</h3><p>ICAIOT 2023 · Springer Nature</p></div>
-<span class="publication-badge">Springer</span>
-</a>
-</div>
-</div>
-</section><section class="section section-alt" id="projects">
-<div class="container">
-<div class="section-heading">
-<span class="section-label">Selected projects</span>
-<h2>Selected Projects</h2>
-<p>A mix of research prototypes, safety systems and end-to-end engineering projects.</p>
-</div>
-<div class="project-grid">
-<article class="project-card">
-<span class="project-type">Aviation safety · Best Paper</span>
-<h3>Lightning-Strike Risk Prediction</h3>
-<p>Real-time flight-risk prediction using aircraft data, weather-aware temporal modelling and route visualisation.</p>
-<div class="project-tags"><span class="tag">BiLSTM</span><span class="tag">PPO</span><span class="tag">React</span><span class="tag">Leaflet</span></div>
-<a class="project-link" href="https://github.com/asifa1510/LightningStrikeRisk" rel="noopener noreferrer" target="_blank">View project →</a>
-</article>
-<article class="project-card">
-<span class="project-type">Adversarial machine learning</span>
-<h3>DiffQuantumQR</h3>
-<p>Secure QR classification using diffusion-guided purification, contrastive learning and adversarial robustness evaluation.</p>
-<div class="project-tags"><span class="tag">Diffusion</span><span class="tag">U-Net</span><span class="tag">Contrastive Learning</span></div>
-<a class="project-link" href="https://github.com/asifa1510" rel="noopener noreferrer" target="_blank">Explore GitHub →</a>
-</article>
-<article class="project-card">
-<span class="project-type">Surgical intelligence</span>
-<h3>Surgical Error Prediction in Robotic-Assisted Cholecystectomy (Ongoing)</h3>
-<p>Investigating temporal deep learning methods for anticipating adverse surgical events from surgical video and workflow signals.</p>
-<div class="project-tags"><span class="tag">Time Series</span><span class="tag">Deep Learning</span><span class="tag">Cholec80</span></div>
-<a class="project-link" href="https://github.com/asifa1510/PredictingRoboticMalfunctions" rel="noopener noreferrer" target="_blank">View project →</a>
-</article>
-<article class="project-card">
-<span class="project-type">Agentic AI</span>
-<h3>MemoGPT</h3>
-<p>A local RAG assistant with semantic search, persistent memory, context management and tool-supported reasoning.</p>
-<div class="project-tags"><span class="tag">RAG</span><span class="tag">LLMs</span><span class="tag">Vector Search</span></div>
-<a class="project-link" href="https://github.com/asifa1510/MemoGPT" rel="noopener noreferrer" target="_blank">View project →</a>
-</article>
-<article class="project-card">
-<span class="project-type">Sequence modelling</span>
-<h3>Liquid Neural Networks from Scratch</h3>
-<p>A ground-up implementation created to understand continuous-time neural dynamics beyond high-level libraries.</p>
-<div class="project-tags"><span class="tag">Python</span><span class="tag">Liquid Networks</span><span class="tag">Sequential Data</span></div>
-<a class="project-link" href="https://github.com/asifa1510/LNN" rel="noopener noreferrer" target="_blank">View project →</a>
-</article>
-<article class="project-card">
-<span class="project-type">Assistive edge AI</span>
-<h3>Neuro-Assist</h3>
-<p>An offline assistive platform using ESP32 wearables and AI glasses for communication, fall alerts and OCR support.</p>
-<div class="project-tags"><span class="tag">ESP32</span><span class="tag">Edge AI</span><span class="tag">OCR</span></div>
-<a class="project-link" href="https://github.com/asifa1510" rel="noopener noreferrer" target="_blank">Explore GitHub →</a>
-</article>
-</div>
-</div>
-</section><section aria-label="Recognition" class="section section-alt" id="awards">
-<div class="container">
-<div class="section-heading">
-<span class="section-label">Recognition</span>
-<h2>Awards and Recognition</h2>
-</div>
-<div class="recognition-grid">
-<article class="recognition-card"><h3>IEEE RFCoN 2025 Best Paper Award</h3><p>Recognised for research on lightning-strike risk prediction for aviation safety.</p></article>
-<article class="recognition-card"><h3>NUS IRIS Summer Research Intern</h3><p>Selected for the international research programme at the National University of Singapore.</p></article>
-<article class="recognition-card"><h3>DevsHouse’24 Finalist</h3><p>Top 7.5% of 800+ teams with an eye-gaze-controlled assistive communication system.</p></article>
-<article class="recognition-card"><h3>National Hackathon Finalist</h3><p>Finalist at HackHub’25 and Glytch 2025 for applied AI and assistive-technology prototypes.</p></article>
-</div>
-</div>
-</section><section class="section" id="skills">
-<div class="container">
-<div class="section-heading">
-<span class="section-label">Skills</span>
-<h2>Technical Skills</h2>
-</div>
-<div class="skills-grid">
-<article class="skill-card">
-<h3>AI &amp; Temporal Modelling</h3>
-<div class="skill-tags"><span>PyTorch</span><span>Scikit-learn</span><span>Mamba</span><span>LSTM / BiLSTM</span><span>Clustering</span><span>U-Net</span><span>PPO</span></div>
-</article>
-<article class="skill-card">
-<h3>Scientific Machine Learning</h3>
-<div class="skill-tags"><span>Physics-Informed ML</span><span>Symbolic Regression</span><span>GMM</span><span>Dynamical Systems</span><span>Simulation</span><span>Ablation Studies</span></div>
-</article>
-<article class="skill-card">
-<h3>Generative &amp; Agentic AI</h3>
-<div class="skill-tags"><span>LLMs</span><span>RAG</span><span>Vector Databases</span><span>Embeddings</span><span>Semantic Retrieval</span><span>Tool Calling</span></div>
-</article>
-<article class="skill-card">
-<h3>Development &amp; Systems</h3>
-<div class="skill-tags"><span>Python</span><span>C++</span><span>Java</span><span>SQL</span><span>JavaScript</span><span>React</span><span>Docker</span><span>Git</span><span>Linux</span></div>
-</article>
-</div>
-</div>
-</section><section class="section" id="contact">
-<div class="container">
-<div class="contact-card">
-<div>
-<span class="section-label">Contact</span>
-<h2>Let’s work on meaningful AI research.</h2>
-<p>I welcome enquiries about research collaborations and internship opportunities in artificial intelligence and machine learning.</p>
-</div>
-<div class="contact-actions">
-<a class="btn btn-primary" href="mailto:asifa.s2004@gmail.com">Email me</a>
-<a class="btn btn-secondary" href="https://www.linkedin.com/in/s-asifa-896741250/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-</div>
-</div>
-</div>
-</section></main><footer>
-<div class="container footer-inner">
-<p>© <span id="year">2026</span> Asifa S.</p>
-<div class="footer-links">
-<a href="https://www.linkedin.com/in/s-asifa-896741250/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-<a href="https://github.com/asifa1510" rel="noopener noreferrer" target="_blank">GitHub</a>
-<a href="mailto:asifa.s2004@gmail.com">Email</a>
-</div>
-</div>
-</footer><script>document.getElementById('year').textContent=new Date().getFullYear();</script></body>
+
+<!-- =========================
+     RESEARCH
+========================== -->
+
+<section id="research">
+
+    <h2>Selected Research</h2>
+
+    <article class="research-entry">
+
+        <figure class="project-figure"
+                data-kind="regime"
+                data-image="assets/projects/nus-research.png">
+        </figure>
+
+        <div>
+
+            <h3 class="research-title">
+                Physics-Informed Hidden Regime Discovery and
+                Local Symbolic Law Learning for Semi-Batch Reactors
+            </h3>
+
+            <div class="affiliation">
+                National University of Singapore |
+                IRIS Summer Research Programme, 2026
+            </div>
+
+            <p>
+                Advisor: Assoc. Prof. Lakshminarayanan Samavedham
+            </p>
+
+            <p>
+                Investigated interpretable temporal modelling of
+                the nonlinear Chylla–Haase polymerization reactor
+                using physics-informed selective state-space models,
+                Gaussian mixture modelling and regime-conditioned
+                symbolic regression.
+            </p>
+
+            <p>
+                The framework discovers latent operating regimes
+                and extracts interpretable local equations
+                describing temperature-change dynamics.
+            </p>
+
+            <div class="results">
+
+                <div class="result">
+                    <strong>396,220</strong>
+                    <span>Observations</span>
+                </div>
+
+                <div class="result">
+                    <strong>220</strong>
+                    <span>Trajectories</span>
+                </div>
+
+                <div class="result">
+                    <strong>8</strong>
+                    <span>Hidden regimes</span>
+                </div>
+
+                <div class="result">
+                    <strong>43.4%</strong>
+                    <span>Test RMSE reduction</span>
+                </div>
+
+                <div class="result">
+                    <strong>17.6%</strong>
+                    <span>OOD RMSE reduction</span>
+                </div>
+
+            </div>
+
+            <div class="research-tags">
+                <span>Scientific ML</span>
+                <span>Mamba</span>
+                <span>GMM</span>
+                <span>Symbolic Regression</span>
+            </div>
+
+        </div>
+
+    </article>
+
+    <article class="research-entry">
+
+        <figure class="project-figure"
+                data-kind="surgery"
+                data-image="assets/projects/surgery.png">
+        </figure>
+
+        <div>
+
+            <h3 class="research-title">
+                Surgical Error Prediction in
+                Robotic-Assisted Cholecystectomy
+            </h3>
+
+            <div class="affiliation">
+                Ongoing Research
+            </div>
+
+            <p>
+                Investigating deep learning methods for anticipating
+                adverse surgical events through surgical scene
+                segmentation, spatiotemporal representation learning,
+                instrument motion analysis, surgical phase recognition
+                and uncertainty estimation.
+            </p>
+
+            <p>
+                Datasets: Cholec80, ECRCD, EndoScapes and SOAR.
+            </p>
+
+            <div class="paper-links">
+
+                <a href="https://github.com/asifa1510/PredictingRoboticMalfunctions"
+                   target="_blank">
+                    [Code]
+                </a>
+
+            </div>
+
+            <div class="research-tags">
+                <span>Computer Vision</span>
+                <span>Temporal Learning</span>
+                <span>Uncertainty Estimation</span>
+            </div>
+
+        </div>
+
+    </article>
+
+</section>
+
+<!-- =========================
+     PUBLICATIONS
+========================== -->
+
+<section id="publications">
+
+    <h2>Publications</h2>
+
+    <article class="research-entry">
+
+        <figure class="project-figure"
+                data-kind="aviation"
+                data-image="assets/projects/lightning.png">
+        </figure>
+
+        <div>
+
+            <h3 class="research-title">
+                Lightning-Strike Risk Prediction for Aviation Safety
+            </h3>
+
+            <p class="venue">
+                IEEE RFCoN, 2025
+            </p>
+
+            <p class="award">
+                Best Paper Award
+            </p>
+
+            <p>
+                A real-time aviation risk prediction framework
+                integrating aircraft trajectory information,
+                weather data and bidirectional temporal learning
+                to assess lightning-strike risk.
+            </p>
+
+            <div class="paper-links">
+
+                <a href="https://ieeexplore.ieee.org/document/11085355"
+                   target="_blank">
+                    [Paper]
+                </a>
+
+                <a href="https://github.com/asifa1510/LightningStrikeRisk"
+                   target="_blank">
+                    [Code]
+                </a>
+
+                <a href="https://scholar.google.com/scholar?q=Lightning+Strike+Risk+Prediction+for+Aviation+Safety"
+                   target="_blank">
+                    [Scholar]
+                </a>
+
+            </div>
+
+        </div>
+
+    </article>
+
+    <article class="research-entry">
+
+        <figure class="project-figure"
+                data-kind="qr"
+                data-image="assets/projects/diffquantumqr.png">
+        </figure>
+
+        <div>
+
+            <h3 class="research-title">
+                Diffusion-Guided Quantum-Aware Contrastive
+                Learning for Secure QR Code Classification
+            </h3>
+
+            <p class="venue">
+                IEEE iConSCEPT, 2025
+            </p>
+
+            <p>
+                A secure QR classification framework combining
+                diffusion-guided purification and quantum-aware
+                contrastive learning to improve robustness
+                against adversarial perturbations.
+            </p>
+
+            <div class="paper-links">
+
+                <a href="https://doi.org/10.1109/IConSCEPT66142.2025.11436838"
+                   target="_blank">
+                    [Paper]
+                </a>
+
+                <a href="https://github.com/asifa1510"
+                   target="_blank">
+                    [GitHub]
+                </a>
+
+                <a href="https://scholar.google.com/scholar?q=Diffusion+Guided+Quantum+Aware+Contrastive+Learning+for+Secure+QR+Code+Classification"
+                   target="_blank">
+                    [Scholar]
+                </a>
+
+            </div>
+
+        </div>
+
+    </article>
+
+    <article class="research-entry">
+
+        <figure class="project-figure"
+                data-kind="security"
+                data-image="assets/projects/fepod.png">
+        </figure>
+
+        <div>
+
+            <h3 class="research-title">
+                Payable Outsourced Decryption for Functional
+                Encryption using Blockchain
+            </h3>
+
+            <p class="venue">
+                ICAIOT 2023, Springer Nature
+            </p>
+
+            <p>
+                Research on outsourced functional decryption
+                and blockchain-based payment mechanisms.
+            </p>
+
+            <div class="paper-links">
+
+                <a href="https://doi.org/10.1007/978-3-031-48774-3_5"
+                   target="_blank">
+                    [Paper]
+                </a>
+
+                <a href="https://scholar.google.com/scholar?q=Payable+Outsourced+Decryption+for+Functional+Encryption+using+Blockchain"
+                   target="_blank">
+                    [Scholar]
+                </a>
+
+            </div>
+
+        </div>
+
+    </article>
+
+</section>
+
+<!-- =========================
+     EXPERIENCE
+========================== -->
+
+<section id="experience">
+
+    <h2>Research Experience</h2>
+
+    <article class="experience-item">
+
+        <div class="experience-header">
+
+            <h3>
+                <a href="https://www.nus.edu.sg/"
+                   target="_blank">
+                    National University of Singapore
+                </a>
+            </h3>
+
+            <span>May – July 2026</span>
+
+        </div>
+
+        <p>
+            <strong>IRIS Summer Research Intern</strong>
+        </p>
+
+        <p>
+            Physics-informed machine learning, selective
+            state-space models, nonlinear dynamical systems
+            and interpretable symbolic modelling.
+        </p>
+
+        <p class="small">
+            Advisor: Assoc. Prof. Lakshminarayanan Samavedham
+        </p>
+
+    </article>
+
+    <article class="experience-item">
+
+        <div class="experience-header">
+
+            <h3>
+                <a href="https://www.ntu.edu.sg/"
+                   target="_blank">
+                    Nanyang Technological University
+                </a>
+            </h3>
+
+            <span>2026</span>
+
+        </div>
+
+        <p>
+            <strong>Research Collaborator</strong>
+        </p>
+
+        <p>
+            Contributed to AIView, an AI-based interview
+            analytics system, focusing on human-centred
+            interface development, competency analysis,
+            performance visualization and feedback systems.
+        </p>
+
+    </article>
+
+</section>
+
+<!-- =========================
+     PROJECTS
+========================== -->
+
+<section id="projects">
+
+    <h2>Selected Projects</h2>
+
+    <article class="research-entry">
+
+        <figure class="project-figure"
+                data-kind="agent"
+                data-image="assets/projects/memogpt.png">
+        </figure>
+
+        <div>
+
+            <h3 class="research-title">
+                MemoGPT
+            </h3>
+
+            <p>
+                An agentic retrieval-augmented generation
+                assistant incorporating semantic retrieval,
+                persistent memory, local knowledge storage,
+                context management and tool-supported reasoning.
+            </p>
+
+            <div class="paper-links">
+
+                <a href="https://github.com/asifa1510/MemoGPT"
+                   target="_blank">
+                    [Code]
+                </a>
+
+            </div>
+
+            <div class="research-tags">
+                <span>LLMs</span>
+                <span>Agentic AI</span>
+                <span>RAG</span>
+                <span>Memory</span>
+            </div>
+
+        </div>
+
+    </article>
+
+    <article class="research-entry">
+
+        <figure class="project-figure"
+                data-kind="assistive"
+                data-image="assets/projects/neuro-assist.png">
+        </figure>
+
+        <div>
+
+            <h3 class="research-title">
+                Neuro-Assist
+            </h3>
+
+            <p>
+                An offline assistive intelligence platform
+                integrating wearable sensors, gesture-based
+                communication, fall detection and optical
+                character recognition for accessible interaction.
+            </p>
+
+            <div class="paper-links">
+
+                <a href="https://github.com/asifa1510"
+                   target="_blank">
+                    [GitHub]
+                </a>
+
+            </div>
+
+            <div class="research-tags">
+                <span>ESP32</span>
+                <span>Edge AI</span>
+                <span>IoT</span>
+                <span>Assistive Technology</span>
+            </div>
+
+        </div>
+
+    </article>
+
+    <article class="research-entry">
+
+        <figure class="project-figure"
+                data-kind="network"
+                data-image="assets/projects/network-security.png">
+        </figure>
+
+        <div>
+
+            <h3 class="research-title">
+                PCAP Network Attack Detection
+            </h3>
+
+            <p>
+                Machine learning-based network traffic analysis
+                for identifying anomalous patterns associated
+                with distributed denial-of-service attacks,
+                port scanning and botnet activity.
+            </p>
+
+            <div class="paper-links">
+
+                <a href="https://github.com/asifa1510"
+                   target="_blank">
+                    [GitHub]
+                </a>
+
+            </div>
+
+            <div class="research-tags">
+                <span>Machine Learning</span>
+                <span>Network Security</span>
+                <span>Anomaly Detection</span>
+            </div>
+
+        </div>
+
+    </article>
+
+    <article class="research-entry">
+
+        <figure class="project-figure"
+                data-kind="gaze"
+                data-image="assets/projects/eye-gaze.png">
+        </figure>
+
+        <div>
+
+            <h3 class="research-title">
+                Eye-Gaze Controlled Virtual Keyboard
+            </h3>
+
+            <p>
+                An accessible human-computer interaction system
+                enabling hands-free communication through
+                eye-gaze tracking and virtual keyboard interaction.
+            </p>
+
+            <p class="award">
+                DevsHouse'24 Finalist
+            </p>
+
+            <div class="research-tags">
+                <span>Computer Vision</span>
+                <span>HCI</span>
+                <span>Accessibility</span>
+            </div>
+
+        </div>
+
+    </article>
+
+</section>
+
+<!-- =========================
+     AWARDS
+========================== -->
+
+<section id="awards">
+
+    <h2>Awards and Recognition</h2>
+
+    <ul class="awards-list">
+
+        <li>
+            <strong>IEEE RFCoN 2025 — Best Paper Award</strong>
+            <br>
+            Research on lightning-strike risk prediction
+            for aviation safety.
+        </li>
+
+        <li>
+            <strong>NUS IRIS Summer Research Programme, 2026</strong>
+            <br>
+            Selected as one of 37 participants worldwide
+            from over 4,500 applicants.
+        </li>
+
+        <li>
+            <strong>DevsHouse'24 — Finalist</strong>
+            <br>
+            Top 7.5% of over 800 teams.
+        </li>
+
+        <li>
+            <strong>HackHub'25 — Finalist</strong>
+        </li>
+
+        <li>
+            <strong>Glytch 2025 — Finalist</strong>
+        </li>
+
+    </ul>
+
+</section>
+
+<!-- =========================
+     TECHNICAL SKILLS
+========================== -->
+
+<section id="skills">
+
+    <h2>Technical Skills</h2>
+
+    <table class="skills-table">
+
+        <tr>
+            <td>Machine Learning</td>
+            <td>
+                PyTorch, Scikit-learn, Deep Learning,
+                Mamba, LSTM, BiLSTM, U-Net
+            </td>
+        </tr>
+
+        <tr>
+            <td>Scientific ML</td>
+            <td>
+                Physics-Informed Learning, Symbolic Regression,
+                Dynamical Systems, Gaussian Mixture Models
+            </td>
+        </tr>
+
+        <tr>
+            <td>Generative AI</td>
+            <td>
+                LLMs, RAG, Embeddings, Vector Databases,
+                Semantic Retrieval, Tool Calling
+            </td>
+        </tr>
+
+        <tr>
+            <td>Programming</td>
+            <td>
+                Python, C++, Java, SQL, JavaScript
+            </td>
+        </tr>
+
+        <tr>
+            <td>Development</td>
+            <td>
+                React, Git, Docker, Linux
+            </td>
+        </tr>
+
+    </table>
+
+</section>
+
+<!-- =========================
+     CONTACT
+========================== -->
+
+<section id="contact">
+
+    <h2>Contact</h2>
+
+    <p>
+        I welcome enquiries about research collaborations,
+        internships and opportunities in artificial intelligence
+        and machine learning.
+    </p>
+
+    <p>
+        <strong>Email:</strong>
+        <a href="mailto:asifa.s2004@gmail.com">
+            asifa.s2004@gmail.com
+        </a>
+    </p>
+
+    <p>
+        <strong>Affiliation:</strong>
+        Vellore Institute of Technology, Chennai, India
+    </p>
+
+    <div class="paper-links">
+
+        <a href="https://github.com/asifa1510"
+           target="_blank">
+            GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/s-asifa-896741250/"
+           target="_blank">
+            LinkedIn
+        </a>
+
+        <a href="assets/AsifaS_resume.pdf"
+           target="_blank">
+            Curriculum Vitae
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <span>
+            &copy; <span id="year"></span> Asifa S
+        </span>
+
+        <div class="footer-links">
+
+            <a href="#home">Back to top</a>
+
+            <a href="mailto:asifa.s2004@gmail.com">
+                Email
+            </a>
+
+            <a href="https://github.com/asifa1510"
+               target="_blank">
+                GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- =========================
+     EMBEDDED PROJECT GRAPHICS
+========================== -->
+
+<script>
+
+const palette = [
+    "#497fae",
+    "#d69b5c",
+    "#6d9f85",
+    "#a18ab9",
+    "#c87575",
+    "#71a9ba",
+    "#a4a65e",
+    "#7583a8"
+];
+
+function svgWrap(content) {
+    return `
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 320 190"
+             role="img"
+             aria-label="Conceptual research illustration">
+
+            <rect width="320" height="190"
+                  fill="#f8fafc"/>
+
+            <g font-family="Arial, Helvetica, sans-serif"
+               font-size="11"
+               fill="#344454">
+
+                ${content}
+
+            </g>
+
+        </svg>
+    `;
+}
+
+function arrow(x1, y1, x2, y2) {
+
+    const angle = Math.atan2(y2-y1, x2-x1);
+
+    const a = 6;
+
+    return `
+        <path d="M${x1} ${y1} L${x2} ${y2}"
+              stroke="#758596"
+              stroke-width="1.5"
+              fill="none"/>
+
+        <path d="
+            M${x2} ${y2}
+            L${x2-a*Math.cos(angle-0.5)}
+             ${y2-a*Math.sin(angle-0.5)}
+            L${x2-a*Math.cos(angle+0.5)}
+             ${y2-a*Math.sin(angle+0.5)}
+            Z"
+            fill="#758596"/>
+    `;
+}
+
+function block(x,y,w,h,label,fill="#e5eef6") {
+
+    return `
+        <rect x="${x}" y="${y}"
+              width="${w}" height="${h}"
+              rx="5"
+              fill="${fill}"
+              stroke="#8296a8"/>
+
+        <text x="${x+w/2}"
+              y="${y+h/2+4}"
+              text-anchor="middle">
+
+            ${label}
+
+        </text>
+    `;
+}
+
+function wave(color, offset, amplitude) {
+
+    let d = "";
+
+    for(let x=0; x<=260; x+=3) {
+
+        const y =
+            95 +
+            amplitude *
+            Math.sin(x/22 + offset) +
+            7*Math.cos(x/11);
+
+        d += `${x===0?"M":"L"}${30+x} ${y} `;
+    }
+
+    return `
+        <path d="${d}"
+              stroke="${color}"
+              stroke-width="2"
+              fill="none"/>
+    `;
+}
+
+function makeGraphic(kind) {
+
+    let c = "";
+
+    if(kind === "science") {
+
+        c += `
+            <ellipse cx="65" cy="42"
+                     rx="32" ry="12"
+                     fill="#d7e8f5"
+                     stroke="#6e91ae"/>
+
+            <path d="M33 42 V120
+                     Q65 145 97 120 V42"
+                  fill="#e0edf6"
+                  stroke="#6e91ae"/>
+
+            <ellipse cx="65" cy="120"
+                     rx="32" ry="12"
+                     fill="#c0d8e9"
+                     stroke="#6e91ae"/>
+
+            <path d="M65 15 V105 M50 105 H80"
+                  stroke="#6e91ae"
+                  stroke-width="3"/>
+
+            <text x="65" y="160"
+                  text-anchor="middle">
+                Physical system
+            </text>
+        `;
+
+        c += arrow(105,85,140,85);
+
+        c += block(
+            140,55,70,60,
+            "Learning"
+        );
+
+        c += arrow(210,85,235,85);
+
+        c += `
+            <path d="M235 120 Q245 40 260 75
+                     T290 50"
+                  stroke="#5284b4"
+                  stroke-width="2.5"
+                  fill="none"/>
+
+            <text x="264" y="150"
+                  text-anchor="middle">
+                Dynamics
+            </text>
+        `;
+    }
+
+    else if(kind === "temporal") {
+
+        for(let i=0;i<5;i++) {
+
+            c += `
+                <path d="M30 ${40+i*25}
+                         H290"
+                      stroke="#e1e6eb"/>
+            `;
+        }
+
+        c += `
+            <path d="M30 20 V150 H295"
+                  stroke="#8796a5"
+                  fill="none"/>
+        `;
+
+        c += wave("#4c81b2",0,35);
+        c += wave("#c18c54",1.1,25);
+        c += wave("#79a28a",2.4,18);
+
+        c += `
+            <text x="160" y="175"
+                  text-anchor="middle">
+                Temporal representations
+            </text>
+        `;
+    }
+
+    else if(kind === "regime") {
+
+        for(let i=0;i<8;i++) {
+
+            const cx = 48+(i%4)*74;
+            const cy = 48+Math.floor(i/4)*75;
+
+            c += `
+                <ellipse cx="${cx}" cy="${cy}"
+                         rx="26" ry="23"
+                         fill="${palette[i]}"
+                         opacity="0.12"/>
+            `;
+
+            for(let j=0;j<14;j++) {
+
+                const x =
+                    cx+Math.cos(j*2.4+i)*(8+j%5*3);
+
+                const y =
+                    cy+Math.sin(j*2.4+i)*(6+j%4*3);
+
+                c += `
+                    <circle cx="${x}" cy="${y}"
+                            r="2.7"
+                            fill="${palette[i]}"
+                            opacity="0.85"/>
+                `;
+            }
+
+            c += `
+                <text x="${cx}" y="${cy+34}"
+                      text-anchor="middle"
+                      font-size="10">
+                    R${i}
+                </text>
+            `;
+        }
+
+        c += `
+            <text x="160" y="178"
+                  text-anchor="middle">
+                Conceptual latent regime space
+            </text>
+        `;
+    }
+
+    else if(kind === "agent") {
+
+        c += block(110,12,100,30,"User query");
+
+        c += arrow(160,42,160,65);
+
+        c += block(
+            110,65,100,42,
+            "AI agent","#dceaf6"
+        );
+
+        c += block(
+            10,65,75,42,
+            "Memory","#e1eee5"
+        );
+
+        c += block(
+            235,65,75,42,
+            "Tools","#f2e7d8"
+        );
+
+        c += arrow(110,85,85,85);
+        c += arrow(210,85,235,85);
+
+        c += arrow(160,107,160,135);
+
+        c += block(
+            105,135,110,35,
+            "Response"
+        );
+    }
+
+    else if(kind === "aviation") {
+
+        for(let i=0;i<6;i++) {
+
+            c += `
+                <path d="M0 ${i*35}
+                         H320"
+                      stroke="#e0e8ee"/>
+
+                <path d="M${i*65} 0
+                         V190"
+                      stroke="#e0e8ee"/>
+            `;
+        }
+
+        c += `
+            <ellipse cx="225" cy="60"
+                     rx="55" ry="38"
+                     fill="#e4b4a4"
+                     opacity="0.6"/>
+
+            <ellipse cx="225" cy="60"
+                     rx="35" ry="24"
+                     fill="#ce806a"
+                     opacity="0.55"/>
+
+            <path d="M15 155
+                     Q90 100 140 115
+                     T300 25"
+                  stroke="#477eae"
+                  stroke-width="3"
+                  stroke-dasharray="7 5"
+                  fill="none"/>
+
+            <g transform="translate(135 105)
+                          rotate(-22)">
+
+                <path d="M-20 0 L20 0
+                         L5 -4 L-2 -23
+                         L-7 -23 L-5 -3
+                         L-20 -6 Z
+                         M-5 3 L-2 23
+                         L-7 23 L-10 3 Z"
+                      fill="#3c566e"/>
+
+            </g>
+
+            <path d="M225 30 L212 60
+                     H229 L215 91
+                     L245 51 H227 L240 30 Z"
+                  fill="#c49b39"/>
+
+            <text x="160" y="180"
+                  text-anchor="middle">
+                Weather-aware flight risk
+            </text>
+        `;
+    }
+
+    else if(kind === "qr") {
+
+        function qr(x,y,color) {
+
+            let q = "";
+
+            q += `
+                <rect x="${x}" y="${y}"
+                      width="90" height="90"
+                      fill="white"
+                      stroke="#bfc9d2"/>
+            `;
+
+            for(let r=0;r<15;r++) {
+
+                for(let col=0;col<15;col++) {
+
+                    if(
+                        (r*13+col*7+r*col)%5<2
+                    ) {
+
+                        q += `
+                            <rect
+                                x="${x+col*6}"
+                                y="${y+r*6}"
+                                width="6"
+                                height="6"
+                                fill="${color}"/>
+                        `;
+                    }
+                }
+            }
+
+            return q;
+        }
+
+        c += qr(15,40,"#657483");
+        c += qr(215,40,"#243849");
+
+        c += arrow(108,85,126,85);
+
+        c += block(
+            126,55,68,60,
+            "Diffusion"
+        );
+
+        c += arrow(194,85,212,85);
+
+        c += `
+            <text x="60" y="150"
+                  text-anchor="middle">
+                Perturbed input
+            </text>
+
+            <text x="260" y="150"
+                  text-anchor="middle">
+                Purification
+            </text>
+
+            <text x="160" y="175"
+                  text-anchor="middle">
+                Adversarially robust classification
+            </text>
+        `;
+    }
+
+    else if(kind === "surgery") {
+
+        c += `
+            <rect x="12" y="20"
+                  width="125" height="105"
+                  rx="5"
+                  fill="#d9e2e9"
+                  stroke="#8496a7"/>
+
+            <ellipse cx="75" cy="75"
+                     rx="38" ry="25"
+                     fill="#aabcae"/>
+
+            <path d="M20 25 L80 72
+                     M125 30 L80 72"
+                  stroke="#596c7c"
+                  stroke-width="7"/>
+
+            <circle cx="80" cy="72"
+                    r="16"
+                    stroke="#b57764"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-dasharray="4 3"/>
+        `;
+
+        c += arrow(140,70,165,70);
+
+        c += block(
+            165,42,140,55,
+            "Temporal model"
+        );
+
+        c += arrow(235,97,235,120);
+
+        c += block(
+            175,120,120,35,
+            "Risk forecast","#f2e4de"
+        );
+
+        c += `
+            <text x="75" y="150"
+                  text-anchor="middle">
+                Surgical video
+            </text>
+        `;
+    }
+
+    else if(kind === "security") {
+
+        c += block(
+            15,65,80,50,
+            "Encrypted data"
+        );
+
+        c += arrow(95,90,120,90);
+
+        c += block(
+            120,65,80,50,
+            "Decryption"
+        );
+
+        c += arrow(200,90,225,90);
+
+        c += block(
+            225,65,80,50,
+            "Output","#e1eee5"
+        );
+
+        c += `
+            <path d="M140 65 V35 H180 V65"
+                  stroke="#6b8195"
+                  stroke-width="2"
+                  fill="none"/>
+
+            <rect x="145" y="15"
+                  width="30" height="25"
+                  rx="3"
+                  fill="#cbdce9"
+                  stroke="#6b8195"/>
+
+            <text x="160" y="150"
+                  text-anchor="middle">
+                Blockchain-assisted security
+            </text>
+        `;
+    }
+
+    else if(kind === "assistive") {
+
+        c += `
+            <rect x="25" y="30"
+                  width="55" height="95"
+                  rx="15"
+                  fill="#cbdbe7"
+                  stroke="#6f8498"/>
+
+            <rect x="35" y="55"
+                  width="35" height="45"
+                  rx="5"
+                  fill="#718ba0"/>
+
+            <circle cx="52" cy="78"
+                    r="8"
+                    fill="#dceaf4"/>
+        `;
+
+        c += arrow(85,80,120,80);
+
+        c += block(
+            120,50,85,60,
+            "Edge AI"
+        );
+
+        c += arrow(205,80,235,80);
+
+        c += `
+            <rect x="235" y="40"
+                  width="65" height="85"
+                  rx="5"
+                  fill="#e4eee6"
+                  stroke="#7c9985"/>
+
+            <path d="M245 82 L258 95
+                     L290 60"
+                  stroke="#6b9a78"
+                  stroke-width="4"
+                  fill="none"/>
+
+            <text x="160" y="165"
+                  text-anchor="middle">
+                Offline assistive intelligence
+            </text>
+        `;
+    }
+
+    else if(kind === "network") {
+
+        const nodes = [
+            [45,45],[45,95],[45,145],
+            [150,95],
+            [260,45],[260,95],[260,145]
+        ];
+
+        nodes.forEach((n,i)=>{
+
+            if(i!==3) {
+
+                c += `
+                    <path d="M${n[0]} ${n[1]}
+                             L150 95"
+                          stroke="#8ba0b1"
+                          stroke-width="1.5"/>
+                `;
+            }
+        });
+
+        nodes.forEach((n,i)=>{
+
+            c += `
+                <circle cx="${n[0]}"
+                        cy="${n[1]}"
+                        r="${i===3?25:13}"
+                        fill="${i===3?"#9cbcd6":"#dce8f0"}"
+                        stroke="#68859c"/>
+            `;
+        });
+
+        c += `
+            <text x="150" y="99"
+                  text-anchor="middle">
+                ML
+            </text>
+
+            <text x="160" y="180"
+                  text-anchor="middle">
+                Network anomaly detection
+            </text>
+        `;
+    }
+
+    else if(kind === "gaze") {
+
+        c += `
+            <path d="M15 65
+                     Q65 10 115 65
+                     Q65 120 15 65 Z"
+                  fill="#e0eaf1"
+                  stroke="#8297a8"/>
+
+            <circle cx="65" cy="65"
+                    r="23"
+                    fill="#a4bdcf"/>
+
+            <circle cx="65" cy="65"
+                    r="11"
+                    fill="#41576a"/>
+        `;
+
+        c += arrow(115,65,155,65);
+
+        for(let r=0;r<4;r++) {
+
+            for(let col=0;col<6;col++) {
+
+                const i = r*6+col;
+
+                c += `
+                    <rect x="${160+col*23}"
+                          y="${20+r*29}"
+                          width="20"
+                          height="24"
+                          rx="2"
+                          fill="${i===9?"#a6c6df":"#e5ebf0"}"
+                          stroke="#9cabb7"/>
+
+                    <text x="${170+col*23}"
+                          y="${36+r*29}"
+                          text-anchor="middle">
+
+                        ${String.fromCharCode(65+i)}
+
+                    </text>
+                `;
+            }
+        }
+
+        c += `
+            <text x="160" y="170"
+                  text-anchor="middle">
+                Gaze-based communication
+            </text>
+        `;
+    }
+
+    else {
+
+        c += block(15,60,80,60,"Input");
+
+        c += arrow(95,90,120,90);
+
+        c += block(120,60,80,60,"Model");
+
+        c += arrow(200,90,225,90);
+
+        c += block(225,60,80,60,"Output");
+    }
+
+    return svgWrap(c);
+}
+
+/* Load embedded illustrations first.
+   Use actual project images automatically
+   if they are available in the assets folder. */
+
+document.querySelectorAll("[data-kind]").forEach(figure => {
+
+    const kind = figure.dataset.kind;
+
+    figure.innerHTML =
+        makeGraphic(kind) +
+        "<figcaption>Conceptual illustration</figcaption>";
+
+    const imagePath = figure.dataset.image;
+
+    if(imagePath) {
+
+        const image = new Image();
+
+        image.alt = "Research project figure";
+        image.loading = "lazy";
+
+        image.onload = function() {
+
+            figure.innerHTML = "";
+
+            figure.appendChild(image);
+        };
+
+        image.src = imagePath;
+    }
+});
+
+/* Active navigation */
+
+const sectionLinks =
+    document.querySelectorAll(".sub-nav a");
+
+sectionLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        sectionLinks.forEach(item => {
+
+            item.classList.remove("active");
+        });
+
+        link.classList.add("active");
+    });
+});
+
+/* Automatic copyright year */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+/* External link security */
+
+document.querySelectorAll('a[target="_blank"]')
+    .forEach(link => {
+
+        link.rel = "noopener noreferrer";
+    });
+
+</script>
+
+</body>
 </html>

@@ -5,19 +5,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Asifa S | Academic Homepage</title>
+<title>Asifa S | Research Portfolio</title>
 
-<meta name="description" content="Asifa S — Research in artificial intelligence, scientific machine learning, temporal modelling, natural language processing and intelligent systems.">
+<meta name="description" content="Asifa S — Research in machine learning, scientific AI, temporal modelling, computer vision, NLP and agentic AI.">
 
 <style>
 
 :root {
-    --blue: #0085c9;
-    --dark: #191919;
+    --blue: #0085bd;
+    --dark-blue: #005b89;
     --text: #303030;
     --muted: #666666;
-    --border: #e0e0e0;
-    --light: #f5f5f5;
+    --line: #e4e4e4;
+    --light: #f5f7f9;
 }
 
 * {
@@ -31,11 +31,11 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
     background: #ffffff;
     color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
 }
 
 a {
@@ -44,6 +44,7 @@ a {
 }
 
 a:hover {
+    color: var(--dark-blue);
     text-decoration: underline;
 }
 
@@ -54,779 +55,738 @@ button {
 
 img {
     max-width: 100%;
-    display: block;
 }
 
-.container {
-    width: 84%;
-    max-width: 1460px;
-    margin: 0 auto;
+h1, h2, h3, p {
+    margin-top: 0;
 }
 
-/* MAIN NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
-.main-nav {
-    background: #191919;
+header {
     position: sticky;
     top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 5px #00000020;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 2px 5px #00000012;
 }
 
-.nav-content {
+.topbar {
+    border-bottom: 1px solid var(--line);
+}
+
+.nav-container {
+    max-width: 1460px;
+    padding: 0 30px;
+    margin: auto;
     display: flex;
     align-items: center;
     min-height: 53px;
+    gap: 30px;
 }
 
 .brand {
-    color: #bcbcbc;
     font-size: 25px;
     font-weight: 700;
-    padding-right: 30px;
+    color: #333;
+    white-space: nowrap;
 }
 
 .brand:hover {
-    color: white;
     text-decoration: none;
 }
 
-.nav-links {
+.main-nav {
     display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
-}
-
-.nav-links a {
-    color: #b5b5b5;
-    padding: 16px 15px;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    background: #080808;
-    color: white;
-    text-decoration: none;
-}
-
-/* SECONDARY NAVIGATION */
-
-.sub-nav {
-    background: #fafafa;
-    border-bottom: 1px solid #dddddd;
-    position: sticky;
-    top: 53px;
-    z-index: 90;
-}
-
-.sub-nav .container {
-    display: flex;
-    gap: 6px;
     align-items: center;
-    flex-wrap: wrap;
-    min-height: 54px;
+    gap: 26px;
 }
 
-.sub-nav a {
-    padding: 10px 15px;
+.main-nav a {
+    color: #555;
     font-size: 15px;
-    border-bottom: 3px solid transparent;
+    font-weight: 600;
 }
 
-.sub-nav a.active,
-.sub-nav a:hover {
-    background: #eaf5fb;
+.subnav {
+    max-width: 1460px;
+    margin: auto;
+    padding: 0 30px;
+    display: flex;
+    gap: 7px;
+    overflow-x: auto;
+}
+
+.subnav a {
+    padding: 12px 16px 10px;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    font-size: 14px;
+}
+
+.subnav a.active,
+.subnav a:hover {
+    background: #edf6fa;
     border-bottom-color: var(--blue);
     text-decoration: none;
+    color: var(--dark-blue);
 }
 
-/* GENERAL TYPOGRAPHY */
+/* =========================
+   MAIN LAYOUT
+========================= */
 
-h1 {
-    font-size: 38px;
-    line-height: 1.2;
-    margin: 0 0 22px;
-    text-align: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--border);
+.container {
+    max-width: 1460px;
+    margin: 0 auto;
+    padding: 25px 30px 60px;
 }
 
-h2 {
-    font-size: 27px;
-    margin: 0 0 18px;
-    padding-bottom: 9px;
-    border-bottom: 1px solid var(--border);
-}
-
-h3 {
-    font-size: 19px;
-    line-height: 1.4;
-    margin: 0 0 8px;
-}
-
-h4 {
-    font-size: 16px;
-    margin: 0 0 6px;
-}
-
-p {
-    margin: 0 0 13px;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-main {
-    padding-top: 22px;
-}
-
-.section-description {
-    color: #666;
-    margin-bottom: 22px;
-}
-
-.small-text {
-    font-size: 13px;
-    color: #777;
-}
-
-/* INTRODUCTION */
-
-.bio-layout {
+.intro-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 340px;
+    grid-template-columns: minmax(0, 1fr) 310px;
     gap: 38px;
     align-items: start;
 }
 
-.bio-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 4px 0 23px;
-    border-bottom: 1px solid var(--border);
+section {
+    margin-bottom: 38px;
 }
 
-.profile-gallery {
-    flex: 0 0 252px;
-    width: 252px;
+.section-title {
+    font-size: 27px;
+    font-weight: 700;
+    margin: 0 0 22px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+    letter-spacing: -0.5px;
 }
 
-.profile-gallery .gallery-stage {
-    height: 285px;
-    border: 1px solid #888;
-    box-shadow: 3px 4px 8px #00000025;
+.name-title {
+    font-size: 39px;
+    text-align: center;
+    margin: 0 0 24px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+    letter-spacing: -0.8px;
 }
 
-.profile-gallery .gallery-stage img {
-    object-fit: cover;
-    object-position: center;
-}
-
-.bio-text {
-    flex: 1;
-    min-width: 0;
+.bio-layout {
+    display: grid;
+    grid-template-columns: 245px minmax(0, 1fr);
+    align-items: start;
+    gap: 24px;
 }
 
 .bio-text p {
-    font-size: 16px;
-    line-height: 1.55;
+    margin-bottom: 13px;
 }
 
-.social-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 17px;
-    margin: 16px 0;
+.bio-text {
+    font-size: 15.5px;
 }
 
-.social-links a {
-    font-size: 14px;
-    font-weight: 600;
-}
+/* =========================
+   PERSONAL PHOTO GALLERY
+========================= */
 
-.cv-link {
-    display: inline-block;
-    padding: 8px 13px;
-    background: #f0f7fc;
-    border: 1px solid #bdd9e9;
-    border-radius: 3px;
-    font-size: 14px;
-}
-
-.research-summary {
-    padding-top: 21px;
-}
-
-.opportunity {
-    background: #f3f3f3;
-    border-left: 3px solid var(--blue);
-    padding: 17px 20px;
-    margin-top: 20px;
-}
-
-.opportunity p:last-child {
-    margin-bottom: 0;
-}
-
-/* GALLERY */
-
-.gallery {
-    min-width: 0;
-}
-
-.gallery-stage {
-    position: relative;
-    overflow: hidden;
-    background: #fafafa;
-    border: 1px solid #dddddd;
+.profile-gallery {
     width: 100%;
 }
 
-.gallery-stage img {
+.profile-frame {
+    position: relative;
+    width: 100%;
+    height: 285px;
+    border: 1px solid #777;
+    box-shadow: 3px 4px 7px #00000030;
+    overflow: hidden;
+    background: #f1f1f1;
+}
+
+.profile-frame img {
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center 45%;
 }
 
 .gallery-arrow {
     position: absolute;
-    bottom: 12px;
-    width: 36px;
-    height: 40px;
-    border: 0;
-    border-radius: 3px;
-    background: #00000035;
+    bottom: 9px;
+    border: none;
+    background: transparent;
     color: white;
-    font-size: 32px;
-    line-height: 1;
+    font-size: 34px;
     font-weight: bold;
+    line-height: 1;
+    padding: 7px 12px;
     text-shadow: 0 1px 5px #000;
-    z-index: 2;
 }
 
 .gallery-arrow:hover {
-    background: #00000085;
+    background: #00000035;
 }
 
-.gallery-arrow.prev {
-    left: 9px;
+.gallery-prev {
+    left: 5px;
 }
 
-.gallery-arrow.next {
-    right: 9px;
-}
-
-.gallery-caption {
-    font-size: 12px;
-    color: #666;
-    text-align: center;
-    margin: 7px 0 3px;
-    min-height: 18px;
-}
-
-.gallery-counter {
-    text-align: center;
-    color: #999;
-    font-size: 11px;
+.gallery-next {
+    right: 5px;
 }
 
 .gallery-dots {
     display: flex;
     justify-content: center;
-    gap: 6px;
-    margin: 8px 0;
+    gap: 7px;
+    margin-top: 12px;
 }
 
 .gallery-dot {
-    width: 7px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
     padding: 0;
-    border: none;
+    border: 0;
     border-radius: 50%;
-    background: #cccccc;
+    background: #ccc;
 }
 
 .gallery-dot.active {
     background: var(--blue);
 }
 
-/* RESEARCH INTEREST SIDEBAR */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.social-links a {
+    font-weight: 600;
+}
+
+.affiliations {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0 4px;
+}
+
+.affiliation {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.nus-text {
+    color: #003d7c;
+    border-left: 4px solid #ef7c00;
+    padding-left: 8px;
+}
+
+.ntu-text {
+    color: #b32134;
+    border-left: 4px solid #b32134;
+    padding-left: 8px;
+}
+
+.vit-text {
+    color: #154478;
+    border-left: 4px solid #154478;
+    padding-left: 8px;
+}
+
+.research-summary {
+    border-top: 1px solid var(--line);
+    margin-top: 23px;
+    padding-top: 20px;
+}
+
+.research-summary p {
+    margin-bottom: 13px;
+}
+
+.opportunity-note {
+    border-left: 3px solid var(--blue);
+    background: #f4f6f8;
+    padding: 14px 17px;
+    margin-top: 19px;
+    font-size: 14px;
+}
+
+/* =========================
+   RESEARCH INTEREST SIDEBAR
+========================= */
 
 .interest-panel {
-    background: #f5f5f5;
-    border: 1px solid #dddddd;
+    background: #f7f7f7;
+    border: 1px solid #dedede;
     border-radius: 4px;
-    padding: 22px 17px;
-    box-shadow: 0 1px 4px #00000008;
+    padding: 19px 16px;
 }
 
 .interest-panel h2 {
-    text-align: center;
-    font-size: 23px;
-    border: 0;
+    font-size: 21px;
     line-height: 1.4;
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.interest-visual {
+.interest-figure {
     background: white;
-    border: 1px solid #b9c5d0;
-    border-radius: 6px;
-    overflow: hidden;
+    border: 1px solid #b8c4cf;
+    border-radius: 5px;
     margin-bottom: 12px;
+    overflow: hidden;
 }
 
-.interest-visual svg {
+.interest-figure svg {
     display: block;
     width: 100%;
     height: auto;
 }
 
-.interest-info {
-    padding: 12px 13px;
-    border-top: 1px solid #e1e1e1;
-}
-
-.interest-info h3 {
-    font-size: 15px;
-    margin-bottom: 4px;
-}
-
-.interest-info p {
+.interest-caption {
+    border-top: 1px solid #e4e4e4;
+    padding: 10px 12px;
     font-size: 12px;
-    line-height: 1.5;
+    text-align: center;
     color: #555;
-    margin: 0;
 }
 
-/* NEWS */
+.interest-caption strong {
+    display: block;
+    color: #333;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.figure-note {
+    font-size: 11px;
+    color: #777;
+    text-align: center;
+    margin: 12px 0 0;
+}
+
+/* =========================
+   NEWS
+========================= */
 
 .news-list {
-    list-style: none;
-    padding: 0;
+    padding-left: 8px;
     margin: 0;
+    list-style: none;
 }
 
 .news-list li {
     display: grid;
-    grid-template-columns: 95px 1fr;
+    grid-template-columns: 105px 1fr;
     gap: 10px;
-    padding: 10px 0;
-    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 10px;
+    font-size: 14px;
 }
 
 .news-date {
-    font-weight: bold;
-    font-size: 14px;
-    color: #666;
+    font-weight: 700;
+    color: #333;
 }
 
-/* EXPERIENCE TIMELINE */
+.highlight {
+    color: #a32d35;
+    font-weight: 600;
+}
+
+/* =========================
+   RESEARCH & PROJECT ENTRIES
+========================= */
+
+.topic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 25px;
+}
+
+.topic {
+    border: 1px solid #bfc5cb;
+    padding: 3px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #444;
+}
+
+.research-entry {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 34%;
+    gap: 30px;
+    align-items: start;
+    padding: 22px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.research-entry:last-child {
+    border-bottom: 0;
+}
+
+.entry-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--blue);
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+.entry-title a {
+    color: inherit;
+}
+
+.entry-meta {
+    font-size: 13.5px;
+    margin-bottom: 4px;
+}
+
+.entry-venue {
+    font-size: 13.5px;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.entry-description {
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+
+.entry-details {
+    padding-left: 19px;
+    font-size: 13.5px;
+    margin: 10px 0;
+}
+
+.entry-details li {
+    margin-bottom: 5px;
+}
+
+.entry-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    margin-top: 11px;
+}
+
+.entry-links a {
+    font-weight: 600;
+}
+
+.entry-links a + a::before {
+    content: "·";
+    color: #777;
+    margin-right: 7px;
+}
+
+details {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+summary {
+    color: var(--blue);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+details p {
+    margin-top: 10px;
+}
+
+.status {
+    font-size: 12px;
+    color: #875c12;
+    font-weight: 600;
+}
+
+.entry-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.entry-images.two-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.research-image {
+    margin: 0;
+    min-width: 0;
+}
+
+.research-image img,
+.research-image svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #d2d2d2;
+    background: white;
+    box-shadow: 2px 3px 5px #0000001c;
+}
+
+.research-image img {
+    cursor: zoom-in;
+}
+
+.research-image figcaption {
+    font-size: 11px;
+    text-align: center;
+    color: #666;
+    line-height: 1.4;
+    padding: 6px 2px 0;
+}
+
+.result-line {
+    background: #f1f7fb;
+    border-left: 3px solid #1684b7;
+    padding: 10px 13px;
+    margin: 13px 0;
+    font-size: 13px;
+}
+
+.result-line strong {
+    color: #006c9e;
+}
+
+.technology {
+    font-size: 12px;
+    color: #666;
+    margin-top: 9px;
+}
+
+/* =========================
+   PUBLICATIONS
+========================= */
+
+.publication {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 15px;
+    padding: 17px 0;
+    border-bottom: 1px solid #ededed;
+}
+
+.pub-year {
+    font-weight: bold;
+    color: #777;
+    font-size: 15px;
+}
+
+.pub-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 4px;
+}
+
+.publication p {
+    font-size: 13.5px;
+    margin-bottom: 4px;
+}
+
+/* =========================
+   EXPERIENCE TIMELINE
+========================= */
 
 .timeline {
     position: relative;
-    margin: 28px 0 0 12px;
+    margin-left: 13px;
     padding-left: 30px;
-    border-left: 2px solid #dce2e7;
+    border-left: 2px solid #dce3e9;
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 30px;
-    padding: 2px 0 20px;
-    border-bottom: 1px solid #eeeeee;
+    padding: 0 0 28px 0;
 }
 
 .timeline-item:last-child {
-    border-bottom: 0;
-    padding-bottom: 0;
+    padding-bottom: 5px;
 }
 
 .timeline-item::before {
     content: "";
     position: absolute;
-    width: 15px;
-    height: 15px;
-    left: -39px;
-    top: 5px;
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
+    left: -38px;
+    top: 7px;
     background: var(--timeline-color);
-    border: 3px solid white;
-    box-shadow: 0 0 0 2px var(--timeline-color);
+    box-shadow: 0 0 0 4px white;
 }
 
-.timeline-item.ntu {
-    --timeline-color: #a32c46;
+.experience-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    align-items: flex-start;
 }
 
-.timeline-item.nus {
-    --timeline-color: #e97824;
-}
-
-.timeline-item.vit {
-    --timeline-color: #24588e;
-}
-
-.timeline-date {
-    color: var(--timeline-color);
-    font-weight: bold;
-    font-size: 13px;
-    margin-bottom: 5px;
-}
-
-.timeline-institution {
-    font-size: 21px;
-    font-weight: bold;
-    color: var(--timeline-color);
+.experience-heading h3 {
+    font-size: 17px;
     margin-bottom: 3px;
 }
 
-.timeline-role {
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 8px;
+.experience-date {
+    font-size: 13px;
+    color: #777;
+    white-space: nowrap;
+}
+
+.experience-institution {
+    color: var(--timeline-color);
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 9px;
 }
 
 .timeline-item p {
-    font-size: 15px;
+    font-size: 14px;
+    margin-bottom: 8px;
 }
 
-.nus-experience {
+.nus-gallery {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 310px;
-    gap: 25px;
-    align-items: start;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    max-width: 850px;
+    margin-top: 18px;
 }
 
-.nus-gallery .gallery-stage {
-    height: 250px;
+.nus-gallery figure {
+    margin: 0;
 }
 
-/* RESEARCH AND PROJECT ROWS */
-
-.research-entry,
-.project-entry {
-    display: grid;
-    grid-template-columns: 320px minmax(0, 1fr);
-    gap: 25px;
-    align-items: start;
-    padding: 24px 0;
-    border-bottom: 1px solid #e2e2e2;
-}
-
-.research-entry {
-    grid-template-columns: 390px minmax(0, 1fr);
-}
-
-.research-entry .gallery-stage {
-    height: 260px;
-}
-
-.project-entry .gallery-stage {
-    height: 205px;
-}
-
-.project-image {
-    border: 1px solid #ddd;
-    background: #fafafa;
-}
-
-.project-image img {
+.nus-gallery img {
     width: 100%;
-    height: 205px;
-    object-fit: contain;
+    height: 230px;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid #ccc;
+    box-shadow: 2px 3px 6px #00000020;
+    cursor: zoom-in;
 }
 
-.project-title {
-    font-size: 20px;
-    color: #006ba6;
-    margin-bottom: 7px;
-    line-height: 1.4;
-}
-
-.project-category {
+.nus-gallery figcaption {
     font-size: 12px;
-    color: #777;
-    font-weight: bold;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-}
-
-.project-entry p,
-.research-entry p {
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-.project-entry ul,
-.research-entry ul {
-    font-size: 14px;
-    padding-left: 19px;
-    margin: 10px 0 13px;
-}
-
-.project-entry li,
-.research-entry li {
-    margin-bottom: 5px;
-}
-
-.project-links {
-    font-size: 14px;
-    margin-top: 12px;
-}
-
-.project-links a {
-    font-weight: bold;
-}
-
-.project-links a + a::before {
-    content: " / ";
-    color: #999;
-    font-weight: normal;
-    padding: 0 5px;
-}
-
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 12px;
-}
-
-.tag {
-    background: #edf4f8;
-    border: 1px solid #dbe6ed;
-    color: #365d76;
-    padding: 3px 8px;
-    font-size: 11px;
-    border-radius: 3px;
-}
-
-.ongoing {
-    display: inline-block;
-    color: #8d6219;
-    background: #fff6df;
-    border: 1px solid #ead6a9;
-    padding: 3px 8px;
-    font-size: 11px;
-    border-radius: 3px;
-    vertical-align: middle;
-}
-
-/* RESEARCH METRICS */
-
-.metrics {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.metric {
-    background: #f6f9fb;
-    border: 1px solid #dfe8ee;
-    border-top: 3px solid #1681b7;
-    padding: 14px 9px;
-    text-align: center;
-}
-
-.metric strong {
-    display: block;
-    font-size: 25px;
-    color: #146f9d;
-    line-height: 1.2;
-}
-
-.metric span {
-    display: block;
     color: #666;
-    font-size: 11px;
-    margin-top: 6px;
-}
-
-/* PUBLICATIONS */
-
-.publication {
-    display: grid;
-    grid-template-columns: 225px minmax(0, 1fr);
-    gap: 24px;
-    padding: 20px 0;
-    border-bottom: 1px solid #e2e2e2;
-    align-items: center;
-}
-
-.publication-visual {
-    background: #fafafa;
-    border: 1px solid #dddddd;
-    min-height: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.publication-visual img {
-    width: 100%;
-    max-height: 160px;
-    object-fit: contain;
-}
-
-.publication-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #006ba6;
-    margin-bottom: 7px;
-}
-
-.authors {
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-.venue {
-    font-size: 14px;
-    color: #666;
-    font-style: italic;
-}
-
-.award-label {
-    display: inline-block;
-    color: #a44715;
-    background: #fff3e8;
-    border: 1px solid #ebc8a8;
-    font-size: 11px;
-    font-weight: bold;
-    padding: 3px 7px;
-    margin-top: 9px;
-    border-radius: 3px;
-}
-
-/* CONCEPTUAL DIAGRAMS */
-
-.concept-diagram {
-    background: #f8fafc;
-    border: 1px solid #d8e0e7;
-    overflow: hidden;
-}
-
-.concept-diagram svg {
-    width: 100%;
-    display: block;
-    height: auto;
-}
-
-.concept-caption {
     text-align: center;
-    font-size: 11px;
-    color: #777;
-    padding: 5px 8px;
-    border-top: 1px solid #e0e5ea;
+    padding-top: 5px;
 }
 
-/* AWARDS */
+/* =========================
+   AWARDS
+========================= */
 
-.award-row {
+.award-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 8px;
+}
+
+.award-list li {
     display: grid;
-    grid-template-columns: 90px minmax(0, 1fr);
-    gap: 15px;
-    padding: 13px 0;
-    border-bottom: 1px solid #e6e6e6;
+    grid-template-columns: 85px 1fr;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-size: 14px;
 }
 
 .award-year {
-    color: #777;
     font-weight: bold;
+}
+
+.award-description {
+    display: block;
+    color: #666;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skill-table {
+    width: 100%;
+    border-collapse: collapse;
     font-size: 14px;
 }
 
-.award-row h3 {
-    font-size: 16px;
+.skill-table td {
+    padding: 13px 10px;
+    border-bottom: 1px solid #e9e9e9;
+    vertical-align: top;
 }
 
-.award-row p {
-    font-size: 14px;
-    margin: 0;
+.skill-table td:first-child {
+    width: 245px;
+    font-weight: 700;
+    color: #333;
 }
 
-/* SKILLS */
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
+.skill-table td:last-child {
+    color: #555;
 }
 
-.skill-group {
-    border: 1px solid #dddddd;
-    border-top: 3px solid #3a7da7;
+/* =========================
+   CONTACT & FOOTER
+========================= */
+
+.contact-box {
     background: #fafafa;
-    padding: 16px;
+    border: 1px solid #e7e7e7;
+    padding: 23px;
 }
 
-.skill-group:nth-child(3n + 2) {
-    border-top-color: #498f83;
+.contact-box h3 {
+    font-size: 18px;
+    margin-bottom: 9px;
 }
 
-.skill-group:nth-child(3n + 3) {
-    border-top-color: #8871ac;
-}
-
-.skill-group h3 {
-    font-size: 16px;
+.contact-box p {
+    font-size: 14px;
     margin-bottom: 10px;
 }
 
-.skill-group p {
-    font-size: 14px;
-    color: #555;
-    margin: 0;
+footer {
+    text-align: center;
+    border-top: 1px solid var(--line);
+    padding: 28px 15px;
+    color: #777;
+    font-size: 12px;
     line-height: 1.8;
 }
 
-/* CONTACT */
-
-.contact-panel {
-    background: #f5f5f5;
-    border-left: 3px solid var(--blue);
-    padding: 22px;
-}
-
-.contact-panel h3 {
-    font-size: 20px;
-}
-
-/* FOOTER */
-
-footer {
-    background: #f5f5f5;
-    border-top: 1px solid #dddddd;
-    padding: 24px 0;
-    font-size: 13px;
-    color: #777;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-/* IMAGE LIGHTBOX */
+/* =========================
+   IMAGE LIGHTBOX
+========================= */
 
 .lightbox {
     display: none;
     position: fixed;
     inset: 0;
-    z-index: 1000;
-    background: #000000ed;
+    z-index: 3000;
+    background: #000000e8;
     align-items: center;
     justify-content: center;
-    padding: 35px;
+    padding: 40px;
 }
 
 .lightbox.open {
@@ -835,193 +795,174 @@ footer {
 
 .lightbox img {
     max-width: 95vw;
-    max-height: 85vh;
+    max-height: 88vh;
     object-fit: contain;
 }
 
 .lightbox-close {
     position: absolute;
-    top: 15px;
     right: 25px;
-    background: transparent;
+    top: 12px;
+    background: none;
     border: 0;
     color: white;
-    font-size: 40px;
+    font-size: 42px;
 }
 
-.zoomable {
-    cursor: zoom-in;
-}
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
 
-/* RESPONSIVE DESIGN */
+@media (max-width: 1100px) {
 
-@media (max-width: 1150px) {
-
-    .container {
-        width: 92%;
-    }
-
-    .bio-layout {
-        grid-template-columns: minmax(0, 1fr) 280px;
+    .intro-layout {
+        grid-template-columns: minmax(0, 1fr) 255px;
         gap: 24px;
     }
 
-    .profile-gallery {
-        flex-basis: 210px;
-        width: 210px;
+    .bio-layout {
+        grid-template-columns: 200px minmax(0, 1fr);
+        gap: 18px;
     }
 
-    .profile-gallery .gallery-stage {
-        height: 255px;
+    .profile-frame {
+        height: 250px;
     }
 
     .research-entry {
-        grid-template-columns: 310px minmax(0, 1fr);
-    }
-
-    .nus-experience {
-        grid-template-columns: 1fr;
-    }
-
-    .nus-gallery {
-        max-width: 400px;
+        grid-template-columns: minmax(0, 1fr) 38%;
+        gap: 20px;
     }
 }
 
 @media (max-width: 850px) {
 
-    .bio-layout {
+    .intro-layout {
         grid-template-columns: 1fr;
     }
 
     .interest-panel {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
 
-    .interest-panel h2 {
+    .interest-panel h2,
+    .figure-note {
         grid-column: 1 / -1;
     }
 
-    .interest-visual {
-        margin: 0;
+    .interest-figure {
+        margin-bottom: 0;
     }
 
-    .research-entry,
-    .project-entry {
-        grid-template-columns: 270px minmax(0, 1fr);
-        gap: 18px;
+    .container {
+        padding: 22px 20px 40px;
     }
 
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .nav-container,
+    .subnav {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    .sub-nav {
-        position: static;
-    }
-
-    .main-nav {
-        position: static;
-    }
-
-    html {
-        scroll-padding-top: 15px;
+    .nus-gallery img {
+        height: 180px;
     }
 }
 
 @media (max-width: 600px) {
 
     body {
-        font-size: 15px;
-    }
-
-    .container {
-        width: 92%;
-    }
-
-    .nav-content {
-        flex-wrap: wrap;
+        font-size: 14px;
     }
 
     .brand {
-        width: 100%;
-        padding: 12px 0 0;
-        font-size: 23px;
+        font-size: 20px;
     }
 
-    .nav-links a {
-        padding: 12px 10px;
-        font-size: 13px;
+    .nav-container {
+        gap: 20px;
     }
 
-    .sub-nav a {
-        padding: 8px 10px;
-        font-size: 13px;
+    .main-nav {
+        gap: 13px;
     }
 
-    h1 {
-        font-size: 31px;
+    .main-nav a {
+        font-size: 12px;
     }
 
-    h2 {
-        font-size: 23px;
+    .subnav a {
+        padding: 10px 11px;
+        font-size: 12px;
     }
 
-    .bio-row {
-        flex-direction: column;
+    .name-title {
+        font-size: 32px;
+    }
+
+    .bio-layout {
+        grid-template-columns: 1fr;
     }
 
     .profile-gallery {
-        width: 230px;
-        flex: auto;
-        margin: 0 auto 12px;
+        max-width: 250px;
+        margin: auto;
     }
 
-    .profile-gallery .gallery-stage {
-        height: 280px;
+    .profile-frame {
+        height: 290px;
     }
 
-    .research-entry,
-    .project-entry,
-    .publication {
+    .section-title {
+        font-size: 23px;
+    }
+
+    .research-entry {
         grid-template-columns: 1fr;
+        gap: 16px;
     }
 
-    .research-entry .gallery-stage,
-    .project-entry .gallery-stage {
-        height: 240px;
+    .entry-images {
+        max-width: 100%;
     }
 
-    .publication-visual {
-        max-width: 320px;
-    }
-
-    .metrics {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .interest-panel {
-        grid-template-columns: 1fr;
-    }
-
-    .news-list li {
-        grid-template-columns: 75px 1fr;
+    .experience-heading {
+        flex-direction: column;
+        gap: 3px;
     }
 
     .nus-gallery {
-        width: 100%;
+        grid-template-columns: 1fr;
     }
 
-    .award-row {
-        grid-template-columns: 60px 1fr;
+    .nus-gallery img {
+        height: auto;
+        max-height: 450px;
+        object-fit: contain;
     }
 
+    .skill-table td:first-child {
+        width: 35%;
+    }
+
+    .skill-table td {
+        font-size: 12px;
+        padding: 10px 5px;
+    }
+
+    .news-list li {
+        grid-template-columns: 80px 1fr;
+    }
+
+    .award-list li {
+        grid-template-columns: 55px 1fr;
+    }
+
+    .lightbox {
+        padding: 10px;
+    }
 }
 
 </style>
@@ -1029,123 +970,133 @@ footer {
 
 <body>
 
-<!-- MAIN NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================== -->
 
-<header class="main-nav">
-    <div class="container nav-content">
+<header>
 
-        <a href="#bio" class="brand">Asifa S</a>
+    <div class="topbar">
+        <div class="nav-container">
 
-        <nav class="nav-links">
-            <a href="#bio" class="active">Home</a>
-            <a href="#publications">Publications</a>
-            <a href="#research">Research</a>
-            <a href="assets/AsifaS_resume.pdf"
-               target="_blank">CV</a>
-        </nav>
+            <a class="brand" href="#bio">Asifa S</a>
 
+            <nav class="main-nav">
+                <a href="#bio">Home</a>
+                <a href="#publications">Publications</a>
+                <a href="assets/AsifaS_resume.pdf"
+                   target="_blank">CV</a>
+            </nav>
+
+        </div>
     </div>
-</header>
 
-<nav class="sub-nav">
-    <div class="container">
-
+    <nav class="subnav">
         <a href="#bio" class="active">Bio</a>
         <a href="#news">News</a>
-        <a href="#experience">Experience</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#awards">Awards</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
+    </nav>
 
-    </div>
-</nav>
+</header>
 
 <main class="container">
 
-<!-- BIOGRAPHY -->
+<!-- =========================
+     BIOGRAPHY
+========================== -->
 
-<section id="bio">
-
-<div class="bio-layout">
+<div class="intro-layout">
 
 <div>
 
-    <h1>Asifa S</h1>
+<section id="bio">
 
-    <div class="bio-row">
+    <h1 class="name-title">Asifa S</h1>
 
-        <!-- PERSONAL PHOTO GALLERY -->
+    <div class="bio-layout">
 
-        <div class="gallery profile-gallery"
-             data-gallery="profile">
+        <div class="profile-gallery">
 
-            <div class="gallery-stage">
+            <div class="profile-frame">
 
-                <img src="assets/profile.jpg"
-                     alt="Asifa S"
-                     class="gallery-image zoomable">
+                <img id="profileImage"
+                     src="assets/1000110982.jpg"
+                     alt="Asifa in Singapore">
 
-                <button class="gallery-arrow prev"
+                <button class="gallery-arrow gallery-prev"
+                        onclick="changeProfile(-1)"
                         aria-label="Previous photograph">
                     &lt;
                 </button>
 
-                <button class="gallery-arrow next"
+                <button class="gallery-arrow gallery-next"
+                        onclick="changeProfile(1)"
                         aria-label="Next photograph">
                     &gt;
                 </button>
 
             </div>
 
-            <div class="gallery-caption"></div>
-            <div class="gallery-dots"></div>
+            <div class="gallery-dots">
+
+                <button class="gallery-dot active"
+                        onclick="showProfile(0)"
+                        aria-label="Photograph one"></button>
+
+                <button class="gallery-dot"
+                        onclick="showProfile(1)"
+                        aria-label="Photograph two"></button>
+
+            </div>
 
         </div>
 
         <div class="bio-text">
 
             <p>
-                I am an Integrated M.Tech student in
+                I am a final-year Integrated M.Tech student in
                 Software Engineering at
                 <a href="https://chennai.vit.ac.in/"
-                   target="_blank">VIT Chennai</a>,
-                with research interests in artificial
-                intelligence and machine learning.
+                   target="_blank">VIT Chennai</a>.
             </p>
 
             <p>
                 I was a summer research intern at the
                 <a href="https://www.nus.edu.sg/"
                    target="_blank">
-                    National University of Singapore
+                    National University of Singapore (NUS)
                 </a>
                 through the IRIS programme, advised by
-                Assoc. Prof.
-                <strong>Lakshminarayanan Samavedham</strong>.
-                My research focused on physics-informed
-                temporal representation learning and
-                interpretable modelling of nonlinear
+                <a href="https://scholar.google.com/scholar?q=Lakshminarayanan+Samavedham"
+                   target="_blank">
+                    Assoc. Prof. Lakshminarayanan Samavedham
+                </a>.
+                My research explored physics-informed temporal
+                representation learning, hidden operating regime
+                discovery and interpretable modelling of nonlinear
                 dynamical systems.
             </p>
 
             <p>
-                I have also collaborated on human-centred
-                AI research at
+                I also collaborate on research associated with
                 <a href="https://www.ntu.edu.sg/"
                    target="_blank">
-                    Nanyang Technological University
+                    Nanyang Technological University (NTU), Singapore
                 </a>,
-                Singapore.
+                working on AI-driven interview analytics,
+                human-centred interfaces and multimodal assessment.
             </p>
 
             <p>
-                My broader interests lie in developing
-                reliable and interpretable learning systems,
-                particularly for complex sequential data
-                and intelligent agents.
+                My broader work spans machine learning,
+                computer vision, natural language processing,
+                large language models and intelligent systems.
             </p>
 
             <div class="social-links">
@@ -1153,20 +1104,19 @@ footer {
                 <a href="https://github.com/asifa1510"
                    target="_blank">GitHub</a>
 
-                <a href="#publications">Publications</a>
-
-                <a href="#contact">Contact</a>
-
                 <a href="https://scholar.google.com/scholar?q=Asifa+Sendhil"
-                   target="_blank">Scholar Search</a>
+                   target="_blank">Google Scholar Search</a>
+
+                <a href="assets/AsifaS_resume.pdf"
+                   target="_blank">Curriculum Vitae (PDF)</a>
 
             </div>
 
-            <a class="cv-link"
-               href="assets/AsifaS_resume.pdf"
-               target="_blank">
-                Curriculum Vitae (PDF)
-            </a>
+            <div class="affiliations">
+                <span class="affiliation nus-text">NUS</span>
+                <span class="affiliation ntu-text">NTU</span>
+                <span class="affiliation vit-text">VIT</span>
+            </div>
 
         </div>
 
@@ -1176,334 +1126,340 @@ footer {
 
         <p>
             <strong>Research Interests:</strong>
-            Scientific Machine Learning;
-            Temporal Representation Learning;
-            Interpretable and Reliable AI;
-            Large Language Models (LLMs);
-            Natural Language Processing (NLP);
-            Retrieval-Augmented Generation (RAG);
-            Agentic AI.
+            <a href="#research">Scientific Machine Learning</a>;
+            Temporal Representation Learning and Dynamical Systems;
+            Interpretable and Robust Machine Learning;
+            Computer Vision;
+            Natural Language Processing and Large Language Models;
+            Agentic AI and Retrieval-Augmented Generation.
         </p>
 
         <p>
-            I am particularly interested in understanding
-            how learning systems represent complex
-            environments, discover meaningful hidden
-            structure, reason over evolving information,
-            and communicate uncertainty in their predictions.
+            My research focuses on
+            <strong>
+                developing machine learning methods that can
+                understand complex systems, learn meaningful
+                representations and support reliable decision-making.
+            </strong>
+            I am particularly interested in connecting data-driven
+            learning with domain knowledge, temporal reasoning
+            and interpretability.
         </p>
 
-        <div class="opportunity">
+        <p>
+            I also explore language-model-based systems,
+            retrieval mechanisms, persistent memory and
+            tool-augmented reasoning.
+        </p>
 
-            <h4>Research Opportunities</h4>
+        <div class="opportunity-note">
 
-            <p>
-                I am interested in research collaborations
-                and internships in machine learning,
-                scientific AI, natural language processing
-                and intelligent agent systems.
-            </p>
+            <strong>Research Opportunities</strong>
 
-            <p>
-                Please refer to my
-                <a href="#research">research</a>,
-                <a href="#publications">publications</a>
-                and <a href="#projects">projects</a>
-                for more information about my work.
+            <p style="margin:5px 0 0;">
+                I am interested in research collaborations,
+                research internships and doctoral opportunities
+                in artificial intelligence and machine learning.
             </p>
 
         </div>
 
     </div>
 
-    <!-- NEWS -->
+</section>
 
-    <section id="news" style="margin-top:30px">
+<!-- =========================
+     NEWS
+========================== -->
 
-        <h2>News</h2>
+<section id="news">
 
-        <ul class="news-list">
+    <h2 class="section-title">News</h2>
 
-            <li>
-                <span class="news-date">Nov 2026</span>
-                <span>
-                    Continuing research on surgical scene
-                    understanding, uncertainty estimation
-                    and adverse event forecasting.
-                </span>
-            </li>
+    <ul class="news-list">
 
-            <li>
-                <span class="news-date">2026</span>
-                <span>
-                    Research collaboration on AIView,
-                    a human-centred interview analytics
-                    system at NTU Singapore.
-                </span>
-            </li>
+        <li>
+            <span class="news-date">Nov. 2026:</span>
+            <span>
+                Working on
+                <a href="#surgical">
+                    surgical event forecasting and uncertainty-aware
+                    visual learning.
+                </a>
+            </span>
+        </li>
 
-            <li>
-                <span class="news-date">Jul 2026</span>
-                <span>
-                    Completed my summer research internship
-                    at the National University of Singapore.
-                </span>
-            </li>
+        <li>
+            <span class="news-date">2026:</span>
+            <span>
+                Research collaboration on AI-driven interview
+                analytics associated with NTU Singapore.
+            </span>
+        </li>
 
-            <li>
-                <span class="news-date">2025</span>
-                <span>
-                    Received the
-                    <strong>Best Paper Award</strong>
-                    at IEEE RFCoN 2025.
-                </span>
-            </li>
+        <li>
+            <span class="news-date">Jul. 2026:</span>
+            <span>
+                Completed my
+                <a href="#nus-research">
+                    summer research internship at NUS
+                </a>
+                and presented my work on physics-informed
+                hidden regime discovery.
+            </span>
+        </li>
 
-            <li>
-                <span class="news-date">2025</span>
-                <span>
-                    Research on adversarial QR code
-                    classification published at
-                    IEEE iConSCEPT.
-                </span>
-            </li>
+        <li>
+            <span class="news-date">May 2026:</span>
+            <span>
+                Joined the NUS IRIS Summer Research Programme,
+                selected among 37 participants worldwide
+                from over 4,500 applicants.
+            </span>
+        </li>
 
-        </ul>
+        <li>
+            <span class="news-date">2025:</span>
+            <span>
+                Received the
+                <span class="highlight">Best Paper Award</span>
+                at IEEE RFCoN for lightning-strike risk prediction
+                in aviation.
+            </span>
+        </li>
 
-    </section>
+        <li>
+            <span class="news-date">2025:</span>
+            <span>
+                Published research on adversarially robust
+                QR code classification at IEEE iConSCEPT.
+            </span>
+        </li>
+
+    </ul>
+
+</section>
 
 </div>
 
-<!-- RESEARCH INTEREST VISUALIZATIONS -->
+<!-- =========================
+     RESEARCH INTEREST VISUALS
+========================== -->
 
 <aside class="interest-panel">
 
     <h2>Visualization of<br>Research Interests</h2>
 
-    <!-- SCIENTIFIC ML -->
-
-    <div class="interest-visual">
+    <figure class="interest-figure">
 
         <svg viewBox="0 0 300 175"
              xmlns="http://www.w3.org/2000/svg">
 
-            <rect width="300" height="175" fill="#f5f9fc"/>
+            <defs>
+                <linearGradient id="physicsBg" x2="1" y2="1">
+                    <stop stop-color="#f0f8ff"/>
+                    <stop offset="1" stop-color="#f4f0ff"/>
+                </linearGradient>
+            </defs>
 
-            <text x="150" y="20" text-anchor="middle"
-                  font-size="12" fill="#36566e">
-                Learning Physical Dynamics
-            </text>
+            <rect width="300" height="175"
+                  fill="url(#physicsBg)"/>
 
-            <g stroke="#dce5eb" stroke-width="1">
-                <path d="M30 40H280 M30 70H280 M30 100H280 M30 130H280"/>
-                <path d="M60 30V145 M110 30V145 M160 30V145 M210 30V145 M260 30V145"/>
+            <g stroke="#cdd9e5" stroke-width=".7">
+                <path d="M20 35H280 M20 65H280
+                         M20 95H280 M20 125H280
+                         M50 20V145 M100 20V145
+                         M150 20V145 M200 20V145
+                         M250 20V145"/>
             </g>
 
-            <path d="M30 30V145H280"
-                  fill="none" stroke="#687f90"/>
+            <path d="M25 135 C60 130 65 30 100 65
+                     S150 150 175 70 S230 20 275 40"
+                  fill="none" stroke="#2478ad" stroke-width="3"/>
 
-            <path d="M32 132 C55 130 62 55 90 62
-                     S125 130 151 92 S190 28 214 56
-                     S250 125 278 38"
-                  fill="none" stroke="#287fb6"
-                  stroke-width="3"/>
-
-            <path d="M32 138 C60 136 65 69 90 70
-                     S128 135 151 99 S190 37 214 63
-                     S251 131 278 48"
-                  fill="none" stroke="#e29449"
+            <path d="M25 130 C60 120 70 45 100 75
+                     S150 140 175 78 S230 32 275 48"
+                  fill="none" stroke="#ed8d42"
                   stroke-width="2" stroke-dasharray="5 4"/>
 
-            <text x="150" y="164" font-size="10"
-                  text-anchor="middle" fill="#555">
-                Time / system evolution
+            <g fill="#2786ba">
+                <circle cx="55" cy="112" r="4"/>
+                <circle cx="100" cy="65" r="4"/>
+                <circle cx="175" cy="70" r="4"/>
+                <circle cx="245" cy="32" r="4"/>
+            </g>
+
+            <text x="150" y="163" text-anchor="middle"
+                  font-size="11" fill="#42566a">
+                Physics + Data + Temporal Dynamics
             </text>
 
         </svg>
 
-        <div class="interest-info">
-            <h3>Scientific Machine Learning</h3>
-            <p>
-                Physics-informed learning, nonlinear
-                dynamics and interpretable scientific models.
-            </p>
-        </div>
+        <figcaption class="interest-caption">
+            <strong>Scientific Machine Learning</strong>
+            Physics-informed learning and nonlinear dynamical systems.
+        </figcaption>
 
-    </div>
+    </figure>
 
-    <!-- TEMPORAL REPRESENTATION -->
-
-    <div class="interest-visual">
-
-        <svg viewBox="0 0 300 170"
-             xmlns="http://www.w3.org/2000/svg">
-
-            <rect width="300" height="170" fill="#f8fafc"/>
-
-            <text x="150" y="20" text-anchor="middle"
-                  font-size="12" fill="#36566e">
-                Temporal Representation Learning
-            </text>
-
-            <g stroke="#9aabb8" stroke-width="1.5">
-                <path d="M45 55H255"/>
-                <path d="M45 65L70 115 M100 65L125 115
-                         M155 65L180 115 M210 65L235 115"/>
-            </g>
-
-            <g fill="#dcecf7" stroke="#5793b7">
-                <rect x="25" y="39" width="40" height="32" rx="5"/>
-                <rect x="80" y="39" width="40" height="32" rx="5"/>
-                <rect x="135" y="39" width="40" height="32" rx="5"/>
-                <rect x="190" y="39" width="40" height="32" rx="5"/>
-                <rect x="245" y="39" width="30" height="32" rx="5"/>
-            </g>
-
-            <g fill="#36566e" font-size="11" text-anchor="middle">
-                <text x="45" y="59">t1</text>
-                <text x="100" y="59">t2</text>
-                <text x="155" y="59">t3</text>
-                <text x="210" y="59">t4</text>
-                <text x="260" y="59">tn</text>
-            </g>
-
-            <g opacity=".85">
-                <circle cx="65" cy="118" r="16" fill="#76a9d1"/>
-                <circle cx="83" cy="127" r="12" fill="#76a9d1"/>
-                <circle cx="130" cy="113" r="15" fill="#78b99b"/>
-                <circle cx="148" cy="126" r="12" fill="#78b99b"/>
-                <circle cx="216" cy="117" r="16" fill="#ae94ce"/>
-                <circle cx="237" cy="128" r="11" fill="#ae94ce"/>
-            </g>
-
-            <text x="150" y="158" text-anchor="middle"
-                  font-size="10" fill="#555">
-                Latent states and hidden regimes
-            </text>
-
-        </svg>
-
-        <div class="interest-info">
-            <h3>Temporal Learning</h3>
-            <p>
-                Sequential modelling, state-space models
-                and unsupervised discovery of hidden structure.
-            </p>
-        </div>
-
-    </div>
-
-    <!-- NLP AND LLM -->
-
-    <div class="interest-visual">
+    <figure class="interest-figure">
 
         <svg viewBox="0 0 300 175"
              xmlns="http://www.w3.org/2000/svg">
 
-            <rect width="300" height="175" fill="#faf8fc"/>
+            <rect width="300" height="175" fill="#f9fbfd"/>
 
-            <text x="150" y="20" text-anchor="middle"
-                  font-size="12" fill="#65517e">
-                Language and Context
-            </text>
-
-            <g fill="#e7ddf3" stroke="#a28abb">
-                <rect x="20" y="40" width="55" height="27" rx="4"/>
-                <rect x="88" y="40" width="55" height="27" rx="4"/>
-                <rect x="156" y="40" width="55" height="27" rx="4"/>
-                <rect x="224" y="40" width="55" height="27" rx="4"/>
+            <g fill="none" stroke="#a6b7c7">
+                <ellipse cx="80" cy="55" rx="42" ry="30"/>
+                <ellipse cx="215" cy="55" rx="45" ry="30"/>
+                <ellipse cx="145" cy="125" rx="48" ry="30"/>
             </g>
 
-            <g font-size="10" text-anchor="middle" fill="#65517e">
-                <text x="47" y="57">Token</text>
-                <text x="115" y="57">Token</text>
-                <text x="183" y="57">Token</text>
-                <text x="251" y="57">Token</text>
+            <g fill="#428bc0">
+                <circle cx="60" cy="42" r="5"/>
+                <circle cx="85" cy="60" r="5"/>
+                <circle cx="100" cy="43" r="5"/>
+                <circle cx="70" cy="70" r="5"/>
+                <circle cx="91" cy="33" r="5"/>
             </g>
 
-            <g stroke="#b8a6ce" stroke-width="1.3" opacity=".8">
-                <path d="M47 67L110 110 M47 67L190 110
-                         M115 67L110 110 M115 67L190 110
-                         M183 67L110 110 M183 67L190 110
-                         M251 67L110 110 M251 67L190 110"/>
+            <g fill="#e5a24e">
+                <circle cx="200" cy="40" r="5"/>
+                <circle cx="225" cy="52" r="5"/>
+                <circle cx="205" cy="70" r="5"/>
+                <circle cx="240" cy="40" r="5"/>
+                <circle cx="230" cy="72" r="5"/>
             </g>
 
-            <rect x="60" y="105" width="180" height="38"
-                  rx="6" fill="#ddd1ed" stroke="#a28abb"/>
+            <g fill="#6eaa8a">
+                <circle cx="120" cy="112" r="5"/>
+                <circle cx="150" cy="135" r="5"/>
+                <circle cx="170" cy="115" r="5"/>
+                <circle cx="140" cy="105" r="5"/>
+                <circle cx="125" cy="140" r="5"/>
+            </g>
 
-            <text x="150" y="128" text-anchor="middle"
-                  font-size="12" fill="#65517e">
-                Contextual Representations
-            </text>
+            <path d="M115 55H170 M95 82L120 100
+                     M200 82L170 100"
+                  stroke="#8d9bab" stroke-width="1.5"
+                  stroke-dasharray="4 4"/>
 
-            <text x="150" y="162" text-anchor="middle"
-                  font-size="10" fill="#777">
-                Understanding and reasoning
+            <text x="150" y="164" text-anchor="middle"
+                  font-size="11" fill="#42566a">
+                Representations and Hidden States
             </text>
 
         </svg>
 
-        <div class="interest-info">
-            <h3>LLMs &amp; Natural Language Processing</h3>
-            <p>
-                Contextual understanding, language
-                representations and reliable reasoning.
-            </p>
-        </div>
+        <figcaption class="interest-caption">
+            <strong>Temporal &amp; Interpretable Learning</strong>
+            State-space models, regime discovery and symbolic laws.
+        </figcaption>
 
-    </div>
+    </figure>
 
-    <!-- AGENTIC AI -->
+    <figure class="interest-figure">
 
-    <div class="interest-visual">
-
-        <svg viewBox="0 0 300 190"
+        <svg viewBox="0 0 300 175"
              xmlns="http://www.w3.org/2000/svg">
 
-            <rect width="300" height="190" fill="#f5faf8"/>
+            <rect width="300" height="175" fill="#f6f9fc"/>
 
-            <g stroke="#7da699" stroke-width="2">
-                <path d="M150 53V78 M150 115V145"/>
-                <path d="M92 96H42 M208 96H258"/>
+            <g stroke="#92a7ba" stroke-width="1.5">
+                <path d="M150 55L55 110
+                         M150 55L150 110
+                         M150 55L245 110"/>
             </g>
 
-            <rect x="105" y="15" width="90" height="38"
-                  rx="6" fill="#e2eee8" stroke="#79a896"/>
+            <rect x="105" y="18" width="90" height="40"
+                  rx="7" fill="#dbeaf7" stroke="#769dbd"/>
 
-            <rect x="92" y="78" width="116" height="38"
-                  rx="6" fill="#c9e3d8" stroke="#79a896"/>
+            <text x="150" y="43" text-anchor="middle"
+                  font-size="13" fill="#244762">
+                LLM Agent
+            </text>
 
-            <rect x="8" y="79" width="70" height="34"
-                  rx="5" fill="#e2eee8" stroke="#79a896"/>
+            <rect x="13" y="108" width="84" height="42"
+                  rx="6" fill="#e2f0e6" stroke="#8cb39b"/>
 
-            <rect x="222" y="79" width="70" height="34"
-                  rx="5" fill="#e2eee8" stroke="#79a896"/>
+            <rect x="108" y="108" width="84" height="42"
+                  rx="6" fill="#f2e8f8" stroke="#ae91c1"/>
 
-            <rect x="95" y="145" width="110" height="30"
-                  rx="5" fill="#e2eee8" stroke="#79a896"/>
+            <rect x="203" y="108" width="84" height="42"
+                  rx="6" fill="#f9eedb" stroke="#d5b77d"/>
 
-            <g fill="#365f51" font-size="11"
-               text-anchor="middle">
-                <text x="150" y="38">User Query</text>
-                <text x="150" y="101">LLM Agent</text>
-                <text x="43" y="100">Memory</text>
-                <text x="257" y="100">Tools</text>
-                <text x="150" y="164">Grounded Output</text>
+            <g font-size="11" text-anchor="middle" fill="#344657">
+                <text x="55" y="133">Retrieval</text>
+                <text x="150" y="133">Memory</text>
+                <text x="245" y="133">Tools</text>
             </g>
 
         </svg>
 
-        <div class="interest-info">
-            <h3>Agentic AI &amp; RAG</h3>
-            <p>
-                Knowledge retrieval, persistent memory,
-                tool-augmented reasoning and adaptive agents.
-            </p>
-        </div>
+        <figcaption class="interest-caption">
+            <strong>NLP, LLMs &amp; Agentic AI</strong>
+            Retrieval, memory and tool-augmented reasoning.
+        </figcaption>
 
-    </div>
+    </figure>
 
-    <p class="small-text" style="text-align:center">
+    <figure class="interest-figure">
+
+        <svg viewBox="0 0 300 175"
+             xmlns="http://www.w3.org/2000/svg">
+
+            <rect width="300" height="175" fill="#edf3f7"/>
+
+            <g transform="translate(18 25)">
+                <rect width="110" height="105" rx="5"
+                      fill="#263d50"/>
+
+                <path d="M15 65L35 25L72 20L95 60L70 88L30 90Z"
+                      fill="#6da3bc"/>
+
+                <path d="M45 35L75 28L95 60L70 88L50 70Z"
+                      fill="#b4a1d0"/>
+
+                <rect x="10" y="10" width="90" height="85"
+                      fill="none" stroke="#d5e5f2"
+                      stroke-dasharray="4 3"/>
+            </g>
+
+            <path d="M138 78H164"
+                  stroke="#6c8195" stroke-width="2"/>
+
+            <path d="M157 72L165 78L157 84"
+                  fill="none" stroke="#6c8195" stroke-width="2"/>
+
+            <g transform="translate(175 25)">
+                <rect width="107" height="105" rx="5"
+                      fill="#283c51"/>
+
+                <path d="M8 90L20 70L40 78L55 35L70 52L95 15"
+                      fill="none" stroke="#f0b95e"
+                      stroke-width="3"/>
+
+                <path d="M8 90L20 70L40 78L55 35L70 52L95 15
+                         L95 95H8Z"
+                      fill="#f0b95e" opacity=".15"/>
+            </g>
+
+            <text x="150" y="156" text-anchor="middle"
+                  font-size="11" fill="#42566a">
+                Perception to Temporal Prediction
+            </text>
+
+        </svg>
+
+        <figcaption class="interest-caption">
+            <strong>Computer Vision &amp; Robust AI</strong>
+            Visual representations, uncertainty and event forecasting.
+        </figcaption>
+
+    </figure>
+
+    <p class="figure-note">
         Conceptual illustrations of research interests.
     </p>
 
@@ -1511,310 +1467,165 @@ footer {
 
 </div>
 
-</section>
-
-<!-- EXPERIENCE -->
-
-<section id="experience">
-
-    <h2>Experience &amp; Education</h2>
-
-    <div class="timeline">
-
-        <article class="timeline-item ntu">
-
-            <div class="timeline-date">2026</div>
-
-            <div class="timeline-institution">
-                Nanyang Technological University, Singapore
-            </div>
-
-            <div class="timeline-role">
-                Research Collaborator
-            </div>
-
-            <p>
-                Collaborated on AIView, an AI-assisted
-                interview analytics platform integrating
-                competency evaluation, behavioural feedback
-                and human-centred data visualization.
-            </p>
-
-            <p>
-                Contributed to interactive analytical
-                interfaces, performance tracking, structured
-                feedback presentation and frontend
-                integration of AI-generated assessments.
-            </p>
-
-            <div class="tags">
-                <span class="tag">Human-Centred AI</span>
-                <span class="tag">Multimodal Analytics</span>
-                <span class="tag">React</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">HCI</span>
-            </div>
-
-        </article>
-
-        <article class="timeline-item nus">
-
-            <div class="timeline-date">
-                May – July 2026
-            </div>
-
-            <div class="timeline-institution">
-                National University of Singapore
-            </div>
-
-            <div class="timeline-role">
-                IRIS Summer Research Intern
-            </div>
-
-            <div class="nus-experience">
-
-                <div>
-
-                    <p>
-                        Selected among 37 participants
-                        worldwide for the NUS IRIS
-                        international summer research programme.
-                    </p>
-
-                    <p>
-                        <strong>Research Advisor:</strong>
-                        Assoc. Prof.
-                        Lakshminarayanan Samavedham
-                    </p>
-
-                    <p>
-                        Investigated physics-informed
-                        temporal modelling, hidden operating
-                        regime discovery and interpretable
-                        symbolic law learning for nonlinear
-                        semi-batch reactor dynamics.
-                    </p>
-
-                    <p>
-                        Developed reproducible computational
-                        pipelines for physical simulation,
-                        sequence modelling, clustering,
-                        symbolic regression and evaluation
-                        under distribution shift.
-                    </p>
-
-                    <a href="#nus-research">
-                        View research details →
-                    </a>
-
-                    <div class="tags">
-                        <span class="tag">Scientific ML</span>
-                        <span class="tag">Mamba</span>
-                        <span class="tag">GMM</span>
-                        <span class="tag">Symbolic Regression</span>
-                    </div>
-
-                </div>
-
-                <!-- NUS PHOTO GALLERY -->
-
-                <div class="gallery nus-gallery"
-                     data-gallery="nusExperience">
-
-                    <div class="gallery-stage">
-
-                        <img src="assets/nus-talk.jpg"
-                             alt="NUS research presentation"
-                             class="gallery-image zoomable">
-
-                        <button class="gallery-arrow prev"
-                                aria-label="Previous NUS photo">
-                            &lt;
-                        </button>
-
-                        <button class="gallery-arrow next"
-                                aria-label="Next NUS photo">
-                            &gt;
-                        </button>
-
-                    </div>
-
-                    <div class="gallery-caption"></div>
-                    <div class="gallery-dots"></div>
-
-                </div>
-
-            </div>
-
-        </article>
-
-        <article class="timeline-item vit">
-
-            <div class="timeline-date">
-                Expected graduation: July 2027
-            </div>
-
-            <div class="timeline-institution">
-                Vellore Institute of Technology, Chennai
-            </div>
-
-            <div class="timeline-role">
-                Integrated M.Tech — Software Engineering
-            </div>
-
-            <p>
-                Five-year integrated postgraduate programme
-                covering software engineering, artificial
-                intelligence, machine learning, algorithms,
-                database systems and computer science.
-            </p>
-
-            <p><strong>CGPA:</strong> 8.82 / 10</p>
-
-        </article>
-
-    </div>
-
-</section>
-
-<!-- SELECTED RESEARCH -->
+<!-- =========================
+     SELECTED RESEARCH WORKS
+========================== -->
 
 <section id="research">
 
-    <h2>Selected Research</h2>
+    <h2 class="section-title">Selected Research Works</h2>
 
-    <p class="section-description">
-        Research in scientific machine learning,
-        interpretable temporal modelling, reliable AI
-        and intelligent systems.
-    </p>
+    <div class="topic-list">
+        <span class="topic">Scientific ML</span>
+        <span class="topic">Temporal Learning</span>
+        <span class="topic">Computer Vision</span>
+        <span class="topic">Interpretable AI</span>
+        <span class="topic">Robust Learning</span>
+        <span class="topic">LLMs &amp; RAG</span>
+    </div>
+
+    <!-- NUS RESEARCH -->
 
     <article class="research-entry" id="nus-research">
 
-        <div class="gallery" data-gallery="nusResearch">
-
-            <div class="gallery-stage">
-
-                <img src="assets/Screenshot%202026-11-26%20162519.png"
-                     alt="Physics-informed AI framework"
-                     class="gallery-image zoomable">
-
-                <button class="gallery-arrow prev"
-                        aria-label="Previous research figure">
-                    &lt;
-                </button>
-
-                <button class="gallery-arrow next"
-                        aria-label="Next research figure">
-                    &gt;
-                </button>
-
-            </div>
-
-            <div class="gallery-caption"></div>
-            <div class="gallery-dots"></div>
-
-        </div>
-
         <div>
 
-            <div class="project-category">
-                Scientific Machine Learning · NUS · 2026
-            </div>
-
-            <h3 class="project-title">
-                Physics-Informed Hidden Regime Discovery
-                and Local Symbolic Law Learning for
-                Nonlinear Semi-Batch Reactors
+            <h3 class="entry-title">
+                Physics-Informed Hidden Regime Discovery and
+                Local Symbolic Law Learning for Semi-Batch Reactors
             </h3>
 
-            <p>
-                <strong>National University of Singapore</strong>
-                <br>
-                Advisor: Assoc. Prof.
-                Lakshminarayanan Samavedham
+            <p class="entry-meta">
+                <strong>Asifa S</strong>
             </p>
 
-            <p>
-                Developed a physics-informed learning
-                framework for discovering hidden operating
-                regimes in the nonlinear Chylla–Haase
-                polymerization reactor and deriving
-                interpretable local dynamical equations.
+            <p class="entry-venue">
+                National University of Singapore —
+                IRIS Summer Research, 2026
             </p>
 
-            <ul>
+            <p class="entry-meta">
+                Advisor:
+                <a href="https://scholar.google.com/scholar?q=Lakshminarayanan+Samavedham"
+                   target="_blank">
+                    Assoc. Prof. Lakshminarayanan Samavedham
+                </a>
+            </p>
+
+            <p class="entry-description">
+                Developed a physics-informed machine learning
+                framework for discovering hidden operating regimes
+                in the nonlinear Chylla–Haase semi-batch
+                polymerization reactor.
+                Rather than fitting a single global equation,
+                the framework learns temporal representations
+                and discovers distinct local operating behaviours.
+            </p>
+
+            <ul class="entry-details">
 
                 <li>
-                    Generated and processed 396,220
-                    observations across 220 simulated
-                    reactor trajectories.
+                    Constructed a physics-consistent dataset
+                    comprising 396,220 observations across
+                    220 reactor trajectories.
                 </li>
 
                 <li>
-                    Learned temporal representations using
-                    a Mamba selective state-space model
-                    incorporating physics-based features.
+                    Implemented a Mamba-based selective
+                    state-space architecture integrating
+                    physics-informed input features.
                 </li>
 
                 <li>
-                    Discovered eight operating regimes
-                    through Gaussian Mixture Model
-                    clustering without manual regime labels.
+                    Applied Gaussian Mixture Models to learned
+                    temporal embeddings to discover eight
+                    unlabelled operating regimes.
                 </li>
 
                 <li>
-                    Applied regime-conditioned symbolic
-                    regression to obtain interpretable
-                    temperature-change equations.
+                    Used regime-conditioned symbolic regression
+                    to derive interpretable local equations
+                    describing temperature-change dynamics.
                 </li>
 
                 <li>
-                    Evaluated generalization on held-out
-                    and out-of-distribution trajectories.
+                    Evaluated generalization on validation,
+                    test and out-of-distribution trajectories.
                 </li>
 
             </ul>
 
-            <div class="metrics">
+            <div class="result-line">
 
-                <div class="metric">
-                    <strong>220</strong>
-                    <span>Reactor trajectories</span>
-                </div>
-
-                <div class="metric">
-                    <strong>8</strong>
-                    <span>Discovered regimes</span>
-                </div>
-
-                <div class="metric">
-                    <strong>43.4%</strong>
-                    <span>Lower test RMSE</span>
-                </div>
-
-                <div class="metric">
-                    <strong>17.6%</strong>
-                    <span>Lower OOD RMSE</span>
-                </div>
+                <strong>Results:</strong>
+                8 discovered operating regimes ·
+                43.4% lower test RMSE ·
+                17.6% lower out-of-distribution RMSE
+                compared with the global symbolic-law baseline.
 
             </div>
 
-            <p class="small-text">
-                RMSE reductions compare regime-conditioned
-                symbolic laws with the global symbolic
-                regression baseline.
+            <p class="technology">
+                Mamba · State-Space Models · Physics-Informed ML ·
+                Gaussian Mixture Models · Symbolic Regression ·
+                Python · PyTorch
             </p>
 
-            <div class="tags">
-                <span class="tag">Physics-Informed ML</span>
-                <span class="tag">Mamba</span>
-                <span class="tag">State-Space Models</span>
-                <span class="tag">Time Series</span>
-                <span class="tag">GMM</span>
-                <span class="tag">Symbolic Regression</span>
-                <span class="tag">OOD Evaluation</span>
+            <div class="entry-links">
+                <a href="#nus-experience">▣ Research experience</a>
+                <a href="assets/Screenshot%202026-11-26%20162519.png"
+                   target="_blank">▣ Framework</a>
+                <a href="assets/Screenshot%202026-11-26%20162535.png"
+                   target="_blank">▣ Results</a>
             </div>
+
+            <details>
+                <summary>Abstract</summary>
+
+                <p>
+                    Nonlinear reactor behaviour changes across
+                    operating conditions involving reaction heat,
+                    feed rate, viscosity and cooling dynamics.
+                    This work investigates whether temporal
+                    representation learning can uncover
+                    these operating behaviours without manual
+                    regime annotations. Physics-informed features,
+                    selective state-space modelling and probabilistic
+                    clustering are combined with symbolic regression
+                    to obtain local, interpretable dynamical laws.
+                </p>
+            </details>
+
+        </div>
+
+        <div class="entry-images">
+
+            <figure class="research-image">
+                <img loading="lazy"
+                     src="assets/Screenshot%202026-11-26%20161453.png"
+                     alt="Physics fingerprint of eight discovered regimes">
+                <figcaption>
+                    Physics fingerprints of discovered regimes R0–R7.
+                </figcaption>
+            </figure>
+
+            <figure class="research-image">
+                <img loading="lazy"
+                     src="assets/Screenshot%202026-11-26%20162519.png"
+                     alt="Proposed physics-informed AI framework">
+                <figcaption>
+                    Proposed physics-informed learning framework.
+                </figcaption>
+            </figure>
+
+            <figure class="research-image">
+                <img loading="lazy"
+                     src="assets/Screenshot%202026-11-26%20162535.png"
+                     alt="Global and regime-conditioned symbolic law comparison">
+                <figcaption>
+                    Global versus regime-conditioned symbolic laws.
+                </figcaption>
+            </figure>
 
         </div>
 
@@ -1822,551 +1633,332 @@ footer {
 
     <!-- SURGICAL RESEARCH -->
 
-    <article class="research-entry">
-
-        <div class="gallery" data-gallery="surgical">
-
-            <div class="gallery-stage">
-
-                <img src="assets/Screenshot%202026-11-16%20024020.png"
-                     alt="Surgical segmentation and uncertainty"
-                     class="gallery-image zoomable">
-
-                <button class="gallery-arrow prev"
-                        aria-label="Previous surgical figure">
-                    &lt;
-                </button>
-
-                <button class="gallery-arrow next"
-                        aria-label="Next surgical figure">
-                    &gt;
-                </button>
-
-            </div>
-
-            <div class="gallery-caption"></div>
-            <div class="gallery-dots"></div>
-
-        </div>
+    <article class="research-entry" id="surgical">
 
         <div>
 
-            <div class="project-category">
-                Computer Vision · Temporal Learning
-            </div>
-
-            <h3 class="project-title">
-                Surgical Error Prediction in
-                Robotic-Assisted Cholecystectomy
-                <span class="ongoing">Ongoing</span>
+            <h3 class="entry-title">
+                Surgical Error Prediction in Robotic-Assisted
+                Cholecystectomy
             </h3>
 
-            <p>
-                Investigating deep learning methods for
-                anticipating adverse surgical events through
-                surgical scene understanding, temporal
-                representation learning and uncertainty
-                estimation.
+            <p class="entry-meta">
+                <strong>Asifa S</strong>
             </p>
 
-            <ul>
+            <p class="status">Ongoing Research · 2026</p>
+
+            <p class="entry-description">
+                Investigating uncertainty-aware spatiotemporal
+                learning for anticipating adverse surgical events
+                from operative video sequences.
+                The research combines surgical scene understanding,
+                anatomical segmentation, instrument motion analysis
+                and temporal representations.
+            </p>
+
+            <ul class="entry-details">
 
                 <li>
-                    Anatomical and surgical instrument
-                    segmentation from operative video.
+                    Anatomical and instrument segmentation
+                    using deep visual representations.
                 </li>
 
                 <li>
-                    Spatiotemporal feature extraction
-                    and instrument motion analysis.
+                    Surgical phase recognition and temporal
+                    modelling of procedural dynamics.
                 </li>
 
                 <li>
-                    Surgical phase recognition and
-                    modelling of procedural transitions.
+                    Optical-flow-based motion analysis and
+                    spatiotemporal feature extraction.
                 </li>
 
                 <li>
                     Entropy-based uncertainty estimation
-                    for anatomical predictions.
+                    for identifying ambiguous predictions.
                 </li>
 
                 <li>
-                    Exploring future adverse event
-                    forecasting using temporal models.
+                    Investigating forecasting of adverse events
+                    before their occurrence.
                 </li>
 
             </ul>
 
-            <p>
+            <p class="entry-description">
                 <strong>Datasets:</strong>
-                Cholec80, ECRCD, EndoScapes and SOAR
-                are part of the broader research workflow.
+                Cholec80, ECRCD, EndoScapes and SOAR.
             </p>
 
-            <p class="small-text">
-                The displayed figures show segmentation
-                and uncertainty results. They do not
-                establish validated surgical error
-                forecasting performance.
+            <p class="entry-description">
+                The displayed results represent the visual
+                perception and uncertainty-estimation components.
+                Adverse-event forecasting remains under development
+                and is not yet clinically validated.
             </p>
 
-            <div class="tags">
-                <span class="tag">PyTorch</span>
-                <span class="tag">U-Net</span>
-                <span class="tag">Computer Vision</span>
-                <span class="tag">Optical Flow</span>
-                <span class="tag">Temporal Learning</span>
-                <span class="tag">Uncertainty Estimation</span>
+            <p class="technology">
+                Computer Vision · U-Net · Deep Learning ·
+                Semantic Segmentation · Optical Flow ·
+                Temporal Learning · Uncertainty Estimation
+            </p>
+
+            <div class="entry-links">
+
+                <a href="assets/Screenshot%202026-11-16%20024020.png"
+                   target="_blank">▣ Visual results</a>
+
+                <a href="assets/Screenshot%202026-11-15%20185643.png"
+                   target="_blank">▣ Uncertainty analysis</a>
+
             </div>
+
+        </div>
+
+        <div class="entry-images">
+
+            <figure class="research-image">
+                <img loading="lazy"
+                     src="assets/Screenshot%202026-11-16%20024020.png"
+                     alt="Surgical segmentation predictions and normalized pixel entropy">
+                <figcaption>
+                    Segmentation predictions and pixel-level entropy.
+                </figcaption>
+            </figure>
+
+            <figure class="research-image">
+                <img loading="lazy"
+                     src="assets/Screenshot%202026-11-15%20135320.png"
+                     alt="Ground truth and predicted surgical anatomy">
+                <figcaption>
+                    Ground-truth and predicted anatomical masks.
+                </figcaption>
+            </figure>
+
+            <figure class="research-image">
+                <img loading="lazy"
+                     src="assets/Screenshot%202026-11-15%20185643.png"
+                     alt="Predictive uncertainty in surgical anatomy segmentation">
+                <figcaption>
+                    Predictive entropy and uncertainty visualization.
+                </figcaption>
+            </figure>
 
         </div>
 
     </article>
 
-</section>
+    <!-- AVIATION RESEARCH -->
 
-<!-- PUBLICATIONS -->
-
-<section id="publications">
-
-    <h2>Publications</h2>
-
-    <p class="section-description">
-        Published research in artificial intelligence,
-        adversarial learning, aviation safety and
-        information security.
-    </p>
-
-    <article class="publication">
-
-        <div class="publication-visual">
-
-            <img src="assets/Screenshot%202026-11-26%20162427.png"
-                 alt="DiffQuantumQR architecture"
-                 class="zoomable"
-                 loading="lazy">
-
-        </div>
+    <article class="research-entry" id="aviation">
 
         <div>
 
-            <div class="publication-title">
-                Diffusion-Guided Quantum-Aware
-                Contrastive Learning for Secure
-                QR Code Classification
-            </div>
+            <h3 class="entry-title">
 
-            <div class="authors">
-                <strong>S. Asifa</strong>, R. Sendhil
-            </div>
-
-            <div class="venue">
-                IEEE iConSCEPT 2025,
-                National Institute of Technology Puducherry
-            </div>
-
-            <div class="project-links">
-
-                <a href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=Diffusion-Guided%20Quantum-Aware%20Contrastive%20Learning"
+                <a href="https://ieeexplore.ieee.org/document/11085355"
                    target="_blank">
-                    Find Paper on IEEE Xplore
+
+                    Lightning-Strike Risk Prediction for Aviation Safety
+
                 </a>
 
-            </div>
+            </h3>
 
-        </div>
-
-    </article>
-
-    <article class="publication">
-
-        <div class="concept-diagram">
-
-            <svg viewBox="0 0 300 175"
-                 xmlns="http://www.w3.org/2000/svg">
-
-                <rect width="300" height="175" fill="#eef5fa"/>
-
-                <g stroke="#d4e2eb" stroke-width="1">
-                    <path d="M0 35H300 M0 70H300 M0 105H300 M0 140H300"/>
-                    <path d="M50 0V175 M100 0V175 M150 0V175 M200 0V175 M250 0V175"/>
-                </g>
-
-                <ellipse cx="180" cy="70" rx="55" ry="35"
-                         fill="#f4cc79" opacity=".65"/>
-
-                <ellipse cx="180" cy="70" rx="29" ry="20"
-                         fill="#dc7759" opacity=".8"/>
-
-                <path d="M20 145 Q110 25 280 45"
-                      fill="none" stroke="#2578ad"
-                      stroke-width="3" stroke-dasharray="6 4"/>
-
-                <path d="M20 145 Q140 165 280 45"
-                      fill="none" stroke="#4c9c80"
-                      stroke-width="3"/>
-
-                <path d="M110 85L126 90L113 95L110 109
-                         L104 96L92 90L104 87L110 73Z"
-                      fill="#315e7d"/>
-
-                <text x="180" y="75" font-size="10"
-                      text-anchor="middle" fill="#7d3828">
-                    Risk zone
-                </text>
-
-                <text x="150" y="165" font-size="10"
-                      text-anchor="middle" fill="#555">
-                    Weather-aware flight routing
-                </text>
-
-            </svg>
-
-            <div class="concept-caption">
-                Conceptual illustration
-            </div>
-
-        </div>
-
-        <div>
-
-            <div class="publication-title">
-                Lightning-Strike Risk Prediction
-                for Aviation Safety
-            </div>
-
-            <div class="venue">
+            <p class="entry-venue">
                 IEEE RFCoN 2025
-            </div>
+            </p>
 
-            <span class="award-label">
+            <p class="highlight">
                 Best Paper Award
-            </span>
-
-            <div class="project-links">
-
-                <a href="https://ieeexplore.ieee.org/document/11085355"
-                   target="_blank">
-                    Paper
-                </a>
-
-            </div>
-
-        </div>
-
-    </article>
-
-    <article class="publication">
-
-        <div class="concept-diagram">
-
-            <svg viewBox="0 0 300 155"
-                 xmlns="http://www.w3.org/2000/svg">
-
-                <rect width="300" height="155" fill="#f4f7fa"/>
-
-                <g fill="#dce8f2" stroke="#6d93b0">
-                    <rect x="15" y="50" width="75" height="55" rx="5"/>
-                    <rect x="112" y="50" width="75" height="55" rx="5"/>
-                    <rect x="210" y="50" width="75" height="55" rx="5"/>
-                </g>
-
-                <g stroke="#6d93b0" stroke-width="2">
-                    <path d="M90 77H112 M187 77H210"/>
-                </g>
-
-                <g font-size="11" text-anchor="middle" fill="#36566e">
-                    <text x="52" y="72">Encrypted</text>
-                    <text x="52" y="88">Data</text>
-                    <text x="149" y="72">Outsourced</text>
-                    <text x="149" y="88">Decryption</text>
-                    <text x="247" y="72">Blockchain</text>
-                    <text x="247" y="88">Payment</text>
-                </g>
-
-                <text x="150" y="25" font-size="12"
-                      text-anchor="middle" fill="#36566e">
-                    Secure Outsourced Computation
-                </text>
-
-            </svg>
-
-            <div class="concept-caption">
-                Conceptual illustration
-            </div>
-
-        </div>
-
-        <div>
-
-            <div class="publication-title">
-                Payable Outsourced Decryption for
-                Functional Encryption using Blockchain
-            </div>
-
-            <div class="authors">
-                R. Sendhil, <strong>S. Asifa</strong>,
-                A. Savitha Sree
-            </div>
-
-            <div class="venue">
-                ICAIOT 2023 · Springer Nature
-            </div>
-
-            <div class="project-links">
-
-                <a href="https://link.springer.com/search?query=Payable+Outsourced+Decryption+for+Functional+Encryption+using+Blockchain"
-                   target="_blank">
-                    Find Paper on Springer
-                </a>
-
-            </div>
-
-        </div>
-
-    </article>
-
-</section>
-
-<!-- PROJECTS -->
-
-<section id="projects">
-
-    <h2>Selected Projects</h2>
-
-    <p class="section-description">
-        Selected work across machine learning,
-        language models, computer vision,
-        embedded intelligence and software engineering.
-    </p>
-
-    <!-- MEMOGPT -->
-
-    <article class="project-entry">
-
-        <div class="concept-diagram">
-
-            <svg viewBox="0 0 320 220"
-                 xmlns="http://www.w3.org/2000/svg">
-
-                <rect width="320" height="220" fill="#f6f9fc"/>
-
-                <text x="160" y="22" font-size="14"
-                      font-weight="bold" text-anchor="middle"
-                      fill="#36566e">
-                    MemoGPT
-                </text>
-
-                <g stroke="#8ca5b9" stroke-width="1.7">
-                    <path d="M160 65V85 M160 125V150"/>
-                    <path d="M100 105H65 M220 105H255"/>
-                </g>
-
-                <rect x="110" y="36" width="100" height="29"
-                      rx="4" fill="#dcebf5" stroke="#7ea8c4"/>
-
-                <rect x="100" y="85" width="120" height="40"
-                      rx="5" fill="#c8dfef" stroke="#7ea8c4"/>
-
-                <rect x="8" y="87" width="70" height="36"
-                      rx="5" fill="#e1ebf3" stroke="#7ea8c4"/>
-
-                <rect x="242" y="87" width="70" height="36"
-                      rx="5" fill="#e1ebf3" stroke="#7ea8c4"/>
-
-                <rect x="95" y="150" width="130" height="32"
-                      rx="5" fill="#dcebf5" stroke="#7ea8c4"/>
-
-                <g font-size="11" fill="#36566e"
-                   text-anchor="middle">
-                    <text x="160" y="54">User Query</text>
-                    <text x="160" y="109">Language Model</text>
-                    <text x="43" y="101">Vector</text>
-                    <text x="43" y="114">Search</text>
-                    <text x="277" y="101">Persistent</text>
-                    <text x="277" y="114">Memory</text>
-                    <text x="160" y="170">Grounded Response</text>
-                </g>
-
-                <text x="160" y="205" text-anchor="middle"
-                      font-size="10" fill="#777">
-                    Retrieval · Memory · Reasoning
-                </text>
-
-            </svg>
-
-            <div class="concept-caption">
-                Conceptual system architecture
-            </div>
-
-        </div>
-
-        <div>
-
-            <div class="project-category">
-                Generative AI · NLP · Agentic Systems
-            </div>
-
-            <h3 class="project-title">
-                MemoGPT — Memory-Augmented RAG Assistant
-            </h3>
-
-            <p>
-                Developed a local knowledge assistant
-                combining large language models,
-                retrieval-augmented generation,
-                semantic search and persistent memory
-                for context-aware interactions.
             </p>
 
-            <ul>
+            <p class="entry-description">
+                Developed a machine learning framework for
+                estimating lightning-strike risk in aviation
+                using aircraft trajectories, atmospheric
+                conditions and temporal flight information.
+            </p>
+
+            <ul class="entry-details">
 
                 <li>
-                    Document processing, chunking,
-                    embedding and semantic retrieval.
+                    Integrated real-time aircraft information
+                    using the OpenSky Network API.
                 </li>
 
                 <li>
-                    Local knowledge storage and
-                    persistent conversational memory.
+                    Applied bidirectional LSTM-based temporal
+                    learning for flight-risk classification.
                 </li>
 
                 <li>
-                    Context management and
-                    retrieval-grounded response generation.
+                    Incorporated weather-aware risk analysis
+                    and interactive geographic visualization.
                 </li>
 
                 <li>
-                    Tool-supported reasoning workflows.
+                    Explored reinforcement-learning-based
+                    route optimization.
                 </li>
 
             </ul>
 
-            <div class="tags">
-                <span class="tag">LLMs</span>
-                <span class="tag">NLP</span>
-                <span class="tag">RAG</span>
-                <span class="tag">Embeddings</span>
-                <span class="tag">Vector Search</span>
-                <span class="tag">Agentic Memory</span>
+            <div class="result-line">
+                <strong>Reported classification accuracy:</strong>
+                93% in the project evaluation.
             </div>
 
-        </div>
-
-    </article>
-
-    <!-- LIGHTNING RISK -->
-
-    <article class="project-entry">
-
-        <div class="concept-diagram">
-
-            <svg viewBox="0 0 320 205"
-                 xmlns="http://www.w3.org/2000/svg">
-
-                <rect width="320" height="205" fill="#edf4f8"/>
-
-                <g stroke="#cbdde8" stroke-width="1">
-                    <path d="M0 40H320 M0 80H320 M0 120H320 M0 160H320"/>
-                    <path d="M40 0V205 M100 0V205 M160 0V205 M220 0V205 M280 0V205"/>
-                </g>
-
-                <ellipse cx="200" cy="90" rx="75" ry="55"
-                         fill="#f1cf7c" opacity=".65"/>
-
-                <ellipse cx="200" cy="90" rx="43" ry="30"
-                         fill="#e28c69" opacity=".8"/>
-
-                <path d="M20 155Q160 5 300 70"
-                      fill="none" stroke="#c16a49"
-                      stroke-width="3" stroke-dasharray="6 4"/>
-
-                <path d="M20 155Q170 195 300 70"
-                      fill="none" stroke="#287fac"
-                      stroke-width="3"/>
-
-                <circle cx="20" cy="155" r="5" fill="#287fac"/>
-                <circle cx="300" cy="70" r="5" fill="#287fac"/>
-
-                <path d="M195 61L182 91H200L190 119L220 83H202L214 61Z"
-                      fill="#fff5d6"/>
-
-                <text x="160" y="20" font-size="12"
-                      text-anchor="middle" fill="#36566e">
-                    Aviation Risk Prediction
-                </text>
-
-                <text x="160" y="195" font-size="10"
-                      text-anchor="middle" fill="#36566e">
-                    Risk-aware trajectory visualization
-                </text>
-
-            </svg>
-
-            <div class="concept-caption">
-                Conceptual illustration — not flight data
-            </div>
-
-        </div>
-
-        <div>
-
-            <div class="project-category">
-                Applied Machine Learning · Aviation Safety
-            </div>
-
-            <h3 class="project-title">
-                Lightning-Strike Risk Prediction
-            </h3>
-
-            <p>
-                Developed a machine learning framework
-                for predicting lightning-related aviation
-                risks using aircraft trajectories,
-                weather information and temporal
-                representation learning.
+            <p class="technology">
+                BiLSTM · PPO · Weather Analytics ·
+                OpenSky API · React · Leaflet
             </p>
 
-            <ul>
-
-                <li>
-                    Integrated aircraft data from
-                    the OpenSky Network.
-                </li>
-
-                <li>
-                    Applied BiLSTM-based temporal
-                    modelling for risk prediction.
-                </li>
-
-                <li>
-                    Developed interactive flight-route
-                    and risk visualization.
-                </li>
-
-            </ul>
-
-            <span class="award-label">
-                IEEE RFCoN 2025 — Best Paper Award
-            </span>
-
-            <div class="tags">
-                <span class="tag">BiLSTM</span>
-                <span class="tag">PPO</span>
-                <span class="tag">React</span>
-                <span class="tag">Leaflet</span>
-                <span class="tag">OpenSky API</span>
-            </div>
-
-            <div class="project-links">
+            <div class="entry-links">
 
                 <a href="https://ieeexplore.ieee.org/document/11085355"
-                   target="_blank">
-                    Research Paper
-                </a>
+                   target="_blank">▣ Paper</a>
 
             </div>
+
+        </div>
+
+        <div class="entry-images">
+
+            <figure class="research-image">
+
+                <!-- Embedded aviation conceptual illustration -->
+
+                <svg viewBox="0 0 700 420"
+                     xmlns="http://www.w3.org/2000/svg">
+
+                    <defs>
+
+                        <linearGradient id="sky" x2="0" y2="1">
+                            <stop stop-color="#071a30"/>
+                            <stop offset="1" stop-color="#17465f"/>
+                        </linearGradient>
+
+                        <radialGradient id="storm">
+                            <stop stop-color="#f44f3d" stop-opacity=".85"/>
+                            <stop offset=".35" stop-color="#ffad45" stop-opacity=".7"/>
+                            <stop offset=".65" stop-color="#65bf8d" stop-opacity=".5"/>
+                            <stop offset="1" stop-color="#3d7d93" stop-opacity="0"/>
+                        </radialGradient>
+
+                        <linearGradient id="aircraft" x2="0" y2="1">
+                            <stop stop-color="#ffffff"/>
+                            <stop offset="1" stop-color="#94b9ce"/>
+                        </linearGradient>
+
+                        <pattern id="radarGrid" width="35" height="35"
+                                 patternUnits="userSpaceOnUse">
+                            <path d="M35 0H0V35"
+                                  fill="none" stroke="#8cc7e1"
+                                  stroke-opacity=".13"/>
+                        </pattern>
+
+                    </defs>
+
+                    <rect width="700" height="420" fill="url(#sky)"/>
+                    <rect width="700" height="420" fill="url(#radarGrid)"/>
+
+                    <g fill="none" stroke="#76c3dd"
+                       stroke-opacity=".22">
+
+                        <circle cx="410" cy="205" r="65"/>
+                        <circle cx="410" cy="205" r="120"/>
+                        <circle cx="410" cy="205" r="175"/>
+
+                    </g>
+
+                    <ellipse cx="465" cy="165" rx="180" ry="125"
+                             fill="url(#storm)"/>
+
+                    <ellipse cx="540" cy="240" rx="120" ry="100"
+                             fill="url(#storm)"/>
+
+                    <path d="M478 90L445 155H475L450 220L515 142H482L505 90Z"
+                          fill="#fff1b1" opacity=".95"/>
+
+                    <path d="M35 340Q210 290 355 200T650 95"
+                          stroke="#ffaf62" stroke-width="3"
+                          stroke-dasharray="9 7" fill="none"/>
+
+                    <path d="M35 340Q170 350 265 300
+                             T390 65T650 95"
+                          stroke="#69dfb0" stroke-width="3.5"
+                          fill="none"/>
+
+                    <g transform="translate(245 230) rotate(-40)">
+
+                        <path d="M0 -83
+                                 Q10 -88 13 -65
+                                 L17 -20
+                                 L100 28
+                                 L100 42
+                                 L18 17
+                                 L14 62
+                                 L39 79
+                                 L39 89
+                                 L0 79
+                                 L-39 89
+                                 L-39 79
+                                 L-14 62
+                                 L-18 17
+                                 L-100 42
+                                 L-100 28
+                                 L-17 -20
+                                 L-13 -65
+                                 Q-10 -88 0 -83Z"
+                              fill="url(#aircraft)"
+                              stroke="#d2e5ef" stroke-width="2"/>
+
+                    </g>
+
+                    <g font-family="Arial">
+
+                        <text x="24" y="32" fill="#fff"
+                              font-size="19" font-weight="bold">
+                            WEATHER-AWARE AVIATION RISK
+                        </text>
+
+                        <text x="24" y="53" fill="#9cc7dc"
+                              font-size="12">
+                            Temporal learning and flight trajectory analysis
+                        </text>
+
+                        <rect x="24" y="365" width="652" height="35"
+                              rx="4" fill="#071a30" opacity=".85"/>
+
+                        <circle cx="43" cy="382" r="5" fill="#ffaf62"/>
+
+                        <text x="55" y="386" font-size="11" fill="#dbeaf3">
+                            Risk-exposed route
+                        </text>
+
+                        <circle cx="230" cy="382" r="5" fill="#69dfb0"/>
+
+                        <text x="242" y="386" font-size="11" fill="#dbeaf3">
+                            Alternative route concept
+                        </text>
+
+                        <text x="655" y="386" text-anchor="end"
+                              font-size="10" fill="#9cc7dc">
+                            Conceptual visualization
+                        </text>
+
+                    </g>
+
+                </svg>
+
+                <figcaption>
+                    Conceptual illustration of weather-aware flight
+                    risk prediction and route analysis.
+                </figcaption>
+
+            </figure>
 
         </div>
 
@@ -2374,261 +1966,673 @@ footer {
 
     <!-- DIFFQUANTUMQR -->
 
-    <article class="project-entry">
-
-        <div class="project-image">
-
-            <img src="assets/Screenshot%202026-11-26%20162427.png"
-                 alt="DiffQuantumQR model architecture"
-                 class="zoomable"
-                 loading="lazy">
-
-        </div>
+    <article class="research-entry" id="diffquantum">
 
         <div>
 
-            <div class="project-category">
-                Adversarial ML · Generative Models
-            </div>
+            <h3 class="entry-title">
 
-            <h3 class="project-title">
-                DiffQuantumQR
+                DiffQuantumQR: Diffusion-Guided Quantum-Aware
+                Contrastive Learning for Secure QR Code Classification
+
             </h3>
 
-            <p>
-                Investigated robust QR code classification
-                through diffusion-guided purification,
-                quantum-inspired feature extraction,
-                contrastive representation learning
-                and entropy-based detection.
+            <p class="entry-meta">
+                <strong>S. Asifa</strong>, R. Sendhil
             </p>
 
-            <ul>
+            <p class="entry-venue">
+                IEEE iConSCEPT 2025
+            </p>
+
+            <p class="entry-description">
+                Investigated adversarially robust QR code
+                classification using diffusion-guided purification,
+                quantum-inspired feature representations and
+                contrastive learning.
+            </p>
+
+            <ul class="entry-details">
 
                 <li>
-                    Diffusion-based input purification.
+                    Diffusion-based purification of
+                    adversarially perturbed QR images.
                 </li>
 
                 <li>
-                    Quantum-inspired feature representations
-                    and contrastive learning.
+                    Quantum-inspired feature extraction
+                    and attention mechanisms.
                 </li>
 
                 <li>
-                    Robustness evaluation against
-                    FGSM, PGD and CW adversarial attacks.
+                    Contrastive representation learning
+                    for robust classification.
+                </li>
+
+                <li>
+                    Adversarial robustness evaluation
+                    involving FGSM, PGD and CW attacks.
+                </li>
+
+                <li>
+                    Entropy-based investigation of
+                    uncertain and previously unseen inputs.
                 </li>
 
             </ul>
 
-            <div class="tags">
-                <span class="tag">DDPM</span>
-                <span class="tag">U-Net</span>
-                <span class="tag">Contrastive Learning</span>
-                <span class="tag">Adversarial ML</span>
-                <span class="tag">Computer Vision</span>
+            <p class="technology">
+                Diffusion Models · DDPM · U-Net ·
+                Contrastive Learning · Adversarial ML ·
+                Computer Vision
+            </p>
+
+            <div class="entry-links">
+
+                <a href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=DiffQuantumQR"
+                   target="_blank">▣ Find paper on IEEE</a>
+
             </div>
 
-            <div class="project-links">
+        </div>
 
-                <a href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=Diffusion-Guided%20Quantum-Aware%20Contrastive%20Learning"
+        <div class="entry-images">
+
+            <figure class="research-image">
+
+                <img loading="lazy"
+                     src="assets/Screenshot%202026-11-26%20162427.png"
+                     alt="DiffQuantumQR architecture">
+
+                <figcaption>
+                    DiffQuantumQR architecture and classification pipeline.
+                </figcaption>
+
+            </figure>
+
+        </div>
+
+    </article>
+
+    <!-- MEMOGPT -->
+
+    <article class="research-entry" id="memogpt">
+
+        <div>
+
+            <h3 class="entry-title">
+                MemoGPT: Retrieval-Augmented AI with Persistent
+                Memory and Tool-Augmented Reasoning
+            </h3>
+
+            <p class="entry-venue">
+                Independent AI Systems Project
+            </p>
+
+            <p class="entry-description">
+                Developed a local retrieval-augmented AI assistant
+                exploring persistent memory, semantic knowledge
+                retrieval and context-aware language-model
+                interactions.
+            </p>
+
+            <ul class="entry-details">
+
+                <li>
+                    Document ingestion, chunking and
+                    semantic embedding generation.
+                </li>
+
+                <li>
+                    Vector-based similarity search and
+                    retrieval of relevant knowledge.
+                </li>
+
+                <li>
+                    Persistent memory and local knowledge storage.
+                </li>
+
+                <li>
+                    Context construction for grounded
+                    language-model responses.
+                </li>
+
+                <li>
+                    Tool-supported reasoning and
+                    agentic interaction workflows.
+                </li>
+
+            </ul>
+
+            <p class="technology">
+                Large Language Models · NLP · RAG ·
+                Embeddings · Vector Databases · Semantic Search ·
+                Persistent Memory · Agentic AI
+            </p>
+
+            <div class="entry-links">
+
+                <a href="https://github.com/asifa1510?tab=repositories"
+                   target="_blank">▣ GitHub repositories</a>
+
+            </div>
+
+        </div>
+
+        <div class="entry-images">
+
+            <figure class="research-image">
+
+                <!-- Embedded MemoGPT architecture illustration -->
+
+                <svg viewBox="0 0 700 400"
+                     xmlns="http://www.w3.org/2000/svg">
+
+                    <defs>
+
+                        <linearGradient id="memoBg" x2="1" y2="1">
+                            <stop stop-color="#101b35"/>
+                            <stop offset="1" stop-color="#253653"/>
+                        </linearGradient>
+
+                        <marker id="memoArrow"
+                                markerWidth="8" markerHeight="8"
+                                refX="7" refY="3" orient="auto">
+
+                            <path d="M0 0L8 3L0 6Z"
+                                  fill="#8caacb"/>
+
+                        </marker>
+
+                    </defs>
+
+                    <rect width="700" height="400" fill="url(#memoBg)"/>
+
+                    <g font-family="Arial">
+
+                        <text x="28" y="36"
+                              fill="#fff" font-size="24"
+                              font-weight="bold">
+                            MemoGPT
+                        </text>
+
+                        <text x="28" y="57"
+                              fill="#a9bed7" font-size="12">
+                            Retrieval-Augmented Agentic AI
+                        </text>
+
+                        <g fill="none" stroke="#8caacb"
+                           stroke-width="2"
+                           marker-end="url(#memoArrow)">
+
+                            <path d="M150 110H220"/>
+                            <path d="M350 110H410"/>
+                            <path d="M540 110H575"/>
+                            <path d="M475 145V195"/>
+                            <path d="M410 230H355"/>
+                            <path d="M220 230H155"/>
+                            <path d="M285 265V315"/>
+                            <path d="M475 265V315"/>
+
+                        </g>
+
+                        <g stroke-width="1.3">
+
+                            <rect x="25" y="75" width="125" height="70"
+                                  rx="7" fill="#294967" stroke="#70afd5"/>
+
+                            <rect x="220" y="75" width="130" height="70"
+                                  rx="7" fill="#344768" stroke="#9aadd9"/>
+
+                            <rect x="410" y="75" width="130" height="70"
+                                  rx="7" fill="#3d356a" stroke="#b5a2ef"/>
+
+                            <rect x="575" y="75" width="100" height="70"
+                                  rx="7" fill="#28564d" stroke="#79c7a7"/>
+
+                            <rect x="410" y="195" width="130" height="70"
+                                  rx="7" fill="#294967" stroke="#70afd5"/>
+
+                            <rect x="220" y="195" width="135" height="70"
+                                  rx="7" fill="#3d356a" stroke="#b5a2ef"/>
+
+                            <rect x="25" y="195" width="130" height="70"
+                                  rx="7" fill="#28564d" stroke="#79c7a7"/>
+
+                            <rect x="220" y="315" width="135" height="48"
+                                  rx="7" fill="#4a405e" stroke="#b3a0c9"/>
+
+                            <rect x="410" y="315" width="130" height="48"
+                                  rx="7" fill="#4c493d" stroke="#d0b77e"/>
+
+                        </g>
+
+                        <g fill="#fff" font-size="13"
+                           text-anchor="middle" font-weight="bold">
+
+                            <text x="87" y="106">Documents</text>
+                            <text x="285" y="106">Embeddings</text>
+                            <text x="475" y="106">Vector Store</text>
+                            <text x="625" y="106">Index</text>
+                            <text x="475" y="226">Retrieval</text>
+                            <text x="287" y="226">LLM Agent</text>
+                            <text x="90" y="226">Response</text>
+                            <text x="287" y="344">Persistent Memory</text>
+                            <text x="475" y="344">External Tools</text>
+
+                        </g>
+
+                        <g fill="#c5d5e8" font-size="10"
+                           text-anchor="middle">
+
+                            <text x="87" y="123">Ingestion &amp; chunks</text>
+                            <text x="285" y="123">Semantic encoding</text>
+                            <text x="475" y="123">Knowledge storage</text>
+                            <text x="625" y="123">Similarity</text>
+                            <text x="475" y="243">Relevant context</text>
+                            <text x="287" y="243">Context &amp; reasoning</text>
+                            <text x="90" y="243">Grounded generation</text>
+
+                        </g>
+
+                        <text x="675" y="386"
+                              text-anchor="end"
+                              fill="#a9bed7" font-size="10">
+                            Conceptual system architecture
+                        </text>
+
+                    </g>
+
+                </svg>
+
+                <figcaption>
+                    Conceptual architecture of retrieval,
+                    persistent memory and tool-supported reasoning.
+                </figcaption>
+
+            </figure>
+
+        </div>
+
+    </article>
+
+</section>
+
+<!-- =========================
+     PUBLICATIONS
+========================== -->
+
+<section id="publications">
+
+    <h2 class="section-title">Publications</h2>
+
+    <article class="publication">
+
+        <div class="pub-year">2025</div>
+
+        <div>
+
+            <h3 class="pub-title">
+
+                <a href="https://ieeexplore.ieee.org/document/11085355"
                    target="_blank">
-                    Find Research Paper
+                    Lightning-Strike Risk Prediction for Aviation Safety
                 </a>
 
+            </h3>
+
+            <p>IEEE RFCoN 2025</p>
+
+            <p class="highlight">Best Paper Award</p>
+
+            <div class="entry-links">
+                <a href="https://ieeexplore.ieee.org/document/11085355"
+                   target="_blank">▣ IEEE Xplore</a>
+                <a href="#aviation">▣ Research overview</a>
             </div>
 
         </div>
 
     </article>
 
-    <!-- AIVIEW -->
+    <article class="publication">
 
-    <article class="project-entry">
+        <div class="pub-year">2025</div>
 
-        <div class="concept-diagram">
+        <div>
 
-            <svg viewBox="0 0 320 210"
-                 xmlns="http://www.w3.org/2000/svg">
+            <h3 class="pub-title">
 
-                <rect width="320" height="210" fill="#f2f6fa"/>
+                Diffusion-Guided Quantum-Aware Contrastive Learning
+                for Secure QR Code Classification
 
-                <rect x="12" y="12" width="296" height="186"
-                      rx="5" fill="white" stroke="#b5c8d8"/>
+            </h3>
 
-                <rect x="12" y="12" width="296" height="24"
-                      rx="5" fill="#375b77"/>
+            <p><strong>S. Asifa</strong>, R. Sendhil</p>
 
-                <text x="24" y="28" fill="white"
-                      font-size="10" font-weight="bold">
-                    AIView — Interview Analytics
-                </text>
+            <p>
+                IEEE iConSCEPT 2025 —
+                National Institute of Technology Puducherry
+            </p>
 
-                <g fill="#e7f0f7" stroke="#d3e2ee">
-                    <rect x="24" y="47" width="83" height="40" rx="3"/>
-                    <rect x="118" y="47" width="83" height="40" rx="3"/>
-                    <rect x="212" y="47" width="83" height="40" rx="3"/>
-                </g>
+            <div class="entry-links">
 
-                <g font-size="9" fill="#45647c" text-anchor="middle">
-                    <text x="65" y="64">Performance</text>
-                    <text x="159" y="64">Competency</text>
-                    <text x="253" y="64">Feedback</text>
-                </g>
+                <a href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=DiffQuantumQR"
+                   target="_blank">▣ IEEE paper search</a>
 
-                <g fill="#7ba9cb">
-                    <rect x="35" y="126" width="19" height="50"/>
-                    <rect x="64" y="110" width="19" height="66"/>
-                    <rect x="93" y="138" width="19" height="38"/>
-                    <rect x="122" y="101" width="19" height="75"/>
-                </g>
+                <a href="#diffquantum">▣ Research overview</a>
 
-                <g fill="#dce8f1">
-                    <rect x="170" y="106" width="112" height="8" rx="3"/>
-                    <rect x="170" y="125" width="90" height="8" rx="3"/>
-                    <rect x="170" y="144" width="102" height="8" rx="3"/>
-                    <rect x="170" y="163" width="75" height="8" rx="3"/>
-                </g>
-
-            </svg>
-
-            <div class="concept-caption">
-                Conceptual interface illustration
             </div>
 
         </div>
 
+    </article>
+
+    <article class="publication">
+
+        <div class="pub-year">2023</div>
+
         <div>
 
-            <div class="project-category">
-                Human-Centred AI · NTU Singapore
-            </div>
+            <h3 class="pub-title">
 
-            <h3 class="project-title">
-                AIView — Intelligent Interview Analytics
+                Payable Outsourced Decryption for Functional
+                Encryption using Blockchain
+
             </h3>
 
             <p>
-                Contributed to the development of an
-                AI-assisted interview analytics interface
-                for presenting structured competency
-                assessments and behavioural feedback.
+                R. Sendhil, <strong>S. Asifa</strong>, A. Savitha Sree
             </p>
 
-            <ul>
+            <p>ICAIOT 2023 · Springer Nature</p>
+
+            <div class="entry-links">
+
+                <a href="https://link.springer.com/search?query=Payable+Outsourced+Decryption+for+Functional+Encryption+using+Blockchain"
+                   target="_blank">▣ Springer paper search</a>
+
+            </div>
+
+        </div>
+
+    </article>
+
+</section>
+
+<!-- =========================
+     EXPERIENCE & EDUCATION
+========================== -->
+
+<section id="experience">
+
+    <h2 class="section-title">Research Experience &amp; Education</h2>
+
+    <div class="timeline">
+
+        <!-- NTU -->
+
+        <article class="timeline-item"
+                 style="--timeline-color:#b82d42;">
+
+            <div class="experience-heading">
+
+                <h3>Research Collaborator</h3>
+
+                <span class="experience-date">2026</span>
+
+            </div>
+
+            <div class="experience-institution">
+                Nanyang Technological University, Singapore
+            </div>
+
+            <p>
+                Contributing to AIView, an AI-driven interview
+                assessment and analytics system exploring
+                human-centred AI and multimodal assessment.
+            </p>
+
+            <ul class="entry-details">
 
                 <li>
-                    Interview performance and
-                    competency visualization.
+                    Designed interactive competency-analysis
+                    and interview-performance dashboards.
                 </li>
 
                 <li>
-                    Historical score trends and
-                    structured assessment feedback.
+                    Developed interfaces for detailed feedback,
+                    interview recordings and behavioural analytics.
                 </li>
 
                 <li>
-                    Searchable interview records
-                    and detailed evaluation views.
+                    Implemented score visualization, filtering,
+                    historical comparisons and user-facing
+                    assessment workflows.
                 </li>
 
                 <li>
-                    Responsive frontend and
-                    backend integration.
+                    Worked with React, TypeScript and
+                    backend API integration.
                 </li>
 
             </ul>
 
-            <div class="tags">
-                <span class="tag">React</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">Human-Centred AI</span>
-                <span class="tag">Data Visualization</span>
-                <span class="tag">HCI</span>
-            </div>
+        </article>
 
-        </div>
+        <!-- NUS -->
 
-    </article>
+        <article class="timeline-item"
+                 id="nus-experience"
+                 style="--timeline-color:#e27b20;">
 
-    <!-- NEURO ASSIST -->
+            <div class="experience-heading">
 
-    <article class="project-entry">
+                <h3>IRIS Summer Research Intern</h3>
 
-        <div class="gallery" data-gallery="glytch">
-
-            <div class="gallery-stage">
-
-                <img src="assets/Screenshot%202026-11-26%20161734.png"
-                     alt="Glytch assistive wearable"
-                     class="gallery-image zoomable"
-                     loading="lazy">
-
-                <button class="gallery-arrow prev"
-                        aria-label="Previous prototype photograph">
-                    &lt;
-                </button>
-
-                <button class="gallery-arrow next"
-                        aria-label="Next prototype photograph">
-                    &gt;
-                </button>
+                <span class="experience-date">
+                    May – July 2026
+                </span>
 
             </div>
 
-            <div class="gallery-caption"></div>
-            <div class="gallery-dots"></div>
+            <div class="experience-institution">
+                National University of Singapore
+            </div>
 
-        </div>
+            <p>
+                Selected among 37 participants worldwide
+                from over 4,500 applicants for the
+                NUS IRIS Summer Research Programme.
+            </p>
+
+            <p>
+                <strong>Advisor:</strong>
+                Assoc. Prof. Lakshminarayanan Samavedham
+            </p>
+
+            <p>
+                Conducted research on physics-informed temporal
+                modelling, hidden operating regime discovery
+                and interpretable symbolic law learning for
+                nonlinear chemical reactor dynamics.
+            </p>
+
+            <p>
+                Developed reproducible simulation, model-training,
+                clustering, symbolic regression and evaluation
+                pipelines, and presented the research findings
+                at the programme's research presentation.
+            </p>
+
+            <div class="entry-links">
+                <a href="#nus-research">▣ Research work</a>
+            </div>
+
+            <div class="nus-gallery">
+
+                <figure>
+
+                    <img loading="lazy"
+                         src="assets/20260716_161939(1).jpg"
+                         alt="NUS research presentation">
+
+                    <figcaption>
+                        Research presentation at NUS
+                    </figcaption>
+
+                </figure>
+
+                <figure>
+
+                    <img loading="lazy"
+                         src="assets/20260716_161940(1).jpg"
+                         alt="Presenting physics-informed AI research">
+
+                    <figcaption>
+                        Presenting the research framework
+                    </figcaption>
+
+                </figure>
+
+                <figure>
+
+                    <img loading="lazy"
+                         src="assets/nus-talk.jpg"
+                         alt="NUS IRIS summer research presentation">
+
+                    <figcaption>
+                        NUS IRIS Summer Research, 2026
+                    </figcaption>
+
+                </figure>
+
+            </div>
+
+        </article>
+
+        <!-- VIT -->
+
+        <article class="timeline-item"
+                 style="--timeline-color:#285c9d;">
+
+            <div class="experience-heading">
+
+                <h3>Integrated M.Tech in Software Engineering</h3>
+
+                <span class="experience-date">
+                    Expected July 2027
+                </span>
+
+            </div>
+
+            <div class="experience-institution">
+                Vellore Institute of Technology, Chennai
+            </div>
+
+            <p>
+                Five-year integrated postgraduate programme
+                in Software Engineering.
+            </p>
+
+            <p>
+                <strong>CGPA:</strong> 8.82 / 10
+            </p>
+
+            <p>
+                Academic interests include artificial intelligence,
+                machine learning, software engineering,
+                data structures, algorithms, computer networks
+                and intelligent systems.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     ENGINEERING PROJECTS
+========================== -->
+
+<section id="projects">
+
+    <h2 class="section-title">Selected Engineering Projects</h2>
+
+    <!-- GLYTCH -->
+
+    <article class="research-entry">
 
         <div>
 
-            <div class="project-category">
-                Assistive Technology · Embedded Intelligence
-            </div>
-
-            <h3 class="project-title">
-                Neuro-Assist — Glytch
+            <h3 class="entry-title">
+                Neuro-Assist — Glytch: Offline Assistive AI System
             </h3>
 
-            <p>
+            <p class="entry-venue">
+                Assistive Technology · Embedded AI · HCI
+            </p>
+
+            <p class="entry-description">
                 Developed an offline assistive technology
-                prototype integrating wearable sensors,
-                embedded processing and smart glasses
-                for accessible everyday assistance.
+                platform integrating wearable sensing,
+                gesture-based communication and smart glasses
+                for accessibility-oriented applications.
             </p>
 
-            <ul>
+            <ul class="entry-details">
 
                 <li>
-                    Gesture-based communication
-                    through wearable sensing.
+                    Gesture-based communication through
+                    wearable sensor inputs.
                 </li>
 
                 <li>
-                    Motion-based fall detection.
+                    Motion-based fall detection and
+                    assistive alerts.
                 </li>
 
                 <li>
-                    Smart glasses for OCR-based
-                    medicine information assistance.
+                    Smart glasses for text recognition
+                    and medication-related assistance.
                 </li>
 
                 <li>
-                    Offline operation without
-                    continuous cloud connectivity.
+                    Offline operation using embedded
+                    hardware and local processing.
                 </li>
 
             </ul>
 
-            <div class="tags">
-                <span class="tag">ESP32</span>
-                <span class="tag">Embedded AI</span>
-                <span class="tag">OCR</span>
-                <span class="tag">Sensor Integration</span>
-                <span class="tag">IoT</span>
-                <span class="tag">Assistive Computing</span>
-            </div>
+            <p class="technology">
+                ESP32 · Embedded Systems · Sensors ·
+                OCR · Edge AI · Human–Computer Interaction
+            </p>
+
+        </div>
+
+        <div class="entry-images two-columns">
+
+            <figure class="research-image">
+
+                <img loading="lazy"
+                     src="assets/Screenshot%202026-11-26%20161734.png"
+                     alt="Glytch wearable hardware">
+
+                <figcaption>Wearable unit</figcaption>
+
+            </figure>
+
+            <figure class="research-image">
+
+                <img loading="lazy"
+                     src="assets/Screenshot%202026-11-26%20161749.png"
+                     alt="Glytch assistive smart glasses">
+
+                <figcaption>Assistive smart glasses</figcaption>
+
+            </figure>
 
         </div>
 
@@ -2636,79 +2640,77 @@ footer {
 
     <!-- ACCIDENT IOT -->
 
-    <article class="project-entry">
-
-        <div class="gallery" data-gallery="accident">
-
-            <div class="gallery-stage">
-
-                <img src="assets/Screenshot%202026-11-26%20161603.png"
-                     alt="AccidentIoT wearable unit"
-                     class="gallery-image zoomable"
-                     loading="lazy">
-
-                <button class="gallery-arrow prev"
-                        aria-label="Previous hardware photograph">
-                    &lt;
-                </button>
-
-                <button class="gallery-arrow next"
-                        aria-label="Next hardware photograph">
-                    &gt;
-                </button>
-
-            </div>
-
-            <div class="gallery-caption"></div>
-            <div class="gallery-dots"></div>
-
-        </div>
+    <article class="research-entry">
 
         <div>
 
-            <div class="project-category">
-                IoT · Embedded Systems · Road Safety
-            </div>
-
-            <h3 class="project-title">
-                AccidentIoT — Intelligent Accident Monitoring
+            <h3 class="entry-title">
+                AccidentIoT: Wearable and Vehicle-Based
+                Accident Monitoring System
             </h3>
 
-            <p>
-                Built a dual-unit IoT prototype for
-                monitoring accident-related signals
-                through wearable and vehicle-mounted
-                embedded systems.
+            <p class="entry-venue">
+                Internet of Things · Road Safety · Embedded Systems
             </p>
 
-            <ul>
+            <p class="entry-description">
+                Developed a dual-unit IoT prototype for
+                monitoring accident-related motion and impact
+                signals using wearable and vehicle-mounted
+                sensing hardware.
+            </p>
+
+            <ul class="entry-details">
 
                 <li>
-                    Wearable sensing unit for
-                    motion and status monitoring.
+                    Wearable motion-sensing unit with
+                    real-time sensor monitoring.
                 </li>
 
                 <li>
-                    Vehicle unit integrating
-                    piezoelectric impact sensors,
-                    MPU6050 and GPS.
+                    Vehicle unit integrating piezoelectric
+                    impact sensors and motion sensors.
                 </li>
 
                 <li>
-                    ESP32-based sensor integration
-                    and embedded event processing.
+                    GPS-based location acquisition.
+                </li>
+
+                <li>
+                    ESP32-based hardware integration
+                    and embedded communication.
                 </li>
 
             </ul>
 
-            <div class="tags">
-                <span class="tag">ESP32</span>
-                <span class="tag">MPU6050</span>
-                <span class="tag">GPS</span>
-                <span class="tag">Piezo Sensors</span>
-                <span class="tag">Arduino</span>
-                <span class="tag">Embedded C</span>
-            </div>
+            <p class="technology">
+                ESP32 · MPU6050 · ADXL345 · GPS ·
+                Piezoelectric Sensors · Embedded Programming
+            </p>
+
+        </div>
+
+        <div class="entry-images two-columns">
+
+            <figure class="research-image">
+
+                <img loading="lazy"
+                     src="assets/Screenshot%202026-11-26%20161603.png"
+                     alt="AccidentIoT wearable unit">
+
+                <figcaption>Wearable sensing unit</figcaption>
+
+            </figure>
+
+            <figure class="research-image">
+
+                <img loading="lazy"
+                     src="assets/Screenshot%202026-11-26%20161651.png"
+                     alt="AccidentIoT vehicle unit">
+
+                <figcaption>Vehicle-mounted sensing unit</figcaption>
+
+            </figure>
 
         </div>
 
@@ -2716,82 +2718,83 @@ footer {
 
     <!-- MONETRA -->
 
-    <article class="project-entry">
-
-        <div class="gallery" data-gallery="monetra">
-
-            <div class="gallery-stage">
-
-                <img src="assets/Screenshot%202026-11-26%20161842.png"
-                     alt="Monetra email processing workflow"
-                     class="gallery-image zoomable"
-                     loading="lazy">
-
-                <button class="gallery-arrow prev"
-                        aria-label="Previous workflow">
-                    &lt;
-                </button>
-
-                <button class="gallery-arrow next"
-                        aria-label="Next workflow">
-                    &gt;
-                </button>
-
-            </div>
-
-            <div class="gallery-caption"></div>
-            <div class="gallery-dots"></div>
-
-        </div>
+    <article class="research-entry">
 
         <div>
 
-            <div class="project-category">
-                Intelligent Automation · API Integration
-            </div>
-
-            <h3 class="project-title">
-                Monetra — Automated Information Workflows
+            <h3 class="entry-title">
+                Monetra: Intelligent Workflow Automation
             </h3>
 
-            <p>
-                Developed automated workflows for
-                processing incoming email information,
-                extracting structured data, maintaining
-                spreadsheet records and delivering
+            <p class="entry-venue">
+                AI Automation · API Integration · Data Processing
+            </p>
+
+            <p class="entry-description">
+                Developed automated workflows for extracting
+                and processing information from incoming emails,
+                storing structured records and delivering
                 scheduled notifications.
             </p>
 
-            <ul>
+            <ul class="entry-details">
 
                 <li>
                     Gmail-triggered information processing.
                 </li>
 
                 <li>
-                    Generative AI API integration
-                    and JavaScript transformations.
+                    Language-model API integration for
+                    structured information extraction.
                 </li>
 
                 <li>
-                    Automated Google Sheets data logging.
+                    JavaScript-based data transformation.
                 </li>
 
                 <li>
-                    Scheduled retrieval and
-                    notification workflows.
+                    Google Sheets integration for record storage.
+                </li>
+
+                <li>
+                    Scheduled retrieval and automated
+                    notification delivery.
                 </li>
 
             </ul>
 
-            <div class="tags">
-                <span class="tag">n8n</span>
-                <span class="tag">Generative AI APIs</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">REST APIs</span>
-                <span class="tag">Google Sheets</span>
-                <span class="tag">Twilio</span>
-            </div>
+            <p class="technology">
+                n8n · Gemini API · JavaScript ·
+                Google Sheets · Gmail · Twilio · REST APIs
+            </p>
+
+        </div>
+
+        <div class="entry-images">
+
+            <figure class="research-image">
+
+                <img loading="lazy"
+                     src="assets/Screenshot%202026-11-26%20161842.png"
+                     alt="Monetra email-triggered workflow">
+
+                <figcaption>
+                    Email-triggered extraction and structured logging.
+                </figcaption>
+
+            </figure>
+
+            <figure class="research-image">
+
+                <img loading="lazy"
+                     src="assets/Screenshot%202026-11-26%20161857.png"
+                     alt="Monetra scheduled notification workflow">
+
+                <figcaption>
+                    Scheduled retrieval and notification workflow.
+                </figcaption>
+
+            </figure>
 
         </div>
 
@@ -2799,76 +2802,91 @@ footer {
 
     <!-- EYE GAZE -->
 
-    <article class="project-entry">
-
-        <div class="concept-diagram">
-
-            <svg viewBox="0 0 320 200"
-                 xmlns="http://www.w3.org/2000/svg">
-
-                <rect width="320" height="200" fill="#f6f9fc"/>
-
-                <path d="M95 47Q160 -2 225 47Q160 96 95 47Z"
-                      fill="white" stroke="#789ab4"
-                      stroke-width="2"/>
-
-                <circle cx="160" cy="47" r="20" fill="#9abbd1"/>
-                <circle cx="160" cy="47" r="10" fill="#36566e"/>
-
-                <path d="M160 68V104" stroke="#7ba4c0"
-                      stroke-width="2" stroke-dasharray="4 4"/>
-
-                <rect x="30" y="104" width="260" height="78"
-                      rx="6" fill="#e4edf4" stroke="#9eb5c8"/>
-
-                <g font-size="11" fill="#36566e"
-                   text-anchor="middle">
-
-                    <text x="160" y="125">Q W E R T Y U I O P</text>
-                    <text x="160" y="145">A S D F G H J K L</text>
-                    <text x="160" y="165">Z X C V B N M</text>
-
-                </g>
-
-            </svg>
-
-            <div class="concept-caption">
-                Conceptual interaction diagram
-            </div>
-
-        </div>
+    <article class="research-entry">
 
         <div>
 
-            <div class="project-category">
-                Computer Vision · Accessibility · HCI
-            </div>
-
-            <h3 class="project-title">
-                Eye-Gaze Controlled Virtual Keyboard
+            <h3 class="entry-title">
+                Eye-Gaze-Controlled Virtual Keyboard
             </h3>
 
-            <p>
-                Developed an assistive communication
-                prototype enabling hands-free keyboard
-                interaction through eye-gaze tracking,
-                with accessibility as the primary
-                design objective.
+            <p class="entry-venue">
+                Human–Computer Interaction · Assistive Computing
             </p>
 
-            <p>
-                Recognised as a finalist at DevsHouse 2024,
-                placing within the top 7.5% of participating
-                teams.
+            <p class="entry-description">
+                Developed an accessibility-oriented virtual
+                keyboard exploring gaze-based interaction
+                for individuals with limited motor mobility.
+                The system investigates hands-free communication
+                through computer vision and eye movement tracking.
             </p>
 
-            <div class="tags">
-                <span class="tag">Computer Vision</span>
-                <span class="tag">Eye Tracking</span>
-                <span class="tag">Python</span>
-                <span class="tag">HCI</span>
-                <span class="tag">Accessibility</span>
-            </div>
+            <p class="highlight">
+                DevsHouse'24 Finalist —
+                Top 7.5% of 800+ teams
+            </p>
+
+            <p class="technology">
+                Computer Vision · Eye Tracking ·
+                OpenCV · Python · Assistive HCI
+            </p>
+
+        </div>
+
+        <div class="entry-images">
+
+            <figure class="research-image">
+
+                <svg viewBox="0 0 500 280"
+                     xmlns="http://www.w3.org/2000/svg">
+
+                    <rect width="500" height="280" fill="#edf3f7"/>
+
+                    <rect x="35" y="20" width="430" height="240"
+                          rx="9" fill="#fff" stroke="#94a7b8"/>
+
+                    <path d="M165 70Q250 10 335 70Q250 130 165 70Z"
+                          fill="#e1eaf1" stroke="#56738b"
+                          stroke-width="2"/>
+
+                    <circle cx="250" cy="70" r="25" fill="#73a2bc"/>
+                    <circle cx="250" cy="70" r="12" fill="#243b50"/>
+
+                    <path d="M250 98V174"
+                          stroke="#e4934c" stroke-width="2"
+                          stroke-dasharray="5 4"/>
+
+                    <g font-size="14" text-anchor="middle"
+                       fill="#435569">
+
+                        <rect x="65" y="145" width="370" height="92"
+                              rx="5" fill="#e8eef3"/>
+
+                        <text x="250" y="166">
+                            Q W E R T Y U I O P
+                        </text>
+
+                        <text x="250" y="192">
+                            A S D F G H J K L
+                        </text>
+
+                        <text x="250" y="219">
+                            Z X C V B N M
+                        </text>
+
+                        <rect x="241" y="174" width="22" height="24"
+                              rx="3" fill="#f2b66b" opacity=".65"/>
+
+                    </g>
+
+                </svg>
+
+                <figcaption>
+                    Conceptual illustration of gaze-based keyboard interaction.
+                </figcaption>
+
+            </figure>
 
         </div>
 
@@ -2876,75 +2894,85 @@ footer {
 
     <!-- NETWORK SECURITY -->
 
-    <article class="project-entry">
-
-        <div class="concept-diagram">
-
-            <svg viewBox="0 0 320 180"
-                 xmlns="http://www.w3.org/2000/svg">
-
-                <rect width="320" height="180" fill="#f4f8fb"/>
-
-                <g stroke="#9ab0c2" stroke-width="2">
-                    <path d="M50 45L160 90L270 45"/>
-                    <path d="M50 135L160 90L270 135"/>
-                </g>
-
-                <g fill="#d9e7f1" stroke="#6c97b5">
-                    <circle cx="50" cy="45" r="24"/>
-                    <circle cx="50" cy="135" r="24"/>
-                    <circle cx="270" cy="45" r="24"/>
-                    <circle cx="270" cy="135" r="24"/>
-                </g>
-
-                <rect x="110" y="63" width="100" height="54"
-                      rx="6" fill="#c2d9e9" stroke="#6c97b5"/>
-
-                <g font-size="10" fill="#36566e"
-                   text-anchor="middle">
-
-                    <text x="50" y="49">Traffic</text>
-                    <text x="50" y="139">Packets</text>
-                    <text x="270" y="49">Normal</text>
-                    <text x="270" y="139">Alert</text>
-                    <text x="160" y="85">ML Attack</text>
-                    <text x="160" y="100">Detector</text>
-
-                </g>
-
-            </svg>
-
-            <div class="concept-caption">
-                Conceptual detection pipeline
-            </div>
-
-        </div>
+    <article class="research-entry">
 
         <div>
 
-            <div class="project-category">
-                Machine Learning · Cybersecurity
-            </div>
-
-            <h3 class="project-title">
-                PCAP Network Attack Detection
+            <h3 class="entry-title">
+                Machine Learning-Based Network Attack Detection
             </h3>
 
-            <p>
-                Developed a machine learning approach
-                for analysing captured network traffic
-                and identifying malicious activity,
-                including DDoS attacks, port scanning
-                and botnet-related traffic.
+            <p class="entry-venue">
+                Cybersecurity · Network Traffic Analysis
             </p>
 
-            <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">Scikit-learn</span>
-                <span class="tag">Network Security</span>
-                <span class="tag">Feature Engineering</span>
-                <span class="tag">Classification</span>
-            </div>
+            <p class="entry-description">
+                Developed a machine learning pipeline for
+                identifying malicious network behaviour from
+                packet capture data, including DDoS,
+                port-scanning and botnet-related traffic.
+            </p>
+
+            <p class="entry-description">
+                The project explores network feature extraction,
+                traffic preprocessing and supervised
+                classification of suspicious activity.
+            </p>
+
+            <p class="technology">
+                Python · Scikit-learn · PCAP ·
+                Network Security · Machine Learning
+            </p>
+
+        </div>
+
+        <div class="entry-images">
+
+            <figure class="research-image">
+
+                <svg viewBox="0 0 500 280"
+                     xmlns="http://www.w3.org/2000/svg">
+
+                    <rect width="500" height="280" fill="#12283e"/>
+
+                    <g stroke="#6698b8" stroke-width="2">
+                        <path d="M80 70L250 140L420 70
+                                 M80 210L250 140L420 210
+                                 M250 140V40M250 140V240"/>
+                    </g>
+
+                    <g fill="#72b7d8" stroke="#c6e5f2">
+                        <circle cx="80" cy="70" r="22"/>
+                        <circle cx="80" cy="210" r="22"/>
+                        <circle cx="420" cy="70" r="22"/>
+                        <circle cx="250" cy="40" r="18"/>
+                        <circle cx="250" cy="240" r="18"/>
+                    </g>
+
+                    <circle cx="420" cy="210" r="23"
+                            fill="#d96b68" stroke="#ffc2b8"/>
+
+                    <circle cx="250" cy="140" r="43"
+                            fill="#2e5978" stroke="#a4d2e8"/>
+
+                    <text x="250" y="136" text-anchor="middle"
+                          font-size="14" fill="#fff">ML</text>
+
+                    <text x="250" y="154" text-anchor="middle"
+                          font-size="11" fill="#fff">Detector</text>
+
+                    <text x="420" y="248" text-anchor="middle"
+                          font-size="11" fill="#ffb8ad">
+                        Suspicious traffic
+                    </text>
+
+                </svg>
+
+                <figcaption>
+                    Conceptual network traffic classification architecture.
+                </figcaption>
+
+            </figure>
 
         </div>
 
@@ -2952,302 +2980,393 @@ footer {
 
 </section>
 
-<!-- AWARDS -->
+<!-- =========================
+     AWARDS
+========================== -->
 
 <section id="awards">
 
-    <h2>Awards &amp; Recognition</h2>
+    <h2 class="section-title">
+        Awards, Honours and Recognition
+    </h2>
 
-    <div class="award-row">
+    <ul class="award-list">
 
-        <div class="award-year">2026</div>
+        <li>
 
-        <div>
-            <h3>NUS IRIS Summer Research Programme</h3>
-            <p>
-                Selected among 37 participants worldwide
-                for the international research programme
-                at the National University of Singapore.
-            </p>
-        </div>
+            <span class="award-year">2026:</span>
 
-    </div>
+            <div>
 
-    <div class="award-row">
+                <strong>
+                    NUS IRIS Summer Research Programme
+                </strong>
 
-        <div class="award-year">2025</div>
+                <span class="award-description">
+                    Selected among 37 participants worldwide
+                    from over 4,500 applicants.
+                </span>
 
-        <div>
-            <h3>IEEE RFCoN — Best Paper Award</h3>
-            <p>
-                Recognised for research on
-                lightning-strike risk prediction
-                for aviation safety.
-            </p>
-        </div>
+            </div>
 
-    </div>
+        </li>
 
-    <div class="award-row">
+        <li>
 
-        <div class="award-year">2025</div>
+            <span class="award-year">2025:</span>
 
-        <div>
-            <h3>Glytch — Hackathon Finalist</h3>
-            <p>
-                Assistive technology and offline
-                embedded intelligence prototype.
-            </p>
-        </div>
+            <div>
 
-    </div>
+                <strong class="highlight">
+                    IEEE RFCoN Best Paper Award
+                </strong>
 
-    <div class="award-row">
+                <span class="award-description">
+                    Recognized for research on lightning-strike
+                    risk prediction in aviation.
+                </span>
 
-        <div class="award-year">2025</div>
+            </div>
 
-        <div>
-            <h3>HackHub — National Hackathon Finalist</h3>
-            <p>
-                Recognition for applied technology
-                and engineering development.
-            </p>
-        </div>
+        </li>
 
-    </div>
+        <li>
 
-    <div class="award-row">
+            <span class="award-year">2025:</span>
 
-        <div class="award-year">2024</div>
+            <div>
 
-        <div>
-            <h3>DevsHouse — Finalist</h3>
-            <p>
-                Top 7.5% among 800+ teams for an
-                eye-gaze-controlled assistive
-                communication system.
-            </p>
-        </div>
+                <strong>HackHub'25 Finalist</strong>
 
-    </div>
+                <span class="award-description">
+                    National-level hackathon finalist.
+                </span>
+
+            </div>
+
+        </li>
+
+        <li>
+
+            <span class="award-year">2025:</span>
+
+            <div>
+
+                <strong>Glytch 2025 Finalist</strong>
+
+                <span class="award-description">
+                    Assistive technology and embedded AI project.
+                </span>
+
+            </div>
+
+        </li>
+
+        <li>
+
+            <span class="award-year">2024:</span>
+
+            <div>
+
+                <strong>DevsHouse'24 Finalist</strong>
+
+                <span class="award-description">
+                    Ranked among the top 7.5% of 800+ teams
+                    for an eye-gaze-controlled assistive
+                    communication system.
+                </span>
+
+            </div>
+
+        </li>
+
+    </ul>
 
 </section>
 
-<!-- TECHNICAL SKILLS -->
+<!-- =========================
+     TECHNICAL SKILLS
+========================== -->
 
 <section id="skills">
 
-    <h2>Technical Skills</h2>
+    <h2 class="section-title">Technical Skills</h2>
 
-    <div class="skills-grid">
+    <table class="skill-table">
 
-        <div class="skill-group">
+        <tbody>
 
-            <h3>Artificial Intelligence &amp; ML</h3>
+            <tr>
 
-            <p>
-                PyTorch · Scikit-learn · Deep Learning ·
-                Supervised Learning · Unsupervised Learning ·
-                Classification · Regression · Clustering ·
-                Feature Engineering · Model Evaluation
-            </p>
+                <td>Programming Languages</td>
 
-        </div>
+                <td>
+                    Python, Java, C, C++, JavaScript,
+                    TypeScript, SQL
+                </td>
 
-        <div class="skill-group">
+            </tr>
 
-            <h3>Generative AI &amp; NLP</h3>
+            <tr>
 
-            <p>
-                Large Language Models · NLP ·
-                Retrieval-Augmented Generation ·
-                Prompt Engineering · Text Embeddings ·
-                Semantic Search · Document Chunking ·
-                Context Management · Vector Databases
-            </p>
+                <td>Machine Learning</td>
 
-        </div>
+                <td>
+                    Supervised Learning, Unsupervised Learning,
+                    Classification, Regression, Clustering,
+                    Feature Engineering, Model Evaluation,
+                    Hyperparameter Tuning
+                </td>
 
-        <div class="skill-group">
+            </tr>
 
-            <h3>Agentic AI Systems</h3>
+            <tr>
 
-            <p>
-                Tool Calling · Agentic RAG ·
-                Persistent Memory · Knowledge Retrieval ·
-                Local Knowledge Assistants ·
-                API-Integrated Reasoning ·
-                Workflow Automation
-            </p>
+                <td>Deep Learning</td>
 
-        </div>
+                <td>
+                    CNNs, RNNs, LSTMs, BiLSTMs,
+                    U-Net, Attention Mechanisms,
+                    Mamba, Selective State-Space Models,
+                    Temporal Representation Learning
+                </td>
 
-        <div class="skill-group">
+            </tr>
 
-            <h3>Scientific Machine Learning</h3>
+            <tr>
 
-            <p>
-                Physics-Informed Learning ·
-                Dynamical Systems ·
-                Symbolic Regression ·
-                Gaussian Mixture Models ·
-                Numerical Simulation ·
-                Hidden Regime Discovery ·
-                OOD Evaluation
-            </p>
+                <td>Scientific Machine Learning</td>
 
-        </div>
+                <td>
+                    Physics-Informed Learning,
+                    Dynamical Systems, Numerical Simulation,
+                    Gaussian Mixture Models,
+                    Hidden Regime Discovery,
+                    Symbolic Regression,
+                    Out-of-Distribution Evaluation
+                </td>
 
-        <div class="skill-group">
+            </tr>
 
-            <h3>Temporal &amp; Sequential Learning</h3>
+            <tr>
 
-            <p>
-                Mamba · Selective State-Space Models ·
-                LSTM · BiLSTM ·
-                Time-Series Forecasting ·
-                Temporal Embeddings ·
-                Sequence Representation Learning
-            </p>
+                <td>Generative AI &amp; LLMs</td>
 
-        </div>
+                <td>
+                    Large Language Models,
+                    Retrieval-Augmented Generation,
+                    Prompt Engineering, Context Management,
+                    Semantic Embeddings, Vector Search,
+                    Document Chunking and Indexing,
+                    Grounded Generation
+                </td>
 
-        <div class="skill-group">
+            </tr>
 
-            <h3>Computer Vision</h3>
+            <tr>
 
-            <p>
-                CNNs · U-Net · Image Segmentation ·
-                Optical Flow · Video Analysis ·
-                Spatiotemporal Features ·
-                OCR · Eye Tracking ·
-                OpenCV · Image Classification
-            </p>
+                <td>Natural Language Processing</td>
 
-        </div>
+                <td>
+                    Text Preprocessing, Semantic Retrieval,
+                    Text Embeddings, Information Extraction,
+                    Similarity Search, Language-Model-Based
+                    Text Processing
+                </td>
 
-        <div class="skill-group">
+            </tr>
 
-            <h3>Reliable &amp; Interpretable AI</h3>
+            <tr>
 
-            <p>
-                Uncertainty Estimation ·
-                Entropy-Based Analysis ·
-                Adversarial Robustness ·
-                Contrastive Learning ·
-                Diffusion Models ·
-                Ablation Studies ·
-                Explainable Machine Learning
-            </p>
+                <td>Agentic AI</td>
 
-        </div>
+                <td>
+                    Persistent Memory, Tool Calling,
+                    Tool-Augmented Reasoning,
+                    Local Knowledge Storage,
+                    Agentic RAG, AI Workflow Automation,
+                    API-Based Agent Integration
+                </td>
 
-        <div class="skill-group">
+            </tr>
 
-            <h3>Programming Languages</h3>
+            <tr>
 
-            <p>
-                Python · C · C++ · Java ·
-                JavaScript · TypeScript ·
-                SQL · HTML · CSS
-            </p>
+                <td>Computer Vision</td>
 
-        </div>
+                <td>
+                    Image Classification,
+                    Semantic Segmentation,
+                    Optical Flow, Video Analysis,
+                    Spatiotemporal Feature Extraction,
+                    Instrument and Anatomical Segmentation,
+                    OCR, Eye-Gaze Tracking
+                </td>
 
-        <div class="skill-group">
+            </tr>
 
-            <h3>Software &amp; Web Engineering</h3>
+            <tr>
 
-            <p>
-                React · REST APIs ·
-                Frontend Development ·
-                Backend Integration ·
-                Responsive Interfaces ·
-                Data Visualization ·
-                Git · GitHub
-            </p>
+                <td>Robust &amp; Generative Learning</td>
 
-        </div>
+                <td>
+                    Diffusion Models, DDPM,
+                    Contrastive Learning,
+                    Adversarial Robustness,
+                    FGSM, PGD, CW,
+                    Entropy-Based Uncertainty Estimation
+                </td>
 
-        <div class="skill-group">
+            </tr>
 
-            <h3>Embedded Systems &amp; Edge AI</h3>
+            <tr>
 
-            <p>
-                ESP32 · Arduino · Raspberry Pi ·
-                Embedded C · TinyML ·
-                Sensor Integration · GPS ·
-                MPU6050 · Wearable Computing ·
-                Offline Intelligent Systems
-            </p>
+                <td>Reinforcement Learning</td>
 
-        </div>
+                <td>
+                    Proximal Policy Optimization (PPO),
+                    Reward-Based Learning,
+                    Route Optimization
+                </td>
 
-        <div class="skill-group">
+            </tr>
 
-            <h3>Data Science &amp; Research Tools</h3>
+            <tr>
 
-            <p>
-                NumPy · Pandas · SciPy ·
-                Matplotlib · Jupyter · Kaggle ·
-                Data Preprocessing ·
-                Experimental Evaluation ·
-                Statistical Analysis · LaTeX
-            </p>
+                <td>ML Frameworks &amp; Libraries</td>
 
-        </div>
+                <td>
+                    PyTorch, Scikit-learn,
+                    NumPy, Pandas, OpenCV,
+                    SciPy, Matplotlib, Seaborn
+                </td>
 
-        <div class="skill-group">
+            </tr>
 
-            <h3>Development &amp; Automation Tools</h3>
+            <tr>
 
-            <p>
-                Linux · Docker · Git ·
-                VS Code · n8n ·
-                API Integration ·
-                Google Sheets Automation ·
-                CUDA Fundamentals
-            </p>
+                <td>Web &amp; Software Development</td>
 
-        </div>
+                <td>
+                    React, TypeScript, JavaScript,
+                    HTML, CSS, REST APIs,
+                    Frontend Development,
+                    Backend API Integration,
+                    Interactive Dashboards, Leaflet
+                </td>
 
-    </div>
+            </tr>
+
+            <tr>
+
+                <td>Embedded Systems &amp; IoT</td>
+
+                <td>
+                    ESP32, Arduino, Raspberry Pi,
+                    Sensor Integration, GPS,
+                    Edge AI, TinyML,
+                    Embedded Programming,
+                    Wearable Systems
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>Automation &amp; Integration</td>
+
+                <td>
+                    n8n, Gemini API,
+                    Google Sheets API, Gmail,
+                    Twilio, Webhooks,
+                    Workflow Automation
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>Research &amp; Development Tools</td>
+
+                <td>
+                    Git, GitHub, Linux,
+                    Jupyter Notebook, Kaggle,
+                    Google Colab, LaTeX,
+                    CUDA Fundamentals,
+                    Reproducible Experimentation
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>Research Methodologies</td>
+
+                <td>
+                    Literature Review, Experimental Design,
+                    Baseline Comparison, Ablation Studies,
+                    Quantitative Evaluation,
+                    Error Analysis, Scientific Visualization,
+                    Technical Documentation
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
 
 </section>
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================== -->
 
 <section id="contact">
 
-    <h2>Contact</h2>
+    <h2 class="section-title">Contact Information</h2>
 
-    <div class="contact-panel">
+    <div class="contact-box">
 
-        <h3>Research &amp; Collaboration</h3>
+        <h3>Asifa S</h3>
 
         <p>
-            I welcome opportunities to collaborate
-            on meaningful research in artificial
-            intelligence, machine learning,
-            natural language processing and
-            intelligent systems.
+            Integrated M.Tech — Software Engineering<br>
+            Vellore Institute of Technology, Chennai, India
         </p>
 
         <p>
-            I am particularly interested in research
-            that connects methodological development
-            with real-world problems.
+            I welcome enquiries regarding research collaborations,
+            research internships and opportunities in
+            artificial intelligence and machine learning.
         </p>
+
+        <h3 style="margin-top:22px;">
+            Curriculum Vitae
+        </h3>
+
+        <p>
+
+            <a href="assets/AsifaS_resume.pdf"
+               target="_blank">
+
+                Download Curriculum Vitae (PDF)
+
+            </a>
+
+        </p>
+
+        <h3 style="margin-top:22px;">
+            More Links
+        </h3>
 
         <div class="social-links">
 
             <a href="https://github.com/asifa1510"
                target="_blank">GitHub</a>
 
-            <a href="assets/AsifaS_resume.pdf"
-               target="_blank">Curriculum Vitae</a>
-
-            <a href="#publications">Publications</a>
+            <a href="https://scholar.google.com/scholar?q=Asifa+Sendhil"
+               target="_blank">Google Scholar Search</a>
 
         </div>
 
@@ -3257,418 +3376,135 @@ footer {
 
 </main>
 
+<!-- =========================
+     FOOTER
+========================== -->
+
 <footer>
 
-    <div class="container footer-content">
+    <div>Last updated: November 2026</div>
 
-        <span>© 2026 Asifa S</span>
-
-        <span>
-            <a href="#bio">Back to top ↑</a>
-            &nbsp; | &nbsp;
-            <a href="https://github.com/asifa1510"
-               target="_blank">GitHub</a>
-        </span>
-
-    </div>
+    <div>&copy; 2026 Asifa S</div>
 
 </footer>
 
-<!-- FULL SCREEN IMAGE VIEWER -->
+<!-- =========================
+     IMAGE LIGHTBOX
+========================== -->
 
-<div class="lightbox" id="lightbox"
+<div class="lightbox"
+     id="lightbox"
      role="dialog"
-     aria-label="Expanded image"
+     aria-label="Expanded research image"
      aria-modal="true">
 
     <button class="lightbox-close"
-            aria-label="Close image viewer">
+            onclick="closeLightbox()"
+            aria-label="Close expanded image">
+
         &times;
+
     </button>
 
-    <img id="lightbox-image" src="" alt="">
+    <img id="lightboxImage" src="" alt="Expanded research figure">
 
 </div>
 
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
 <script>
 
-/* ==========================================
-   ALL IMAGE FILENAMES
-   ========================================== */
+/* Personal photo gallery.
+   Only these two photographs use navigation arrows. */
 
-const asset = "assets/";
+const profileImages = [
 
-const galleries = {
+    {
+        src: "assets/1000110982.jpg",
+        alt: "Asifa wearing a purple top in Singapore"
+    },
 
-    /* PERSONAL PHOTO GALLERY */
+    {
+        src: "assets/IMG-20260530-WA0034(2).jpg",
+        alt: "Asifa in Singapore wearing a black outfit"
+    }
 
-    profile: [
+];
 
-        {
-            src: asset + "profile.jpg",
-            caption: "Singapore"
-        },
+let currentProfile = 0;
 
-        {
-            src: asset + "singapore.jpg",
-            caption: "Singapore, 2026"
-        }
+function showProfile(index) {
 
-    ],
+    currentProfile =
+        (index + profileImages.length) % profileImages.length;
 
-    /* NUS EXPERIENCE PHOTOGRAPHS */
+    const image = document.getElementById("profileImage");
 
-    nusExperience: [
+    image.src = profileImages[currentProfile].src;
+    image.alt = profileImages[currentProfile].alt;
 
-        {
-            src: asset + "nus-talk.jpg",
-            caption: "Research presentation at NUS"
-        },
-
-        {
-            src: asset + "nus-presentation2.jpg",
-            caption: "Presenting my summer research"
-        },
-
-        {
-            src: asset + "nus-group.jpg",
-            caption: "NUS IRIS summer research programme"
-        }
-
-    ],
-
-    /* NUS RESEARCH FIGURES */
-
-    nusResearch: [
-
-        {
-            src: asset +
-                "Screenshot 2026-11-26 162519.png",
-            caption:
-                "Proposed physics-informed AI framework"
-        },
-
-        {
-            src: asset +
-                "Screenshot 2026-11-26 161453.png",
-            caption:
-                "Physics fingerprint of eight discovered regimes"
-        },
-
-        {
-            src: asset +
-                "Screenshot 2026-11-26 162535.png",
-            caption:
-                "Global versus regime-conditioned symbolic laws"
-        }
-
-    ],
-
-    /* SURGICAL RESEARCH FIGURES */
-
-    surgical: [
-
-        {
-            src: asset +
-                "Screenshot 2026-11-16 024020.png",
-            caption:
-                "Segmentation predictions and normalized pixel entropy"
-        },
-
-        {
-            src: asset +
-                "Screenshot 2026-11-15 135320.png",
-            caption:
-                "Ground truth and predicted anatomy"
-        },
-
-        {
-            src: asset +
-                "Screenshot 2026-11-15 185643.png",
-            caption:
-                "U-Net anatomy prediction and predictive uncertainty"
-        }
-
-    ],
-
-    /* GLYTCH HARDWARE */
-
-    glytch: [
-
-        {
-            src: asset +
-                "Screenshot 2026-11-26 161734.png",
-            caption: "Assistive wearable prototype"
-        },
-
-        {
-            src: asset +
-                "Screenshot 2026-11-26 161749.png",
-            caption: "Assistive smart glasses"
-        }
-
-    ],
-
-    /* ACCIDENT IOT HARDWARE */
-
-    accident: [
-
-        {
-            src: asset +
-                "Screenshot 2026-11-26 161603.png",
-            caption: "AccidentIoT wearable unit"
-        },
-
-        {
-            src: asset +
-                "Screenshot 2026-11-26 161651.png",
-            caption: "AccidentIoT vehicle unit"
-        }
-
-    ],
-
-    /* MONETRA AUTOMATION */
-
-    monetra: [
-
-        {
-            src: asset +
-                "Screenshot 2026-11-26 161842.png",
-            caption:
-                "Email-triggered information processing"
-        },
-
-        {
-            src: asset +
-                "Screenshot 2026-11-26 161857.png",
-            caption:
-                "Scheduled notification workflow"
-        }
-
-    ]
-
-};
-
-
-/* ==========================================
-   GALLERY FUNCTIONALITY
-   ========================================== */
-
-document.querySelectorAll("[data-gallery]")
-.forEach(function(gallery) {
-
-    const name = gallery.dataset.gallery;
-    const slides = galleries[name];
-
-    if (!slides || slides.length === 0) return;
-
-    let current = 0;
-
-    const image = gallery.querySelector(".gallery-image");
-
-    const caption = gallery.querySelector(".gallery-caption");
-
-    const dotsContainer = gallery.querySelector(".gallery-dots");
-
-    const previous = gallery.querySelector(".prev");
-
-    const next = gallery.querySelector(".next");
-
-    const stage = gallery.querySelector(".gallery-stage");
-
-    let dots = [];
-
-    slides.forEach(function(slide, index) {
-
-        const dot = document.createElement("button");
-
-        dot.className = "gallery-dot";
-
-        dot.setAttribute(
-            "aria-label",
-            "View image " + (index + 1)
-        );
-
-        dot.addEventListener("click", function() {
-
-            current = index;
-            renderGallery();
-
-        });
-
-        dotsContainer.appendChild(dot);
-
-        dots.push(dot);
-
-    });
-
-    function renderGallery() {
-
-        const slide = slides[current];
-
-        image.src = encodeURI(slide.src);
-
-        image.alt = slide.caption;
-
-        caption.textContent =
-            slide.caption +
-            " (" + (current + 1) +
-            "/" + slides.length + ")";
-
-        dots.forEach(function(dot, index) {
+    document.querySelectorAll(".gallery-dot")
+        .forEach((dot, i) => {
 
             dot.classList.toggle(
                 "active",
-                index === current
-            );
-
-            dot.setAttribute(
-                "aria-current",
-                index === current ? "true" : "false"
+                i === currentProfile
             );
 
         });
 
-    }
+}
 
-    function moveGallery(direction) {
+function changeProfile(direction) {
 
-        current =
-            (current + direction + slides.length)
-            % slides.length;
+    showProfile(currentProfile + direction);
 
-        renderGallery();
+}
 
-    }
-
-    previous.addEventListener("click", function() {
-
-        moveGallery(-1);
-
-    });
-
-    next.addEventListener("click", function() {
-
-        moveGallery(1);
-
-    });
-
-    /* KEYBOARD NAVIGATION */
-
-    gallery.setAttribute("tabindex", "0");
-
-    gallery.addEventListener("keydown", function(event) {
-
-        if (event.key === "ArrowLeft") {
-
-            event.preventDefault();
-            moveGallery(-1);
-
-        }
-
-        if (event.key === "ArrowRight") {
-
-            event.preventDefault();
-            moveGallery(1);
-
-        }
-
-    });
-
-    /* MOBILE SWIPE */
-
-    let touchStart = 0;
-
-    stage.addEventListener("touchstart", function(event) {
-
-        touchStart = event.changedTouches[0].screenX;
-
-    }, { passive: true });
-
-    stage.addEventListener("touchend", function(event) {
-
-        const touchEnd = event.changedTouches[0].screenX;
-
-        const distance = touchStart - touchEnd;
-
-        if (distance > 50) moveGallery(1);
-
-        if (distance < -50) moveGallery(-1);
-
-    }, { passive: true });
-
-    /* MISSING IMAGE FALLBACK */
-
-    image.addEventListener("error", function() {
-
-        const fallback = asset + "nus-talk.jpg";
-
-        if (
-            name === "profile" ||
-            name === "nusExperience"
-        ) {
-
-            if (!image.src.endsWith("nus-talk.jpg")) {
-
-                image.src = fallback;
-
-                caption.textContent =
-                    "Photograph pending upload — NUS presentation shown";
-
-            }
-
-        } else {
-
-            caption.textContent =
-                "Image unavailable: " + slides[current].src;
-
-        }
-
-    });
-
-    renderGallery();
-
-});
-
-
-/* ==========================================
-   IMAGE LIGHTBOX
-   ========================================== */
+/* Research image expansion */
 
 const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
 
-const lightboxImage =
-    document.getElementById("lightbox-image");
+document.querySelectorAll(
+    ".research-image img, .nus-gallery img"
+).forEach(image => {
 
-const lightboxClose =
-    document.querySelector(".lightbox-close");
+    image.tabIndex = 0;
 
-let previousFocus = null;
+    image.addEventListener("click", () => {
 
-document.querySelectorAll(".zoomable")
-.forEach(function(image) {
+        openLightbox(image);
 
-    image.addEventListener("click", function() {
+    });
 
-        if (!image.complete || image.naturalWidth === 0) {
-            return;
+    image.addEventListener("keydown", event => {
+
+        if (event.key === "Enter" || event.key === " ") {
+
+            event.preventDefault();
+            openLightbox(image);
+
         }
-
-        previousFocus = document.activeElement;
-
-        lightboxImage.src = image.src;
-
-        lightboxImage.alt = image.alt;
-
-        lightbox.classList.add("open");
-
-        document.body.style.overflow = "hidden";
-
-        lightboxClose.focus();
 
     });
 
 });
+
+function openLightbox(image) {
+
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
+
+    lightbox.classList.add("open");
+
+    document.body.style.overflow = "hidden";
+
+    document.querySelector(".lightbox-close").focus();
+
+}
 
 function closeLightbox() {
 
@@ -3676,15 +3512,9 @@ function closeLightbox() {
 
     document.body.style.overflow = "";
 
-    lightboxImage.removeAttribute("src");
-
-    if (previousFocus) previousFocus.focus();
-
 }
 
-lightboxClose.addEventListener("click", closeLightbox);
-
-lightbox.addEventListener("click", function(event) {
+lightbox.addEventListener("click", event => {
 
     if (event.target === lightbox) {
 
@@ -3694,12 +3524,9 @@ lightbox.addEventListener("click", function(event) {
 
 });
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", event => {
 
-    if (
-        event.key === "Escape" &&
-        lightbox.classList.contains("open")
-    ) {
+    if (event.key === "Escape") {
 
         closeLightbox();
 
@@ -3707,19 +3534,19 @@ document.addEventListener("keydown", function(event) {
 
 });
 
+/* Active navigation highlighting */
 
-/* ==========================================
-   ACTIVE NAVIGATION
-   ========================================== */
+const navigationLinks =
+    document.querySelectorAll(".subnav a");
 
-const subLinks =
-    document.querySelectorAll(".sub-nav a");
+const sections =
+    document.querySelectorAll("main section[id]");
 
-subLinks.forEach(function(link) {
+navigationLinks.forEach(link => {
 
-    link.addEventListener("click", function() {
+    link.addEventListener("click", () => {
 
-        subLinks.forEach(function(item) {
+        navigationLinks.forEach(item => {
 
             item.classList.remove("active");
 
@@ -3731,45 +3558,28 @@ subLinks.forEach(function(link) {
 
 });
 
-const sectionIds = [
-
-    "bio",
-    "news",
-    "experience",
-    "research",
-    "publications",
-    "projects",
-    "awards",
-    "skills",
-    "contact"
-
-];
-
 function updateNavigation() {
 
-    let activeSection = "bio";
+    let currentSection = "bio";
 
-    sectionIds.forEach(function(id) {
+    sections.forEach(section => {
 
-        const section = document.getElementById(id);
+        if (section.getBoundingClientRect().top <= 145) {
 
-        if (
-            section &&
-            section.getBoundingClientRect().top <= 160
-        ) {
-
-            activeSection = id;
+            currentSection = section.id;
 
         }
 
     });
 
-    subLinks.forEach(function(link) {
+    navigationLinks.forEach(link => {
 
         link.classList.toggle(
+
             "active",
-            link.getAttribute("href") ===
-                "#" + activeSection
+
+            link.getAttribute("href") === "#" + currentSection
+
         );
 
     });
@@ -3782,7 +3592,9 @@ window.addEventListener(
     { passive: true }
 );
 
-updateNavigation();
+/* Initial gallery state */
+
+showProfile(0);
 
 </script>
 
